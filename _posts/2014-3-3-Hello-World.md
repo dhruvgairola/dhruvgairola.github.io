@@ -1,8 +1,8 @@
 ---
 layout: post
-title: You're up and running!
+title: Hello world!
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below :point_down:).
+Welcome to my new blog. All of my older blog posts can be viewed at blog.dhruvgairola.com if needed.
 
 ![_config.yml]({{ site.baseurl }}/images/unsplash_casey.jpeg)
