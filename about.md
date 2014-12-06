@@ -8,4 +8,4 @@ I am currently pursuing an MSc degree in Computer Science at McMaster University
 
 My hobbies include playing the guitar, drumming, playing scrabble, swimming, etc.
 
-![_config.yml]({{ site.baseurl }}/images/unsplash_casey.jpeg)
+![_config.yml]({{ site.baseurl }}/images/skills.png)
