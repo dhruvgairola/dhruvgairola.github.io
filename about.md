@@ -3,8 +3,9 @@ layout: page
 title: About
 permalink: /about/
 ---
+I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled "Data Cleaning with Minimal Information Disclosure" (will update with the link soon). Additionally, I completed my BSc degree in Computer Science at the University of Nottingham. 
 
-I am currently pursuing an MSc degree in Computer Science at McMaster University, and am a member of the Data Science Research Lab. My research interests include data cleaning, data mining, data privacy, and databases. An avid programmer, I am intimately familiar with Java, and Java related technologies (Spring, Android, etc). In addition, I also program in Python, Ruby and R.
+My research interests include data cleaning, data mining, and databases. An avid programmer, I am intimately familiar with Java, and Java related technologies (Spring, Android, JRuby, etc). I also enjoy programming in Python, Ruby and R.
 
 My hobbies include playing the guitar, drumming, playing scrabble, swimming, etc.
 
