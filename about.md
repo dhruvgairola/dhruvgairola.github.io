@@ -9,5 +9,5 @@ My research interests include data cleaning, data mining, and databases. I am in
 
 My hobbies include playing the guitar, drumming, playing scrabble, swimming, etc.
 
-The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm written in R.
+The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm (written in R).
 ![_config.yml]({{ site.baseurl }}/images/skills.png)
