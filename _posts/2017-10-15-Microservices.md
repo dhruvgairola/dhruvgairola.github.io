@@ -5,7 +5,7 @@ title: Microservices From Design to Development
 
 I have provided a summary of the book [Microservices : From Design to Development](http://blog.itexus.com/books/Microservices_Designing_Deploying.pdf) here.
 
-**Chapter 1 : Intro**
+**Chapter 1 : Introduction**
 * Monoliths :
   * Bugs hard to fix.
   * Codebase hard to understand.
