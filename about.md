@@ -1,11 +1,19 @@
 ---
 layout: page
-title: About
 permalink: /about/
 ---
-I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf). Additionally, I completed my BSc degree in Computer Science at the University of Nottingham. 
 
-My research interests include data cleaning, data mining, and databases. I am intimately familiar with Java, and Java related technologies (Spring, Android, JRuby, etc). I also enjoy programming in Python, Ruby and R.
+**Experience**
+
+I started my career building games as an Android app developer. Soon after, I transitioned to backend web development (JRuby stack). After my masters studies, I started my own firm, delving deep into distributed systems development. I created an enterprise platform to empower business analysts to work with big-data. Currently, I'm working as an e-commerce developer.
+
+**Education**
+
+I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf). Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham. 
+
+**Interests**
+
+Broadly, my interests include distributed systems, database theory and machine learning. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
 
 My hobbies include playing the guitar, drumming, playing scrabble, swimming, etc.
 
