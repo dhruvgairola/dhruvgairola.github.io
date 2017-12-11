@@ -3,7 +3,7 @@ layout: post
 title: Microservices From Design to Development
 ---
 
-I have provided a summary of the book [Microservices : From Design to Development](http://blog.itexus.com/books/Microservices_Designing_Deploying.pdf) here.
+I have provided a summary of the book [Microservices : From Design to Development](https://www.nginx.com/resources/library/designing-deploying-microservices/) here.
 
 **Chapter 1 : Introduction**
 * Monoliths :
