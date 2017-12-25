@@ -3,7 +3,7 @@ layout: post
 title: Intelligent Investor
 ---
 
-The current cryptocurrency craze inspired me to re-read the Intelligent Investor by Benjamin Graham. I've compiled a list of my learnings, and will keep adding chapters as I read them.
+The current cryptocurrency craze inspired me to re-read the Intelligent Investor by Benjamin Graham. I've compiled a list of my learnings.
 
 **Commentary on the introduction**
 * Intelligent investor : Being patient, disciplined and eager to learn. Harness your emotions and think for yourself.
