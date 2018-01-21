@@ -109,3 +109,31 @@ The current cryptocurrency craze inspired me to re-read the Intelligent Investor
 * Buying stocks in tiny increments over years can set off big tax headaches.
 * If you dollar cost average on 3 index funds- one for US stocks, one for foreign stocks and one for us bonds, you can ensure that you own almost every investment on the planet that's worth owning.
 * The knowledge of how little you know about the future, coupled with the acceptance of your ignorance, is a defensive investor's most powerful weapon.
+
+**Chapter 6 : Portfolio policy for the enterprising investor : negative approach**
+* Avoid high grade preferred stocks.
+* Avoid inferior bonds and preferred stocks unless they can be bought at bargain levels- prices at least 30% under par for high-coupon issues (bonds paying above average interest rates). When a company is paying you a large interest to raise money, the investment is inherently risky.
+* Avoid foreign govt bonds.
+* Be wary of new issues. Be wary of common stocks with excellent earnings confined to the recent past.
+* It is unwise to buy a bond or a preferred which lacks adequate safety merely because the yield is attractive.
+* Bond prices are quoted in % of "par value", or 100. A bond priced at "85" is selling at 85% of its principal value. A bond originally offered for $10k but now selling at 85, will cost $8.5k. When bonds sell <100 they are called discount and about >100 are called premium.
+* Second grade bonds and preferred stocks suffer severe sinking spells in bad markets but recover when favourable conditions return.
+* Avoid buying bonds at 100 when they can probably be bought at 70 or less in the next weak market.
+* Owners of foreign bonds have no legal means of enforcing a claim. Avoid.
+* Be wary of new issues, because they have special salesmanship behind them, which calls for a special degree of sales resistance. Also, most new issues are sold under favourable market conditions, which means favourable for the seller and less favourable for the buyer.
+* Bull market periods are usually characterized by the transformation of a large number of privately owned businesses into companies with quoted shares.
+* In every case, the public has gotten burned on IPOs and has stayed away for at least 2 years but always returned for another scalding.
+* Common stock financing has 2 forms (i) If companies are listed already, additional shares are offered pro rata (proportionally) to existing stockholders. (ii) IPOs.
+* Pattern : Somewhere in the middle of the bull market the first common-stock flotations make an appearance. They are priced not unattractively. As the rise continues, more companies do an IPO and the quality of companies becomes poorer. One sign of the approaching end of a bull swing is the fact that new common stocks of small and nondescript companies are offered at prices somewhat higher than the current level for many medium sized companies with a long market history. In many cases the new issues lose 75% of their offering price.
+* The intelligent investor should stay clear of IPOs. Some of these will prove excellent buys- a few years later when nobody wants them and they can be had at a small fraction of their true worth.
+
+**Commentary on Chapter 6**
+* High yield bonds, or second grade bonds are also called junk bonds.
+* Buying a bond only for its yeild is like getting married only for the sex. When the sex dries up, you'll find yourself asking, "what else is there", and its probably nothing.
+* Foreign bonds rarely move in synch with the US stock maket, so you can get a little bit of comfort in your portfolio (but still, you should probably avoid them).
+* Day trading is one of the best ever weapons for committing financial suicide. Your trader will always make money.
+* When you trade, you turn long term gains (taxed at 20%) into ordinary income (taxed at 38.6%).
+* Stock trader needs to gain at least 10% just to break even on buying and selling a stock.
+* On IPOs, we all want to buy the next Microsoft but forget the fact that most other IPOs were terrible investments.
+* Most of the IPO winners are the big investment banks that get shares at the underwriting price before the stock begins trading.
+* IPOs should stand for "It's probably overpriced".
