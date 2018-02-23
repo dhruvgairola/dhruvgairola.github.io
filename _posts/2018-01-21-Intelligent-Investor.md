@@ -137,3 +137,6 @@ The current cryptocurrency craze inspired me to re-read the Intelligent Investor
 * On IPOs, we all want to buy the next Microsoft but forget the fact that most other IPOs were terrible investments.
 * Most of the IPO winners are the big investment banks that get shares at the underwriting price before the stock begins trading.
 * IPOs should stand for "It's probably overpriced".
+
+**Chapter 7 : Portfolio policy for the enterprising investor : positive side**
+* 
