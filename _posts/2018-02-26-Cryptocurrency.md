@@ -24,11 +24,13 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Bitcoin uses SHA-256 as crypto hash fn.
   * How it works : Takes msg and breaks into blocks that are 512 bits in size (last block has padding). Start by selecting 256 initial value from some table. Then you pass 256 bit and first 512 bit of the msg to a compression fn c that returns 256 bits. Keep repeating it till last block of msg is reached. Output is the hash.
   * If compression fn is collision free, the entire function is collision free.
+
 **Hash pointer data structure**
 * Hash pointer data structure : Pointer to where data is stored and also has crypto hash of the data. The hash allows us the make sure that the data wasn't tampered.
 * Linked list built with hash pointer is a blockchain. It's tamper free because if someone changes the value in one node, this changes the node data (data = value + hash). Thus, the prev node's hash value is not going to match the new data's hash value (because collision free hash fn). So now attacker has the modify the prev hash value. But then he has changed the prev data now. So this keeps repeating till head of linked list.
 * Binary tree build from hash pointers is called Merkle tree. Only the leafs store the values. Advantage is that we can show if a block (value) exists in the tree in O(log n) by starting from the root hash (256 bits). If we maintain a sorted list of values on the leafs, we can even show non-membership in O(log n) time.
 * Hash pointer's can be used in any data structure as long as there are no cycles (as the hashes won't match up).
+
 **Digital signatures**
 * Only you can see and anyone can verify.
 * Signature is tied to a specific doc. Can't be copied.
@@ -40,10 +42,12 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * We use hash of msg as input to the digital signature.
 * If you sign a hash pointer at the end of the blockchain, you're siging the entire contents of the blockchain.
 * Bitcoin uses ECDSA for digital signing. Randomness is very impt to generating the keys and signing the keys.
+
 **Decentralized identity management**
 * Public key is an identity of a person/actor i.e., the public key "says" a message. But to create the message, you need to use secret key which only you control.
 * Decentralized identity management : You can create a new public key (public identity) and secret key (your private control of the identity) if you want. You're anonymous when publishing a message because nobody knows your secret key and they only see your public key that you can keep changing if you want.
 * Bitcoin address is a public identity.
+
 **A simple cryptocurrency**
 * Double spending : Spending the same coin twice.
 * Goofy coin : Goofy can create coins and transactions can occur in the system. No publishing of the blockchain. Problem is double spending.
