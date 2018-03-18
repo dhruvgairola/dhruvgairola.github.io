@@ -18,7 +18,7 @@ Broadly, my interests include distributed systems, database theory and machine l
 The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm (written in R).
 ![_config.yml]({{ site.baseurl }}/images/skills.png)
 
-**Stuff I like**
+**Other Interests**
 
 * Playing the guitar
 * Drumming
@@ -26,6 +26,6 @@ The image below depicts a few of my interests. It is a [dendrogram](http://en.wi
 * Scrabble
 * Poker
 * Entrepreneurship
-* Readng sci-fi books or lit classics
+* Reading sci-fi books or lit classics
 * Table tennis
 * Trivia
