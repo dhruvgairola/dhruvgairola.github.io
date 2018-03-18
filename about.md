@@ -11,11 +11,21 @@ I started my career building games as an Android app developer. Soon after, I tr
 
 I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf). Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham. 
 
-**Interests**
+**Technical Interests**
 
-Broadly, my interests include distributed systems, database theory and machine learning. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
-
-My hobbies include playing the guitar, drumming, playing scrabble, swimming, etc.
+Broadly, my interests include distributed systems, database theory and machine learning. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
 
 The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm (written in R).
 ![_config.yml]({{ site.baseurl }}/images/skills.png)
+
+**Stuff I like**
+
+* Playing the guitar
+* Drumming
+* Swimming
+* Scrabble
+* Poker
+* Entrepreneurship
+* Readng sci-fi books or lit classics
+* Table tennis
+* Trivia
