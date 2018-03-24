@@ -169,4 +169,5 @@ I'm compiling my notes from the coursera course on bitcoin and Cryptocurrency Te
     * These rules of the system cannot be changed because attacker cannot control the bitcoin protocol that the rest of the nodes are running.
   * Can attacker destroy confidence of bitcoin?
     * Blockchain is no longer decentralized so people won't trust bitcoin anymore.
+* As a block gets deeper in the chain, it gets more difficult to fork the chain from that earlier point. This is because to create a longer chain, you now need to add a lot more blocks and adding blocks requires PoW.
 * What else can we do with consensus?
