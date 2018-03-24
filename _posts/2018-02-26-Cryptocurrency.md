@@ -151,7 +151,7 @@ I'm compiling my notes from the coursera course on bitcoin and Cryptocurrency Te
       * Nonce is published as part of the block.
       * Other nodes can verify that published nonce falls in the target output space.
 
-** Brief recap**
+**Brief recap**
 * Mining economics :If mining reward is greater than hardware and electricity cost, then miner can make a profit.
   * But reward is in bitcoin and the costs are in fiat.
   * Reward depends on global hash rate.
