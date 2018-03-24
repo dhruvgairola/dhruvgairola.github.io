@@ -134,7 +134,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * In proportion to amount of computing power called proof of work (used in bitcoin). 
     * In proportion to amount of bitcion owned called proof of stake (not used in bitcoin).
   * Hash puzzle.
-    * In order to create a block, find nonce st H(nonce || prev_hash || prev_transactions) is very small and falls within a target space (a really small space within the output space <<1%).
+    * In order to create a block, find nonce st H(nonce \|\| prev_hash \|\| prev_transactions) is very small and falls within a target space (a really small space within the output space much smaller than 1%).
     * If hash function is secure, the only way to succeed solving the puzzle is to try enough nonces until you get lucky. Bernouili trial.
   * PoW properties :
     * Property 1 : Difficult to compute. 
@@ -144,7 +144,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
       * Avg time between 2 successive blocks produced globally is 10 mins.
       * This means if more hardware is added, the target space will be made smaller. 
       * Hence, P(A wins block creation) = fraction of global hash power she controls.
-      * Why maintain this property? If blocks created close together, there would be a lot of inefficiency, and we lose the opt benefits to put lot of transactions in a single block. So block latency will increase. Need to keep block latency fixed.
+      * Why maintain this property? If blocks created close together, there would be a lot of inefficiency, and we lose the optimization benefits to put lot of transactions in a single block. So block latency will increase. Need to keep block latency fixed.
       * If majority of miners weighted by hash powers are honest, most of the attacks are not possible. Bec comptetion ensures that at least >50% of new nodes are proposed by an honest node.
       * Mean time to find block = 10 min / fraction of global computing power.
     * Property 3 : Trivial to verify that nonce was correct.
@@ -152,10 +152,10 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
       * Other nodes can verify that published nonce falls in the target output space.
 
 **Brief recap**
-* Mining economics :If mining reward is greater than hardware and electricity cost, then miner can make a profit.
+* Mining economics : If mining reward is greater than hardware and electricity cost, then miner can make a profit.
   * But reward is in bitcoin and the costs are in fiat.
   * Reward depends on global hash rate.
-* consensus types in bitcoin :
+* Consensus types in bitcoin :
   * Exchange rate of bitcoin to fiat.
   * Other nodes agree that I own a certain amount of bitcoin.
   * Rules of the system.
