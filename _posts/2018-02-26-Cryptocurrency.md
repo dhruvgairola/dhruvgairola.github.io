@@ -1,13 +1,13 @@
 ---
 layout: post
-title: bitcoin and Cryptocurrency Technologies (Princeton University)
+title: Bitcoin and Cryptocurrency Technologies (Princeton University)
 ---
 
-I'm compiling my notes from the coursera course on bitcoin and Cryptocurrency Technologies (Princeton University) below :
+I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Technologies (Princeton University) below :
 
 ### Week 1
 **Crypto hash fns**
-* bitcoin hash is 256 bits.
+* Bitcoin hash is 256 bits.
 * Cryptograpic hash fn are hash fns that have the following properties:
   * Nobody can find a collision (even though they do exist).
     * Hash useful as a message digest. Compare 256 bit hashes to detect same object instead of actually comparing the objects.
@@ -22,7 +22,7 @@ I'm compiling my notes from the coursera course on bitcoin and Cryptocurrency Te
     * Application is search puzzle. Given puzzle id and target set Y, find solution x where H(concat(id,x)) in Y.
     * This property implies that there is no solving strategy better than trying random values of x to solve the puzzle.
     * Puzzle is used for bitcoin mining.
-* bitcoin uses SHA-256 as crypto hash fn.
+* Bitcoin uses SHA-256 as crypto hash fn.
   * How it works : Takes msg and breaks into blocks that are 512 bits in size (last block has padding). Start by selecting 256 initial value from some table. Then you pass 256 bit and first 512 bit of the msg to a compression fn c that returns 256 bits. Keep repeating it till last block of msg is reached. Output is the hash.
   * If compression fn is collision free, the entire function is collision free.
 
@@ -42,12 +42,12 @@ I'm compiling my notes from the coursera course on bitcoin and Cryptocurrency Te
   * Valid signatures verify and you cant' forge signatures.
 * We use hash of msg as input to the digital signature.
 * If you sign a hash pointer at the end of the blockchain, you're siging the entire contents of the blockchain.
-* bitcoin uses ECDSA for digital signing. Randomness is very impt to generating the keys and signing the keys.
+* Bitcoin uses ECDSA for digital signing. Randomness is very impt to generating the keys and signing the keys.
 
 **Decentralized identity management**
 * Public key is an identity of a person/actor i.e., the public key "says" a message. But to create the message, you need to use secret key which only you control.
 * Decentralized identity management : You can create a new public key (public identity) and secret key (your private control of the identity) if you want. You're anonymous when publishing a message because nobody knows your secret key and they only see your public key that you can keep changing if you want.
-* bitcoin address is a public identity.
+* Bitcoin address is a public identity.
 
 **A simple cryptocurrency**
 * Double spending : Spending the same coin twice.
