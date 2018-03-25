@@ -5,8 +5,8 @@ title: Bitcoin and Cryptocurrency Technologies (Princeton University)
 
 I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Technologies (Princeton University) below :
 
-### Week 1
-**Crypto hash fns**
+### Week 1 : Intro to Crypto.
+**Crypto Hash Functions**
 * Bitcoin hash is 256 bits.
 * Cryptograpic hash fn are hash fns that have the following properties:
   * Nobody can find a collision (even though they do exist).
@@ -26,13 +26,13 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * How it works : Takes msg and breaks into blocks that are 512 bits in size (last block has padding). Start by selecting 256 initial value from some table. Then you pass 256 bit and first 512 bit of the msg to a compression fn c that returns 256 bits. Keep repeating it till last block of msg is reached. Output is the hash.
   * If compression fn is collision free, the entire function is collision free.
 
-**Hash pointer data structure**
+**Hash Pointer Data Structure**
 * Hash pointer data structure : Pointer to where data is stored and also has crypto hash of the data. The hash allows us the make sure that the data wasn't tampered.
 * Linked list built with hash pointer is a blockchain. It's tamper free because if someone changes the value in one node, this changes the node data (data = value + hash). Thus, the prev node's hash value is not going to match the new data's hash value (because collision free hash fn). So now attacker has the modify the prev hash value. But then he has changed the prev data now. So this keeps repeating till head of linked list.
 * Binary tree build from hash pointers is called Merkle tree. Only the leafs store the values. Advantage is that we can show if a block (value) exists in the tree in O(log n) by starting from the root hash (256 bits). If we maintain a sorted list of values on the leafs, we can even show non-membership in O(log n) time.
 * Hash pointer's can be used in any data structure as long as there are no cycles (as the hashes won't match up).
 
-**Digital signatures**
+**Digital Signatures**
 * Only you can see and anyone can verify.
 * Signature is tied to a specific doc. Can't be copied.
 * API for digital signatures:
@@ -44,18 +44,18 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * If you sign a hash pointer at the end of the blockchain, you're siging the entire contents of the blockchain.
 * Bitcoin uses ECDSA for digital signing. Randomness is very impt to generating the keys and signing the keys.
 
-**Decentralized identity management**
+**Decentralized Identity Management**
 * Public key is an identity of a person/actor i.e., the public key "says" a message. But to create the message, you need to use secret key which only you control.
 * Decentralized identity management : You can create a new public key (public identity) and secret key (your private control of the identity) if you want. You're anonymous when publishing a message because nobody knows your secret key and they only see your public key that you can keep changing if you want.
 * Bitcoin address is a public identity.
 
-**A simple cryptocurrency**
+**A simple Cryptocurrency**
 * Double spending : Spending the same coin twice.
 * Goofy coin : Goofy can create coins and transactions can occur in the system. Problem is double spending because blockchain is not published by Goofy.
 * Scrooge coin : Same as Goofy coin except blockchain is published. Solves double spending since everyone can see the history but Scrooge signs each block to validate transactions so we have to trust Scrooge. Problem is that its centralized (Scrooge).
 * Coins are immutable. So in a transaction, they are destroyed and recreated. You can subdivide or even combine coins.
 
-### Week 2
+### Week 2 : How Bitcoin achieves Decentralization.
 **Decentralization**
 * Not all systems are all-or-nothing. Mix between centralization and decentralization.
 * Aspects of decentralization in bitcoin :
@@ -63,7 +63,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Mining : But high centralization because of how much computation you need to mine.
   * Updates to software : Core devs trusted by community.
 
-**Distributed consensus**
+**Distributed Consensus**
 * How to decentralize Scrooge coin.
 * Why consensus? Reliability in distributed systems.
 * Defining distributed consensus :
@@ -83,10 +83,10 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Introduces incentives.
   * Embraces randomness. Consensus only has to be reached over long time scales.
 
-**Consensus without identity**
+**Consensus without Identity**
 * Traditionally need identites for security and some protocols also rely on node ids.
 * Why no identities?
-  * No central authority to give identities to node- Sybil attack (same attacker mimcks many people but really, its just one attacker).
+  * No central authority to give identities to node : Sybil attack (same attacker mimcks many people but really, its just one attacker).
   * Pseudonymity is a goal of bitcoin.
 * Weaker assumptions :
   * Can pick a random node in the system. Give token to nodes and later call on that node, like a raffle/lottery.
@@ -114,7 +114,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * Double spend probability decreases exponentially with the number of confirmations.
   * To recap, protection against invalid trasactions is cyptographic but enforced by consensus. Protection against double spending is purely by consensus. You're never 100% sure a transaction is in consensus branch. Guarantee is probabilistic.
 
-**Incentives and Proof of work**
+**Incentives and Proof of Work**
 * Can we give incentives for nodes to behave honestly?
   * Incentive 1 : Block reward.
     * Creator of the block can add coin creation transaction to the block and choose a recipient (itself).
@@ -151,7 +151,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
       * Nonce is published as part of the block.
       * Other nodes can verify that published nonce falls in the target output space.
 
-**Brief recap**
+**Brief Recap**
 * Mining economics : If mining reward is greater than hardware and electricity cost, then miner can make a profit.
   * But reward is in bitcoin and the costs are in fiat.
   * Reward depends on global hash rate.
@@ -171,3 +171,108 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * Blockchain is no longer decentralized so people won't trust bitcoin anymore.
 * As a block gets deeper in the chain, it gets more difficult to fork the chain from that earlier point. This is because to create a longer chain, you now need to add a lot more blocks and adding blocks requires PoW.
 * What else can we do with consensus?
+
+### Week 3 : Mechanics of Bitcoin.
+**Bitcoin Transactions**
+* Consider an account based ledger :
+  * Have to keep track of balance in each participants account.
+  * Hard to determine if transaction is valid because you have to look backwards till the beginning of time to check all transactions involving the particular participant who is sending the coins.
+  * This is why bitcoin isn't based on an account based ledger. Instead, based on transaction ledger.
+* Transaction based ledger :
+  * Given an input, the output value must total the input value. e.g., (Assume 1 transaction in 1 block) In transaction number x1, A has 25 coins. In transaction x1+1, A wants to send B 10 coins. So the input is x1[A], which is 25 coins, and output is that A sends 10 coins to B and resends herself 15 coins (change address), which totals to 25 coins. In transaction x1+2, B wants to send 4 coins to C. So the input is x1+1[B], which is 10 coins, and output is that B sends 4 coins to C and resends 6 coins to himself (change address). which totals 10 coins.
+  * Validity is easy now because we only do a finite backward scan.
+  * Can do joint payments (with multiple inputs, where each input has 1 signature i.e., owned by 1 person).
+
+**Bitcoin Scripts**
+* Transaction output addresses are really scripts. So are the input addresses.
+* Bitcoin scripting language :
+  * Simple.
+  * Support for cryptography.
+  * Stack based.
+  * Limits on time/memory.
+  * No loops.
+  * Not turing complete. By design because these scripts are to be run by miners.
+  * Output is either error or no error. If error, transaction not accepted into the block.
+* 99% of bitcoin scripts are exactly the same : simple signature check (also called pay to public key script).
+* Nodes have a whitelist of scripts that can be run.
+* Proof-of-burn script :
+  * Write abitrary data into the blockchain by destroying a bit of your currency.
+  * Way to destroy bitcoin and gain an altcoin. 
+* Pay-to-script hash :
+  * Retailer specifies a script to send bitcoins to instead of an address.
+
+**Applications of Bitcoin Scripts**
+* Escrow transactions : A wants to buy from B but B wants the money first while A wants the goods first.
+  * Solution is to use MULTISIG script so that money is released if 2 of 3 people sign the transaction. Involve another person J (judge). In normal exchange of money for goods, A and B can sign the transaction and everything is great. In dispute, J will have to decide whom to support. How do we trust J though?
+* Green addresses : A wants to pay B but B is offline and cannot see the blockchain at all.
+  * Real world solution is that A pays a bank and bank stores the money in green addresses. Later, the bank sends the money to B.
+  * Mt Gox did this so people don't trust this so much anymore in the bitcoin world.
+* Efficient micro payments : A wants to make a lot of small payments to B for using B's service but  does not want to pay a transaction fee for each payment. Can we combine all micro payments to make 1 large payment?
+  * Solution is to use MULTISIG. A sends B 1 coin at time t0. But B never signs it, so its not yet published as a transaction. By time t1>t0, A would have sent B 10 coins and decides to stop using B's service. B now signs the last transaction and it is published for acceptance into a block.
+  * What happens if B never signs the last transaction? Then the coin is just sitting in escrow forever. Solution is to use lock time. Before the micropayment protocol, both A and B have to sign a transaction that refunds all of A's money back if the micropayments have not been signed by B by the lock time.
+* Multiplayer lotteries, hash pre-image challenges, coin swapping protocols are other applications.
+* Bitcoin scripts can be used to define smart contracts, but due to the nature of the scripting language, only few types of smart contracts can be defined.
+
+**Bitcoin Blocks**
+* Why bundle transactions into blocks?
+  * Makes blockchain shorter so easier to verify the chain.
+  * Single unit of work for miners.
+* Bitcoin block : 
+  * Hash chain of blocks and Merkle tree of transactions in each block.
+  * The Merkle tree also contains a special transaction called the coinbase transaction. This contains the mining coin reward plus the transaction fees.
+
+**The Bitcoin Network**
+* Bitcoin P2P network : 
+  * Runs on TCP port 8333.
+  * All nodes are equal.
+  * New nodes can be added at any time.
+  * Forget non-responding nodes after 3 hrs.
+* How do new nodes join?
+  * New nodes find a seed node (1 node in the network) from a list of seed nodes.
+  * Ask the seed node to return all its peers. Can keep repeating this.
+  * Choose which ones from all the nodes you know to peer with.
+* Whats the P2P network good for?
+  * Network maintains the blockchain.
+  * Entire network needs to know about new transactions : flooding algo/gossip algo.
+    * It's like BFS.
+    * Nodes will only relay the transaction if :
+      * Transaction/script is valid.
+      * Script matches a whitelist. This avoids unusual scripts.
+      * Haven't seen the script before. This avoids infinte loop.
+      * Doesn't coflict with others seen before (even though the others might also be valid). This avoids double spending.
+  * Nodes will have different transaction pools because they disagree on which transactions should be added to the published block. It's like a race condition. Its only when one of the nodes publishes a block that this race condition is resolved. Every miner implements their own logic on which transaction to choose if there is a conflict.
+  * New blocks are announced using the same algo as new transactions. New blocks should be added to their copy of the longest chain but there is no restriction preventing them from creating a fork. But that's ok, the protocol can withstand that.
+  * Block propagation takes over 30 sec on average. The protocol is not very efficient in terms of propagation time.
+* How big is the network? Always changing and hard to estimate. But only 5-10k are permanently connected and fully validating nodes.
+* Fully validating node :
+  * Permanently connected.
+  * Store the entire blockchain (about 20 Gb).
+  * Active network connection.
+  * Track all the UTXOs (unspent transaction outputs) in RAM (about 1 Gb).
+* Simple payment verification node : 
+  * Only care about certain transactions e.g., Wallets.
+  * Store block headers only, so they can't verify that other transactions in the block are valid.
+  * They trust the fully validating nodes.
+  * Need only 20 Mb of storage.
+
+**Limitations to the Bitcoin Protocol**
+* Hard coded limits :
+  * 10 min avg time creation per block.
+  * 1 Mb per block.
+  * 250 bytes per transaction.
+  * 7 transaction per second (2-10k transactions per second for Visa).
+  * 1 signature function only ESDSA.
+  * Hard coded hash functions.
+* Constants can't just be changed. Lot of implications.
+* Hard-forking bitcoin :
+  * Involves upgrading the software in every node.
+  * But the un-upgraded nodes will not accept blocks sent by the upgraded nodes because those transaction/script operations don't even exist in the old software.
+  * Until old nodes upgrade their software, they will keep rejecting new nodes.
+  * So the blockchain will split (hard fork) and 2 separate blockchain will form.
+  * New hard-fork possibilities : New instructions, changes to size limits, change to mining rate, small bugfixes, etc. But unlikely to happen, use altcoins to solve instead.
+* Soft-forking :
+  * Idea is that the upgraded software will only make validation tighter.
+  * Rules are stricter i.e., they only limit the set of valid scripts.
+  * The bad part is that old nodes might mine invalid blocks that will be rejected by the new nodes with the upgraded software.
+  * e.g., Pay to script hash was implemented via a soft fork.
+  * New soft-fork possibilities : new signature schemes, extra per-block metadata (e.g., put in "coinbase" parameter in a transaction).
