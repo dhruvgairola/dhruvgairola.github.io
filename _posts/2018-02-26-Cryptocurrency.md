@@ -264,11 +264,11 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * 1 signature function only ESDSA.
   * Hard coded hash functions.
 * Constants can't just be changed. Lot of implications.
-* Hard-forking bitcoin :
+* Hard-forking :
   * Involves upgrading the software in every node.
   * But the un-upgraded nodes will not accept blocks sent by the upgraded nodes because those transaction/script operations don't even exist in the old software.
   * Until old nodes upgrade their software, they will keep rejecting new nodes.
-  * So the blockchain will split (hard fork) and 2 separate blockchain will form.
+  * So the blockchain will split (hard fork) and 2 separate blockchains will form.
   * New hard-fork possibilities : New instructions, changes to size limits, change to mining rate, small bugfixes, etc. But unlikely to happen, use altcoins to solve instead.
 * Soft-forking :
   * Idea is that the upgraded software will only make validation tighter.
