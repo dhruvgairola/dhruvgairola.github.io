@@ -8,7 +8,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 ### Week 1 : Intro to Crypto.
 **Crypto Hash Functions**
 * Bitcoin hash is 256 bits.
-* Cryptograpic hash fn are hash fns that have the following properties:
+* Cryptograpic hash fn are hash fns that have the following properties :
   * Nobody can find a collision (even though they do exist).
     * Hash useful as a message digest. Compare 256 bit hashes to detect same object instead of actually comparing the objects.
   * Hiding : Given H(x), it's impossible to find x.
@@ -18,7 +18,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
       * commit(v) returns (H(concat(k,v)), k). Used to seal a value v and returns tuple. k is a random 256 bit value.
       * verify(c,k,v) returns (H(concat(k,v)) == c). Used to verify that a value v was the same as the value in the commitment.
       * API has the hiding property and also the collision free property.
-  * Puzzle friendly: Given y (high min entropy) and k, it is impossible to find x where H(concat(k,x))=y.
+  * Puzzle friendly : Given y (high min entropy) and k, it is impossible to find x where H(concat(k,x))=y.
     * Application is search puzzle. Given puzzle id and target set Y, find solution x where H(concat(id,x)) in Y.
     * This property implies that there is no solving strategy better than trying random values of x to solve the puzzle.
     * Puzzle is used for bitcoin mining.
@@ -35,10 +35,10 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 **Digital Signatures**
 * Only you can see and anyone can verify.
 * Signature is tied to a specific doc. Can't be copied.
-* API for digital signatures:
-  * generateKeys(keysize) returns (sk, pk). Randomized algo.
+* API for digital signatures :
+  * generateKeys(keysize) returns (sk, pubk). Randomized algo.
   * sign(sk, msg) returns sig. Randomized algo.
-  * verify(pk, msg, sig) returns isValid. Deterministic algo.
+  * verify(pubk, msg, sig) returns isValid. Deterministic algo.
   * Valid signatures verify and you can't forge signatures.
 * We use hash of msg as input to the digital signature.
 * If you sign a hash pointer at the end of the blockchain, you're signing the entire contents of the blockchain.
@@ -48,18 +48,23 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 
 **Decentralized Identity Management**
 * Public key is an identity of a person/actor i.e., the public key "says" a message. But to create the message, you need to use secret key which only you control.
-* Decentralized identity management : You can create a new public key (public identity) and secret key (your private control of the identity) if you want. You're anonymous when publishing a message because nobody knows your secret key and they only see your public key that you can keep changing if you want.
+* Decentralized identity management : You can create a new public key (public identity) and secret key (your private control of the identity) if you want. You're anonymous when publishing a message because nobody knows your secret key and they only see your public key that you can keep changing if you want by calling generateKeys again.
 * Bitcoin address is a public identity.
 
 **A Simple Cryptocurrency**
 * Now lets use what we learn so far to show how a simple cryptocurrency could work.
 * Goofy coin : 
-  * Goofy can create coins and transactions can occur in the system. 
+  * Goofy can create coins and transactions can occur in the system.
+  * Creates a coin by creating a message "Createcoin[coinId]".
+  * Signs the message with private key.
+  * Signature and message is a coin.
+  * People can verify this by using signature, message and public key.
+  * Goofy can send this coin to Alice by creating message "Pay this to Alice's public key" where "this" refers to to the coin's hash pointer.
   * Problem is double spending (spending the same coin twice) because blockchain is not published by Goofy.
 * Scrooge coin : 
   * Same as Goofy coin except blockchain is published and append only. 
   * Solves double spending since everyone can see the history. 
-  * Problem is that its centralized (Scrooge) i.e., Scrooge signs each block to validate transactions so we have to trust Scrooge.
+  * Problem is that its centralized (Scrooge) i.e., Scrooge signs each block to validate transactions so we have to trust Scrooge. Scrooge could deny service to specific users by never validating their transactions.
 * Coins are immutable. So in a transaction, they are destroyed and recreated as change. You can subdivide or even combine coins.
 
 ### Week 2 : How Bitcoin achieves Decentralization.
@@ -285,7 +290,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * New soft-fork possibilities : new signature schemes, extra per-block metadata (e.g., put in "coinbase" parameter in a transaction).
 
 ### Week 4 : How to Store and Use Bitcoins.
-** Simple Local Storage**
+**Simple Local Storage**
 * To spend Bitcoin :
   * Info from blockchain.
   * Owner's secret.
