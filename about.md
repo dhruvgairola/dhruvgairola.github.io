@@ -5,7 +5,7 @@ permalink: /about/
 
 **Experience**
 
-I started my career building games as an Android app developer. Soon after, I transitioned to backend web development (JRuby stack). After my masters studies, I started my own firm, delving deep into distributed systems development. I created an enterprise platform to empower business analysts to work with big-data. Currently, I'm working as an e-commerce developer.
+I started my career building games as an Android app developer. Soon after, I transitioned to backend web development (JRuby stack). After my masters studies, I started my own firm, delving deep into distributed systems development. I created an enterprise platform to empower business analysts to work with big-data. Currently, I work as an e-commerce developer building complex distributed systems.
 
 **Education**
 
@@ -13,7 +13,7 @@ I completed my MSc degree in Computer Science at McMaster University as a member
 
 **Technical Interests**
 
-Broadly, my interests include distributed systems, database theory and machine learning. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
+Broadly, my interests include distributed systems, classical machine learning and software architecture. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
 
 The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm (written in R).
 ![_config.yml]({{ site.baseurl }}/images/skills.png)

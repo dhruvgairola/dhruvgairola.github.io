@@ -26,6 +26,8 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * How it works : Takes msg and breaks into blocks that are 512 bits in size (last block has padding). Start by selecting 256 initial value from some table. Then you pass 256 bit and first 512 bit of the msg to a compression fn c that returns 256 bits. Keep repeating it till last block of msg is reached. Output is the hash.
   * If compression fn is collision free, the entire function is collision free.
 
+![_config.yml]({{ site.baseurl }}/images/signing.png)
+
 **Hash Pointer Data Structure**
 * Hash pointer data structure : Pointer to where data is stored and also has crypto hash of the data. The hash allows us the make sure that the data wasn't tampered.
 * Linked list built with hash pointer is a blockchain. It's tamper free because if someone changes the value in one node, this changes the node data (data = value + hash). Thus, the prev node's hash value is not going to match the new data's hash value (because collision free hash fn). So now attacker has the modify the prev hash value. But then he has changed the prev data now. So this keeps repeating till head of linked list.
@@ -39,9 +41,9 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * generateKeys(keysize) returns (sk, pk). Randomized algo.
   * sign(sk, msg) returns sig. Randomized algo.
   * verify(pk, msg, sig) returns isValid. Deterministic algo.
-  * Valid signatures verify and you cant' forge signatures.
+  * Valid signatures verify and you can't forge signatures.
 * We use hash of msg as input to the digital signature.
-* If you sign a hash pointer at the end of the blockchain, you're siging the entire contents of the blockchain.
+* If you sign a hash pointer at the end of the blockchain, you're signing the entire contents of the blockchain.
 * Bitcoin uses ECDSA for digital signing. Randomness is very impt to generating the keys and signing the keys.
 
 **Decentralized Identity Management**
@@ -49,11 +51,16 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Decentralized identity management : You can create a new public key (public identity) and secret key (your private control of the identity) if you want. You're anonymous when publishing a message because nobody knows your secret key and they only see your public key that you can keep changing if you want.
 * Bitcoin address is a public identity.
 
-**A simple Cryptocurrency**
-* Double spending : Spending the same coin twice.
-* Goofy coin : Goofy can create coins and transactions can occur in the system. Problem is double spending because blockchain is not published by Goofy.
-* Scrooge coin : Same as Goofy coin except blockchain is published. Solves double spending since everyone can see the history but Scrooge signs each block to validate transactions so we have to trust Scrooge. Problem is that its centralized (Scrooge).
-* Coins are immutable. So in a transaction, they are destroyed and recreated. You can subdivide or even combine coins.
+**A Simple Cryptocurrency**
+* Now lets use what we learn so far to show how a simple cryptocurrency could work.
+* Goofy coin : 
+  * Goofy can create coins and transactions can occur in the system. 
+  * Problem is double spending (spending the same coin twice) because blockchain is not published by Goofy.
+* Scrooge coin : 
+  * Same as Goofy coin except blockchain is published and append only. 
+  * Solves double spending since everyone can see the history. 
+  * Problem is that its centralized (Scrooge) i.e., Scrooge signs each block to validate transactions so we have to trust Scrooge.
+* Coins are immutable. So in a transaction, they are destroyed and recreated as change. You can subdivide or even combine coins.
 
 ### Week 2 : How Bitcoin achieves Decentralization.
 **Decentralization**
@@ -121,8 +128,8 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * Currently fixed at 25 bitcoins but halves every 4 years.
     * Block creator only gets those coins if that block is added to the longest chain.
     * Block reward is how bitcoin is created. No other way.
-    * Creation runs out in 2140. So that means total supply of bitcoin is limited to 21 million.
-    * Does that mean that after 2140, the nodes don't have any incentive to behave honestly?
+    * Creation runs out in year 2140. So that means total supply of bitcoin is limited to 21 million.
+    * Does that mean that after year 2140, the nodes don't have any incentive to behave honestly?
   * Incentive 2 : Transaction fee.
     * The creator gets the fee. As block rewards get lower, these fees will increase.
 * Remaining problems?
@@ -276,3 +283,89 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * The bad part is that old nodes might mine invalid blocks that will be rejected by the new nodes with the upgraded software.
   * e.g., Pay to script hash was implemented via a soft fork.
   * New soft-fork possibilities : new signature schemes, extra per-block metadata (e.g., put in "coinbase" parameter in a transaction).
+
+### Week 4 : How to Store and Use Bitcoins.
+** Simple Local Storage**
+* To spend Bitcoin :
+  * Info from blockchain.
+  * Owner's secret.
+  * How to store and manage secret keys?
+* Goals :
+  * Availability : Can spend anytime.
+  * Security.
+  * Convenience.
+* Simple approach : store secret key in a file.
+  * Availability : As available as your device.
+  * Security : As secure as your device.
+  * Very convenient.
+* Wallet software.
+  * Keeps track of coins. 
+  * Provides nice UI. 
+  * Have separate key for each coin, thereby maximizing privacy. Wallet can do this automatically.
+* How to convey address to receive Bitcoin?
+  * Base58 notation : Encode address in Base58.
+  * Use QR code.
+
+**Hot and Cold Storage**
+* Hot storage : Online. Its convenient buy risky.
+* Cold storage : Offline. Archival but safer.
+* Hot storage knows addresses of cold storage. Just sent it to that address. Cold storage does not need to be connected to the network at all!
+* Problem : Want to use new address for each coin sent to cold for privacy. But cold wallet is offline.
+  * Solution 1 : Cold generates a batch of addresses and sends it to hot side before going offline.
+    * Not so good because have to do this periodically.
+  * Solution 2 : Hierarchical wallets.
+    * Call generateKeyHier function. This creates generator for address. This is send to hot wallet. It also creates generator for keys. This is sent to hot wallet. Now cold wallet can go offline and hot wallet can generate new addresses for each coin by calling the address generator with a new integer input.
+* How to store info in cold wallet?
+  * Solution 1 : Info in device, device locked in a safe.
+  * Solution 2 : Brain wallet i.e., user remembers passphrase.
+  * Solution 3 : Paper wallet i.e., print info on paper.
+  * Solution 4 : Tamperproof device i.e., device that signs, but won't divulge keys.
+
+**How to Split and Share Keys**
+* If we store key in 1 location, there is a single point of failure.
+* Secret sharing : Take secret key and divide into N pieces (shares) st if we're given any K pieces, we can reconstruct secret key. If lesser than K, then we cannot learn the secret key.
+  * e.g., N=2, K=2 : Generate P large prime. We have to generate secret S=[0, P) and R=[0, P). Split : X1=(S+R) mod P. X2=(S+2R) mod P. Reconstruct : (2X1-X2) mod P=S.
+  * Proof presented on why secret sharing works.
+  * Good : Adversary needs to discover many pieces.
+  * Bad : The shares still need to be combined in order to reconstruct the secret. This is still a single point of failure.
+    * Solution is multisig. Use the shares separately to sign without needing to reassemble the secret key.
+
+**Online Wallet and Exchanges**
+* Online wallet : Website stores the keys.
+  * Convenient.
+  * Security worries (Bitgrail, Mt Gox).
+* Bank-like services : You deposit coins and can withdraw but Bank can invest their reserves as they see fit.
+* On an exchange : No transaction actually gets added to the Blockchain. They only promise that they will give you the coins you own.
+  * Convenient.
+  * Risky because the exchange only promises to give you the coins you own.
+  * Ponzi schemes possible (Bitconnect).
+  * Most exchanges fail. The ones that succeed are the ones that handle the most traffic (and hence the most attacks).
+* Tranditional banks are govt regulated so depositors have some level of protection.
+* Bitcoin exchange can prove that it has fractional reserve (called proof of reserve).
+  * Reserve : The exchange creates a transaction to itself. Also, the exchange signs a challenge string with the same private key used to validate the transaction. This proves that bank (or someone who the bank knows) has that amount of reserve.
+  * Deposits : Exchange also has to prove how many demand deposits you hold. Exchange uses Merkle tree (whose leaves contains user accounts). Each tree node has total of coins in the subtree. An account owner can use Merkle tree to prove that his or her account was included in the Merkle tree.
+  * Fractional reserve = Reserve / Deposits
+
+**Payment Services**
+* Customers want to pay with Bitcoins. Merchant wants to receive dollars and don't want to deal with exchange rate risk or tech risk or security risk (of storing Bitcoins).
+* A payment service can charge a fee and handle above scenario. It absorbs all of the risks involved in the process.
+
+**Transaction Fees**
+* No transaction fee (consensus fee) if :
+  * tx is less than 1000 bytes.
+  * All outputs are 0.001 or larger.
+  * Priority (age of coins + value of coins over tx size) is large enough.
+* If you don't pay the transaction fee, your transaction will take longer.
+* Some miners may not abide by these rules but most follow them so your transaction will eventually make it into the blockchain.
+
+**Currency Exchange Markets**
+* Supply of Bitcoins = Supply of Bitcoins in circulation + Demand deposit in exchange (i.e., exchange has more deposits than they have Bitcoins).
+* Demand for Bitcoins = BTC to mediate transactions (transaction mediation demand) + BTC as investment (if market thinks that demand will go up in the future).
+* Model for transaction demand :
+  * T = Transaction value mediated by BTC ($ per sec).
+  * D = Duration that BTC is needed by a transaction (sec). This is because a transaction removes the BTC from the supply temporarily.
+  * S = Supply of BTC.
+  * P = Price of BTC.
+  * S/D = number of coins will become available per sec (after the transaction is completed). This models the supply for BTC.
+  * T/P = number of coins needed per sec to serve all the transactions. This models the demand for BTC.
+  * When S/D=T/P, then price of BTC is in equilibrium i.e., P = TD/S. So if people hold BTC as investment, S goes down so P goes up. If people want to use BTC for transaction mediation, TD goes up and P goes up.
