@@ -14,7 +14,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Hiding : Given H(x), it's impossible to find x.
     * Achieve this by concat x with r (chosen from a min-entropy distribution i.e. highly spread out probability distribution) and hashing that i.e., given H(concat(r,x)), its impossible to find x. 
     * Analogy : Seal value in envelope (commit to a value) and put it out there. Later we can open the envelope.
-    * Commitment API
+    * Commitment API :
       * commit(v) returns (H(concat(k,v)), k). Used to seal a value v and returns tuple. k is a random 256 bit value.
       * verify(c,k,v) returns (H(concat(k,v)) == c). Used to verify that a value v was the same as the value in the commitment.
       * API has the hiding property and also the collision free property.
@@ -374,3 +374,141 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * S/D = number of coins will become available per sec (after the transaction is completed). This models the supply for BTC.
   * T/P = number of coins needed per sec to serve all the transactions. This models the demand for BTC.
   * When S/D=T/P, then price of BTC is in equilibrium i.e., P = TD/S. So if people hold BTC as investment, S goes down so P goes up. If people want to use BTC for transaction mediation, TD goes up and P goes up.
+
+### Week 5 : Bitcoin Mining.
+**Recap**
+* Miners :
+  * Store and boradcast the blockchain.
+  * Validate new transactions.
+  * Vote by hash power on consensus.
+
+**Task of Bitcoin Miners**
+* How to become a miner :
+  * Join the network, listen for new transactions and validate them.
+  * Listen for new block and maintain the blockchain. Validate new blocks and blockchain.
+  * Assemble a new block.
+  * Find the nonce to make your block valid (the really hard part).
+  * Hope other nodes accept your blocks.
+  * Profit.
+* Finding valid block :
+  * Assemble all your transactions from your pending transaction pool.
+  * Assemble header that points to previous block.
+  * Search for nonce s.t. hash of block header have the required number of zeroes. This is an iterative process.
+  * If you go through all nonces and can't find the right hash, then you have to increment an extra nonce value in the coinbase transaction (recall that coinbase is a create coin transaction that pays to yourself) and retry searching for the header nonce all over.
+
+![_config.yml]({{ site.baseurl }}/images/fvb.png)
+
+* 2 ^ 66 is number of tries needed to find the right nonce.
+* Mining difficulty set every 2 weeks based on how efficient the miners were in the past 2 weeks. Over time, the mining difficult keeps increasing.
+* Average time to find a block is about 10 mins.
+
+**Mining Hardware**
+* SHA-256 : 
+  * Designed by NSA and isn't broken cryptographically.
+  * 265 bits split to 8, 32 bits words.
+  * In each round, some of the words undergo bit mainpulation. 
+  * Some words are added together mod 32. The new word becomes the first word and the rest of the words shift over to the right.
+  * The previous steps are done 80 times.
+  * Nonce is run through SHA-256 to get the hash and check if hash is suitable.
+* GPU :
+  * Nowdays you need GPUs for mining because CPUs are way too slow.
+  * Parallel ALUs.
+  * Overclocking introduces errors into the SHA-256 process.
+    * But it might be ok to live with these errors.
+    * "Goodput" : Throughput of SHA-256 * Error Rate.
+    * Overclock by 50% with 30% hashing error rate is still ok.
+  * Need good motherboard to run multiple GPUs.
+  * GPUs draw a lot of power.
+  * GPU throughput of computing hashes is 10 times better than CPUs. But still, its really long.
+* FPGAs :
+  * Higher performance than GPUs.
+  * Excellent for bit manipulation.
+  * Better cooling.
+  * More expensive than GPUs.
+  * Needs more expertise.
+  * Still takes 25 years with 100 boards to find a block.
+* Bitcoin ASICs :
+  * Application specific integrated circuit.
+  * Need to pre-order and delivery takes time.
+  * Require significant expertise.
+  * Example is Terraminer IV : 2 THz of hashes, $6k cost, still takes 14 mths to mine a block.
+  * Most ASICs get obsolete within 6 mths.
+  * Half of the profits made within the first 6 mths.
+  * Hence, shipping delays are really costly.
+  * Probably cheaper to buy bitcoin instead of mining.
+* Professional mining centers :
+  * Need cheap power, good network and cool climate.
+
+**Energy consumption and Ecology**
+* Energy aspects of mining :
+  * Hardware manufacturing of ASICs.
+  * Electricity.
+  * Cooling.
+* Estimating energy usage (2014) :
+  * Top down approach : 25 BTC reward per block mined = $15k. This is $25/s being minted. How much electricity can $25/s buy? Assuming 10c per kWH, this is 900 MW.
+  * Bottom up approach :  Network hash rate : 150 million Hz. Estimate is 150 MW.
+  * Typical hydro dam : 1000 MW.
+  * Coal fired plant : 2000 MW.
+  * So we need 1 large power plant to power the Bitcoin network.
+* But even in traditional currency, a lot of energy is used.
+* Data furnaces : Use Bitcoin mines as a home heater. But gas heaters are 10x more efficient. And who owns the blocks that are produced? What happens when consumers turn off heaters?
+* Could we make a currency that doesn't require proof of work?
+
+**Mining Pools**
+* Economics of being a smaller miner :
+  * ASIC is $6k, and block is mined in about 14 mths. About $1k per mth revenue.
+  * A lot of risk because mining is a probabilistic process.
+* Mining pool :
+  * All participants pool their ASICs.
+  * Pool manager will give same block header to all participants.
+  * When block is found by a miner, that miner will send all BTC to pool manager.
+  * Pool manager distributes revenues based on how much work each miner performed. 
+  * Amount of work is determined by "mining shares". These are blocks that are "near valid" (those that start with a lot of zeroes but not 66 needed to make it a valid block). These shares are sent to the pool manager by each miner.
+* Mining pool variation :
+  * Pay per share : 
+    * The pool doesn't need to find a valid block. 
+    * If a share is found by a miner, that can be sent to the pool manager and miner can get paid a flat rate per share.
+    * This means that the pool manager bears a lot of risk because the block hasn't necessarily been created yet.
+    * So pool manager can charge a higher fee.
+    * What if miner doesn't send a valid block?
+  * Proportional model :
+    * Find the valid block first, and only then will the pool manager distribute the reward per share.
+    * This is lower risk for the pool manager.
+    * Miner has some motivation to publish the valid block.
+  * "Luke-jr" approach :
+    * Pool owner collects no fee.
+    * Miners don't get revenue until they have 1 BTC.
+    * Pool owner keeps the spread.
+* There are a lot of mining protocols out there.
+* 90% of miners mine in pools.
+* Pros/cons :
+  * Smaller miners can participate and mining is more predictable.
+  * But this leads to centralization. Also, number of fully validating nodes will go down.
+
+**Mining Incentives and Strategies**
+* Default mining strategies :
+  * Which transactions to include? Anything above min transaction fee.
+  * Which block to mine on top of? Longest chain.
+  * How to choose between colliding blocks? First come first serve.
+  * When to announce new blocks? Immediately once found.
+* Can we get more revenue if we don't use default strategies.
+* Forking attack :
+  * Let 0 < alpha < 1 be the amount of mining power you own.
+  * If you have a lot of mining power (alpha > 0.5), you can rewrite history. This means you can double spend. Or you can obtain some product from your victim and then not pay them.
+  * This attack can be detected.
+  * An attacker could even bribe miners so that he gets alpha > 0.5. This would be tragedy of commons where individual miners care about short term profit more than the stability of the currency.
+  * A solution to forking attacks are checkpointing.
+* Block witholding attack :
+  * Don't announce blocks immediately. Accumulate more blocks first.
+  * Why do this? As soon as another miner finds a valid block, you publish 2 blocks and every miner will accept your 2 blocks instead. So all other miners just wasted their time.
+  * What if you have only 1 block and someone else finds a block? Then you have to immediately publish and hope you win the race to be accepted into the blockchain.
+  * If you peer with every node, you will always win the race because you can announce your new block to everyone hopefully before the other miner does.
+  * This has not been observed in practice yet.
+* Punitive forking :
+  * Suppose you want to block all transactions from address X.
+  * But if alpha < 0.5, as soon as a chain exists that has a transaction involving address X, and if you refuse to accept that chain, then you're basically mining on an orphan fork and this is a waste of your time.
+  * Feather forking strategy : 
+    * You will act like before except that you will give up blacklisting X if you get enough confirmations. 
+    * For you to remove the last block with X's transaction, you will have to find 2 blocks.
+    * If you have alpha = 0.2, then you can publicly announce your blacklist and smaller miners might follow you (as they want to avoid finding blocks that might be overwritten by you).
+* As of 2014, transaction fees don't matter much as miner get 99% of revenue from mining rewards. But later on, miners will be making their revenue from the transaction fees. But how will they enforce higher transaction fees? Mining pools?
