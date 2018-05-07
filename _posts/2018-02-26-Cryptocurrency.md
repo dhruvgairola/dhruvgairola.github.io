@@ -390,7 +390,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Find the nonce to make your block valid (the really hard part).
   * Hope other nodes accept your blocks.
   * Profit.
-* Finding valid block :
+* Finding a valid block :
   * Assemble all your transactions from your pending transaction pool.
   * Assemble header that points to previous block.
   * Search for nonce s.t. hash of block header have the required number of zeroes. This is an iterative process.

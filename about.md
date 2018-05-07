@@ -9,7 +9,7 @@ I started my career building games as an Android app developer. Soon after, I tr
 
 **Education**
 
-I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf). Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham. 
+I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf) and lead to 2 publications (ACM JDIQ Journal and ACM CIKM Conference). Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham, graduating with First Class Honours and a department rank of 1/55.
 
 **Technical Interests**
 
