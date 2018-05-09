@@ -108,11 +108,12 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Node proposes next block in the chain.
   * Other nodes implicity accept/reject the block.
 * Consensus algo in bitcoin :
-  * New transactions are broadcast to all nodes.
-  * Each node collects new transactions into a block.
-  * A random node gets to broadcast its block.
-  * Other nodes accept the block only if all transactions in it are valid.
-  * Nodes express acceptance by including its hash in the next block they create.
+  1. New transactions are broadcast to all nodes.
+  2. Each node collects new transactions into a block.
+  3. A random node gets to broadcast its block.
+    * (Jumping ahead) Proof of work (i.e., finding the nonce that solves a hash puzzle of a block) determines the node that broadcasts its block. Solving this hash puzzle is completely random, but if you control more computing resources, your chances of solving the puzzle increases, which means your chances of proposing the new block increases (thereby obtaining the mining reward and the transaction fees).
+  4. Other nodes accept the block only if all transactions in it are valid.
+  5. Nodes express acceptance by including its hash in the next block they create.
 * How can attacker break this :
   * Steal bitcoins belonging to different user?
     * Nope, because attacker cannot forge a signature (due to cryptography).
@@ -144,8 +145,8 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Solution to all 3 : Proof of work.
   * Select a random node :
     * In proportion to amount of computing power called proof of work (used in bitcoin). 
-    * In proportion to amount of bitcion owned called proof of stake (not used in bitcoin).
-  * Hash puzzle.
+    * In proportion to amount of bitcoin owned called proof of stake (not used in bitcoin).
+  * Hash puzzle :
     * In order to create a block, find nonce st H(nonce \|\| prev_hash \|\| prev_transactions) is very small and falls within a target space (a really small space within the output space much smaller than 1%).
     * If hash function is secure, the only way to succeed solving the puzzle is to try enough nonces until you get lucky. Bernouili trial.
   * PoW properties :
