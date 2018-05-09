@@ -114,12 +114,12 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * (Jumping ahead) Proof of work (i.e., finding the nonce that solves a hash puzzle of a block) determines the node that broadcasts its block. Solving this hash puzzle is completely random, but if you control more computing resources, your chances of solving the puzzle increases, which means your chances of proposing the new block increases (thereby obtaining the mining reward and the transaction fees).
   4. Other nodes accept the block only if all transactions in it are valid.
   5. Nodes express acceptance by including its hash in the next block they create.
-* How can attacker break this :
-  * Steal bitcoins belonging to different user?
+* Finding holes in the consensus algo :
+  * Can an attacker steal bitcoins belonging to different user?
     * Nope, because attacker cannot forge a signature (due to cryptography).
-  * A denys service to B by not including B's transaction in any node A proposes :
+  * Can A deny service to B by not including B's transaction in any node A proposes?
     * B just waits for another block to be proposed by a honest node.
-  * Double spending attack : 
+  * Can a double spending attack be carried out?
     * Spender makes 2 transactions and publishes. Both are legitimate.
     * Due to network latency, some honest nodes will accept 1 transaction while others might accept another.
     * Honest nodes are following the policy of always extending the longest chain.
