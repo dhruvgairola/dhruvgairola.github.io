@@ -118,7 +118,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Can an attacker steal bitcoins belonging to different user?
     * Nope, because attacker cannot forge a signature (due to cryptography).
   * Can A deny service to B by not including B's transaction in any node A proposes?
-    * B just waits for another block to be proposed by a honest node.
+    * B just waits for another block to be proposed by an honest node.
   * Can a double spending attack be carried out?
     * Spender makes 2 transactions and publishes. Both are legitimate.
     * Due to network latency, some honest nodes will accept 1 transaction while others might accept another.
