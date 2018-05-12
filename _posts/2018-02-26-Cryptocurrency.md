@@ -8,20 +8,20 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 ### Week 1 : Intro to Crypto.
 **Crypto Hash Functions**
 * Bitcoin hash is 256 bits.
-* Cryptograpic hash fn are hash fns that have the following properties :
-  * Nobody can find a collision (even though they do exist).
+* Cryptograpic hash functions are hash functions that have the following properties :
+  1. Nobody can find a collision (even though they do exist).
     * Hash useful as a message digest. Compare 256 bit hashes to detect same object instead of actually comparing the objects.
-  * Hiding : Given H(x), it's impossible to find x.
+  2. Hiding : Given H(x), it's impossible to find x.
     * Achieve this by concat x with r (chosen from a min-entropy distribution i.e. highly spread out probability distribution) and hashing that i.e., given H(concat(r,x)), its impossible to find x. 
     * Analogy : Seal value in envelope (commit to a value) and put it out there. Later we can open the envelope.
     * Commitment API :
       * commit(v) returns (H(concat(k,v)), k). Used to seal a value v and returns tuple. k is a random 256 bit value.
       * verify(c,k,v) returns (H(concat(k,v)) == c). Used to verify that a value v was the same as the value in the commitment.
       * API has the hiding property and also the collision free property.
-  * Puzzle friendly : Given y (high min entropy) and k, it is impossible to find x where H(concat(k,x))=y.
+  3. Puzzle friendly : Given y (high min entropy) and k, it is impossible to find x where H(concat(k,x))=y.
     * Application is search puzzle. Given puzzle id and target set Y, find solution x where H(concat(id,x)) in Y.
     * This property implies that there is no solving strategy better than trying random values of x to solve the puzzle.
-    * Puzzle is used for bitcoin mining.
+    * Puzzle is used for Bitcoin mining.
 * Bitcoin uses SHA-256 as crypto hash fn.
   * How it works : Takes msg and breaks into blocks that are 512 bits in size (last block has padding). Start by selecting 256 initial value from some table. Then you pass 256 bit and first 512 bit of the msg to a compression fn c that returns 256 bits. Keep repeating it till last block of msg is reached. Output is the hash.
   * If compression fn is collision free, the entire function is collision free.
@@ -70,7 +70,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 ### Week 2 : How Bitcoin achieves Decentralization.
 **Decentralization**
 * Not all systems are all-or-nothing. Mix between centralization and decentralization.
-* Aspects of decentralization in bitcoin :
+* Aspects of decentralization in Bitcoin :
   * Peer-to-peer network.
   * Mining : But high centralization because of how much computation you need to mine.
   * Updates to software : Core devs trusted by community.
@@ -81,8 +81,8 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Defining distributed consensus :
   * Protocol terminates and all correct nodes decide on the same value.
   * The value must have been proposed by some correct node.
-  * e.g., A wants to pay B so she broadcasts the transaction to all bitcoin nodes. Data in transaction : Signature of A, public key of B and hash (receipt).
-* How consensus could work in bitcoin : 
+  * e.g., A wants to pay B so she broadcasts the transaction to all Bitcoin nodes. Data in transaction : Signature of A, public key of B and hash (receipt).
+* How consensus could work in Bitcoin : 
   * All nodes have a sequence of blocks of transactions they've reached consensus on.
   * Each node has a set of outstanding transactions it's heard about.
   * Disadv : Nodes may crash, nodes may be malicious, not all pairs of nodes connected, faults in network, latency, no notion of global time.
@@ -90,8 +90,8 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Byzantine generals.
   * Fischer-Lynch-Paterson : consensus impossible with a single faulty node.
 * Protocols : 
-  * Paxos : Under certain conditions, the protocol can be stuck. But this model doesn't carry over to bitcoin as it was developed for distributed DBs.
-* How bitcoin is different :
+  * Paxos : Under certain conditions, the protocol can be stuck. But this model doesn't carry over to Bitcoin as it was developed for distributed DBs.
+* How Bitcoin is different :
   * Introduces incentives.
   * Embraces randomness. Consensus only has to be reached over long time scales.
 
@@ -99,7 +99,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Traditionally need identites for security and some protocols also rely on node ids.
 * Why no identities?
   * No central authority to give identities to node : Sybil attack (same attacker mimcks many people but really, its just one attacker).
-  * Pseudonymity is a goal of bitcoin.
+  * Pseudonymity is a goal of Bitcoin.
 * Weaker assumptions :
   * Can pick a random node in the system. Give token to nodes and later call on that node, like a raffle/lottery.
   * Sybil nodes together get 1 token.
@@ -107,7 +107,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Select random node.
   * Node proposes next block in the chain.
   * Other nodes implicity accept/reject the block.
-* Consensus algo in bitcoin :
+* Consensus algo in Bitcoin :
   1. New transactions are broadcast to all nodes.
   2. Each node collects new transactions into a block.
   3. A random node gets to broadcast its block.
@@ -115,7 +115,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   4. Other nodes accept the block only if all transactions in it are valid.
   5. Nodes express acceptance by including its hash in the next block they create.
 * Finding holes in the consensus algo :
-  * Can an attacker steal bitcoins belonging to different user?
+  * Can an attacker steal Bitcoins belonging to different user?
     * Nope, because attacker cannot forge a signature (due to cryptography).
   * Can A deny service to B by not including B's transaction in any node A proposes?
     * B just waits for another block to be proposed by an honest node.
@@ -131,10 +131,10 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Can we give incentives for nodes to behave honestly?
   * Incentive 1 : Block reward.
     * Creator of the block can add coin creation transaction to the block and choose a recipient (itself).
-    * Currently fixed at 25 bitcoins but halves every 4 years.
+    * Currently fixed at 25 Bitcoins but halves every 4 years.
     * Block creator only gets those coins if that block is added to the longest chain.
-    * Block reward is how bitcoin is created. No other way.
-    * Creation runs out in year 2140. So that means total supply of bitcoin is limited to 21 million.
+    * Block reward is how Bitcoin is created. No other way.
+    * Creation runs out in year 2140. So that means total supply of Bitcoin is limited to 21 million.
     * Does that mean that after year 2140, the nodes don't have any incentive to behave honestly?
   * Incentive 2 : Transaction fee.
     * The creator gets the fee. As block rewards get lower, these fees will increase.
@@ -144,8 +144,8 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * How to prevent Sybil attack?
 * Solution to all 3 : Proof of work.
   * Select a random node :
-    * In proportion to amount of computing power called proof of work (used in bitcoin). 
-    * In proportion to amount of bitcoin owned called proof of stake (not used in bitcoin).
+    * In proportion to amount of computing power called proof of work (used in Bitcoin). 
+    * In proportion to amount of Bitcoin owned called proof of stake (not used in Bitcoin).
   * Hash puzzle :
     * In order to create a block, find nonce st H(nonce \|\| prev_hash \|\| prev_transactions) is very small and falls within a target space (a really small space within the output space much smaller than 1%).
     * If hash function is secure, the only way to succeed solving the puzzle is to try enough nonces until you get lucky. Bernouili trial.
@@ -153,6 +153,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * Property 1 : Difficult to compute. 
       * Target output space is 1/10^20 of output space. 
       * Only miners will compete to create blocks.
+      * Ensures no DDOS attack by attackers who want to create multiple fradulent blocks because its too expensive to create blocks. Prevents free-for-all.
     * Property 2 : Size of target space is recalculated every 2 weeks. 
       * Avg time between 2 successive blocks produced globally is 10 mins.
       * This means if more hardware is added, the target space will be made smaller. 
@@ -166,22 +167,22 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 
 **Brief Recap**
 * Mining economics : If mining reward is greater than hardware and electricity cost, then miner can make a profit.
-  * But reward is in bitcoin and the costs are in fiat.
+  * But reward is in Bitcoin and the costs are in fiat.
   * Reward depends on global hash rate.
-* Consensus types in bitcoin :
-  * Exchange rate of bitcoin to fiat.
-  * Other nodes agree that I own a certain amount of bitcoin.
+* Consensus types in Bitcoin :
+  * Exchange rate of Bitcoin to fiat.
+  * Other nodes agree that I own a certain amount of Bitcoin.
   * Rules of the system.
-* How to ensure security of blockchain? Pre-requisite is to have honest ecosystem. How to ensure honesty? Pre-requisite is if exchange rate of bitcoin is high (because of mining reward). How to ensures high and stable value of bitcoin? This can only happen if blockchain is secure. All three are linked.
+* How to ensure security of blockchain? Pre-requisite is to have honest ecosystem. How to ensure honesty? Pre-requisite is if exchange rate of Bitcoin is high (because of mining reward). How to ensures high and stable value of Bitcoin? This can only happen if blockchain is secure. All three are linked.
 * What happens if attacker has >50% of nodes (subvert consensus).
   * Can attacker steal coins?
     * Create a new longer branch with invalid transactions. But recipient will reject the longest branch because its not a valid branch since the signatures of the invalid transactions don't check out. So attacker can't really steal coins by subverting consensus.
   * Can attacker suppress some transactions?
     * Refuse to create new blocks that contain those transactions. So blockchain can be subverted. But those transactions will still reach the rest of the peer-to-peer network. So the attack can be detected.
   * Can attacker change the block reward?
-    * These rules of the system cannot be changed because attacker cannot control the bitcoin protocol that the rest of the nodes are running.
-  * Can attacker destroy confidence of bitcoin?
-    * Blockchain is no longer decentralized so people won't trust bitcoin anymore.
+    * These rules of the system cannot be changed because attacker cannot control the Bitcoin protocol that the rest of the nodes are running.
+  * Can attacker destroy confidence of Bitcoin?
+    * Blockchain is no longer decentralized so people won't trust Bitcoin anymore.
 * As a block gets deeper in the chain, it gets more difficult to fork the chain from that earlier point. This is because to create a longer chain, you now need to add a lot more blocks and adding blocks requires PoW.
 * What else can we do with consensus?
 
@@ -190,7 +191,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Consider an account based ledger :
   * Have to keep track of balance in each participants account.
   * Hard to determine if transaction is valid because you have to look backwards till the beginning of time to check all transactions involving the particular participant who is sending the coins.
-  * This is why bitcoin isn't based on an account based ledger. Instead, based on transaction ledger.
+  * This is why Bitcoin isn't based on an account based ledger. Instead, based on transaction ledger.
 * Transaction based ledger :
   * Given an input, the output value must total the input value. e.g., (Assume 1 transaction in 1 block) In transaction number x1, A has 25 coins. In transaction x1+1, A wants to send B 10 coins. So the input is x1[A], which is 25 coins, and output is that A sends 10 coins to B and resends herself 15 coins (change address), which totals to 25 coins. In transaction x1+2, B wants to send 4 coins to C. So the input is x1+1[B], which is 10 coins, and output is that B sends 4 coins to C and resends 6 coins to himself (change address). which totals 10 coins.
   * Validity is easy now because we only do a finite backward scan.
@@ -206,20 +207,20 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * No loops.
   * Not turing complete. By design because these scripts are to be run by miners.
   * Output is either error or no error. If error, transaction not accepted into the block.
-* 99% of bitcoin scripts are exactly the same : simple signature check (also called pay to public key script).
+* 99% of Bitcoin scripts are exactly the same : simple signature check (also called pay to public key script).
 * Nodes have a whitelist of scripts that can be run.
 * Proof-of-burn script :
   * Write abitrary data into the blockchain by destroying a bit of your currency.
-  * Way to destroy bitcoin and gain an altcoin. 
+  * Way to destroy Bitcoin and gain an altcoin. 
 * Pay-to-script hash :
-  * Retailer specifies a script to send bitcoins to instead of an address.
+  * Retailer specifies a script to send Bitcoins to instead of an address.
 
 **Applications of Bitcoin Scripts**
 * Escrow transactions : A wants to buy from B but B wants the money first while A wants the goods first.
   * Solution is to use MULTISIG script so that money is released if 2 of 3 people sign the transaction. Involve another person J (judge). In normal exchange of money for goods, A and B can sign the transaction and everything is great. In dispute, J will have to decide whom to support. How do we trust J though?
 * Green addresses : A wants to pay B but B is offline and cannot see the blockchain at all.
   * Real world solution is that A pays a bank and bank stores the money in green addresses. Later, the bank sends the money to B.
-  * Mt Gox did this so people don't trust this so much anymore in the bitcoin world.
+  * Mt Gox did this so people don't trust this so much anymore in the Bitcoin world.
 * Efficient micro payments : A wants to make a lot of small payments to B for using B's service but  does not want to pay a transaction fee for each payment. Can we combine all micro payments to make 1 large payment?
   * Solution is to use MULTISIG. A sends B 1 coin at time t0. But B never signs it, so its not yet published as a transaction. By time t1>t0, A would have sent B 10 coins and decides to stop using B's service. B now signs the last transaction and it is published for acceptance into a block.
   * What happens if B never signs the last transaction? Then the coin is just sitting in escrow forever. Solution is to use lock time. Before the micropayment protocol, both A and B have to sign a transaction that refunds all of A's money back if the micropayments have not been signed by B by the lock time.
@@ -436,7 +437,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Most ASICs get obsolete within 6 mths.
   * Half of the profits made within the first 6 mths.
   * Hence, shipping delays are really costly.
-  * Probably cheaper to buy bitcoin instead of mining.
+  * Probably cheaper to buy Bitcoin instead of mining.
 * Professional mining centers :
   * Need cheap power, good network and cool climate.
 
@@ -512,4 +513,4 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * You will act like before except that you will give up blacklisting X if you get enough confirmations. 
     * For you to remove the last block with X's transaction, you will have to find 2 blocks.
     * If you have alpha = 0.2, then you can publicly announce your blacklist and smaller miners might follow you (as they want to avoid finding blocks that might be overwritten by you).
-* As of 2014, transaction fees don't matter much as miner get 99% of revenue from mining rewards. But later on, miners will be making their revenue from the transaction fees. But how will they enforce higher transaction fees? Mining pools?
+* As of 2014, transaction fees don't matter much as miners get 99% of revenue from mining rewards. But later on, miners will be making their revenue from the transaction fees. But how will they enforce higher transaction fees? Mining pools?
