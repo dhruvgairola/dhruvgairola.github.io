@@ -514,3 +514,150 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * For you to remove the last block with X's transaction, you will have to find 2 blocks.
     * If you have alpha = 0.2, then you can publicly announce your blacklist and smaller miners might follow you (as they want to avoid finding blocks that might be overwritten by you).
 * As of 2014, transaction fees don't matter much as miners get 99% of revenue from mining rewards. But later on, miners will be making their revenue from the transaction fees. But how will they enforce higher transaction fees? Mining pools?
+
+### Week 6 : Bitcoin and Anonymity.
+
+**Anonymity Basics**
+* Bitcoin addresses are public key hashes and not your real identity. This is called pseudonymity and Bitcoin is only pseudonymous.
+* Anonymity = Pseudonymity + Unlinkability (as user interacts with system repeatedly, these interactions cannot be linked to each other).
+* Reddit has pseudonymity via usernames while 4chan has anonymity.
+* Why unlinkability needed?
+  * Many Bitcoin services need your real identity.
+  * Linked profiles can be deanonymized due to side channels e.g., your transaction times are correlated with when you tweet online.
+* Defining unlinkability in Bitcoin :
+  * Hard to link different addresses of same user.
+  * Hard to link different transactions of same user.
+  * Hard to link sender of payment to its recipient e.g., the payment reaches the recipient by some circuituous and indirect means.
+* Quantifying anonymity :
+  * Complete unlinkability is hard (for addresses and transactions).
+  * Anonymity set : The crowd that one can blend into e.g., 1000s of transactions that look just like mine.
+     * To calculate set, we need to define adversary model and reason carefully about what adversary knows, and doesn't know.
+* Without privacy in Bitcoin, your transaction history is permanently exposed.
+* But what about money laundering? This is a legitimate worry.
+* Similar dilemma : Tor network, which is an anonymous communication network.
+* People have been trying to make anonymous currencies from a long time e.g., Anonymous e-cash.
+  * In anonymous e-cash, we have a bank that maintains user accounts and the amount of money they own. Users can transfer money to each other and the bank will not be able to link them at all! This is done by a neat cryptographic trick called blind signatures where the signer creates a signature that he/she does not know.
+  * In this system, user A can withdraw money and bank signs and returns a signature to user A that bank doesn't know. User A can send the signature (token) to user B and user B can deposit with bank. Bank will then check a double spend table and if token is not present, then the token can be deposited to B's account. However, bank doesn't know who sent B the token.
+  * So you can trust the bank with keeping your money but not with anonymity.
+  * Developed by David Chaum.
+* Anonymity and decentralization are in conflict with each other.
+  * Interative protocols for anonymity are hard to decentralize e.g., blind signatures require the bank as the third part.
+  * Decentralization usually requires public traceability (like blockchain) in order to prevent things like double spend but this runs contrary to anonymity.
+
+**How to de-anonymize Bitcoin**
+* Application layer de-anonymization :
+  * Shared spending is evidence of joint control. e.g., Alice uses her wallet software to combine 5 BTC and 3 BTC in 1 transaction and then buy a teapot that is worth 8 BTC. This tells attacker that both input addresses are in control of some user.
+  * Addresses can also be linked transitively. e.g., Everytime Alice has a cluster of addresses (shared inputs) that have been linked, and she creates a new transaction that combines one of those addresses with a new addresses, this new address can be added to the cluster.
+  * Change addresses can also be detected with heuristics (change addresses are addresses where the change is sent ater you buy a product that is lesser than the input).
+  * Miekeljohn et Al. published a paper where they labelled clusters for major service providers (like Mt Gox and Satoshi dice) using a Bitcoin transaction graph.
+  * If Miekeljohn et Al. notice that your cluster is within a labelled cluster (in the transaction graph), they can subpoena the service provider and get your real identity.
+* Network layer de-anonymization : 
+  * The first node to inform you of a transaction is probably the source of it.
+  * There is a good system, called Tor, to provide network layer anonymization. But Tor is optimized for low latency (web browsing) so it compromises anonymity sometimes. 
+  * Since Bitcoin has high latency, perhaps we can develop a more fine-tuned anonymity network that doesn't have Tor's shortcomings. 
+  * We can build a mixnet solution to provide anonymity in the Bitcoin network. But Tor is pretty widely used and analysed so its best to just use Tor for network anonymity.
+
+**Mixing**
+* This section discusses solutions to inhibit transaction graph analysis.
+* To protect anonymity, use an intermediary. 
+  * Online wallets.
+    * Reputable but regulated.
+    * Require identity so you have no anonymity wrt wallet service.
+  * Dedicated mixing services.
+    * Promise to delete all records and don't require your identity.
+    * How does it work? Mixer asks you for a recipient address and then sends you an address to send the coins to so that the coins eventually get routed to the recipient address.
+* Principles of mixes :
+  * Use a series of mixes.
+  * All mix transactions must have the same value (chunk value).
+  * Client side must be automated.
+  * Mixing fee : Mixes should randomly swallow an entire chunk but most of the time return the chunk.
+* Current mixes don't follow all the above principles.
+* How to trust mixes?
+  * Stay in business and build up reputation.
+  * Users can test for themselves. If chunk size is very small then users can test the mix themselves.
+  * Cryptographic "warranties". Mix provides some warranty to guarantee safe movement of funds otherwise users can publicize this warranty and others won't use the mix.
+
+**Decentralized Mixing**
+* Why decentralized mixing?
+  * No bootstrapping problem. Find community of peers who all want to do mixing.
+  * Theft is impossible. Enforced by technical meeans.
+  * Possibly better anonymity.
+  * More philosophically aligned with Bitcoin.
+* Decentralized mixing : Coinjoin.
+  1. Find peers who want to mix.
+  2. Exchange input and output addresses.
+  3. One of the peers constructs the transaction.
+  4. Send it around and collect signature from each peer. Each peer checks if its output is present.
+  5. Broadcast the transaction.
+* Problems with Coinjoin :
+  * How to find peers?
+    * Solution : Use an untrusted server to find peers.
+  * Peers know your input-output mapping. 
+    * We have no idea who the peers are. Could be a single attacker with Sybil nodes.
+    * Strawman solution : Peers exchange input addresses, then disconnect and reconnect over Tor and finally exchange output addresses.
+    * Better solution : Decryption mixnets.
+  * Denial of service. 
+    * One of the nodes never signs the transaction. 
+    * One of the nodes spends its transaction outside of the coinjoin so that the joined transaction will look like a double spend and be rejected.
+    * Solutions : 
+      * Proof of work.
+      * Proof of burn aka Fidelity bonds in Bitcoin. You burn some cash in order to participate.
+      * Server kicks out malicious participants.
+      * Cryptographic "blame" protocol.
+* High level flows could be identifying. e.g., A receives 43.12325 BTC per week as income and regularly saves 5% of that to retirement account. These are uniquely specific values and there is also a timing pattern.
+  * Solution : Merge avoidance. Instead of merging inputs for payments, why not have a protocol so that the receiver can provide multiple output addresses? This way, sender can make many transactions to send from different input addresses to different output addresses.
+
+**Zerocoin and Zerocash**
+* Built into the Bitcoin protocol to solve anonymity problems but they're not backward compatible.
+* Zerocoin developed at Johns Hopkins. Zerocash is an improved version of Zerocoin.
+* Zerocoin : Protocol level mixing. Cryptographic guarantee of mixing. You don't need to rely on anybody.
+* Basecoin : Bitcoin-like altcoin. They can be converted into Zerocoin and back. This breaks link between original Basecoin and the new Basecoin.
+* Zerocoins :
+  * Zerocoin is a cryptographic proof that you owned a Basecoin and made it unspendeable.
+  * Miners can verify proofs.
+  * Gives you right to redeem new Basecoin.
+* Challenges :
+  * How to construct proofs? Zero knowledge proofs (a way to prove statements without revealing any other info). 
+  * How to ensure that each proof can only be spent once?
+* Minting a Zerocoin :
+  * Anyone can create Zerocoin using "commitment".
+  * "Commitment" : Create a serial number S and a random private number r. Then compute H(S,r), which is the "commitment".
+  * Next, you put the "commitment" into the blockchain, and you have gained 1 Zerocoin!
+  * Putting the "commitment" into the blockchain is done via a mint transaction. To create a mint transaction, you have to put 1 Basecoin as input, sending it to the "commitment" (not to a recipient public address).
+* Spending a Zerocoin : 
+  * You have to reveal the serial number S. Miners will check if S has been seen before.
+  * Next, you will create a zero knowledge proof. "I know a number r st H(S,r) is a Zerocoin in the blockchain." This doesn't reveal the random number r. So miners now know that you own a Zerocoin.
+  * Now you have the right to redeem a Basecoin that you had spent earlier to create the Zerocoin.
+  * Pick any arbitrary Zerocoin in the blockchain and use it as input to a new transaction, out of which comes a new Basecoin.
+  * You have anonymity because you didn't reveal random number r, even if you revealed S. Beacuse nobody knows which "commitment" i.e., Zerocoin, i.e., H(S,r) is actually yours.
+* Zero knowledge proofs are quite efficient but less efficient than Bitcoin transactions.
+* Zerocash : 
+  * All transactions are Zerocoin. No need Basecoins. 
+  * Since all transactions use Zerocoins i.e, H(S,r), transaction amounts are untraceable. 
+  * Ledger only records the existance of these transactions, not the amounts.
+  * Side channel attacks that can be carried out on Zercoin are no longer true for Zerocash.
+  * The catch :
+    * Setup of the system is different.
+    * Need S and r to generate the Zercoins and these are very large in size.
+    * These secret inputs must be securely destroyed.
+
+![_config.yml]({{ site.baseurl }}/images/btc_anon.png)
+
+**Tor and the Silk Road**
+* Anonymity in communication network refers to unlinkability between the sender and receiver.
+* Tor :
+  * Route messages between sender and receiver. If at least 1 routing node is honest, then the communication is safe-ish (Safe-ish because it might still be possible to determine that A and B are communicating if the attacker controls incoming and outgoing requests into and out of the network by using timestamps of the network activity).
+  * How to hide routing information to nodes? Layered encryption, resembling an onion.
+    * Each router has a public key.
+    * If A wants to send message, she has to pick a path of routers.
+    * Then A can execute a protocol to each router's public key and obtain symmetric key for each router.
+    * Then if A wants to send message to B, she encrypts the message using each symmetric key from each router (according to the path she picked).
+    * Then A sends the encrypted message to the first router in the path.
+    * The router then "peels" the first layer of encryption from the message and gets the IP of the next router and an encryption message.
+    * This keeps happening until the last router is reached, where B's IP is revealed with the actual message. The problem here is that B will eventually receive the unencrypted message from the last router node (can be solved with HTTPS).
+    * So anonymity is achieved because each of the router nodes' only know the previous nodes' IP and the next nodes' IP, breaking the link between A and B.
+* Silk road : What if the server wants to hide its address?
+  1. Server connects to a rendezvous point (a Tor node) through Tor.
+  2. It publishes the mapping between its IP and the rendezvous point via Tor's directory service (known as onion addresses, not DNS).
+  3. Client connects to rendezvous point using the Tor browser by inputting the onion addresses.
+* Anonymity is morally ambiguous but also important to protect.
