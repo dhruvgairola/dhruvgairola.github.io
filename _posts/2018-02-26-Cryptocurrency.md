@@ -661,3 +661,102 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   2. It publishes the mapping between its IP and the rendezvous point via Tor's directory service (known as onion addresses, not DNS).
   3. Client connects to rendezvous point using the Tor browser by inputting the onion addresses.
 * Anonymity is morally ambiguous but also important to protect.
+
+### Week 7 : Community, Politics, and Regulation.
+**Consensus in Bitcoin**
+* Consensus about rules :
+  * What makes a transaction valid.
+  * What makes a block valid.
+  * How P2P nodes should behave.
+  * Protocols and formats.
+* Consensus about history : Agree on contents of the blockchain.
+* Consensus on value : Agree that coins are valuable.
+
+**Bitcoin Core Software**
+* Most widely used software.
+* Defines the de-facto rules in Bitcoin.
+* Bitcoin Improvement Proposal : proposal for improvements to Bitcoin includes tech specs and rationale.
+* If users don't like a new rule, they can fork the rules. There will be a fork in the blockchain if there is a (hard) fork in the rules.
+* If fork was meant as altcoin, then both branches coexist peacefully.
+* If fork was a disagreement over the rules, then the branches will fight for market share (i.e., want more merchants to accept it and people to buy it).
+
+**Stakeholers: Who's in Charge?**
+* In a negotiation about rule setting, who controls the outcome?
+* Do Bitcoin core devs have the power? They control the rules.
+* Do miners have the power? They write to the blockchain.
+* Do investors have the power? In case of hard fork, they control which fork to extend.
+* Do merchants and customers have the power? They generate the primary demand for Bitcoin. Investors are just guessing where the merchants and customers will go in the future.
+* Do payment services have the power? They handle all the transactions for the merchants and customers.
+* Bitcoin foundation : Pays the devs and talks to govt as the voice of Bitcoin.
+  * Some people don't really like that people in suits are representing Bitcoin to the govt.
+  * Who put these people in charge?
+* All stakeholders are in charge.
+
+**Roots of Bitcoin**
+* Libertarianism : Govt should not interfere.
+* Cypherpunk movement : Use crypto to protect individual interests without govt interference.
+* Satoshi Nakamoto : Nobody knows who this person(s) is.
+* I noticed that they didn't mention the 2008 financial crisis.
+
+**Governments Notice Bitcoin**
+* Untraceable digital cash (if it exists) defeats capital controls. Govt can't control the flow of the currency inside and outside the country.
+* Untraceable digital cash also enables crimes like money laundering, kidnapping, extortion and sale of illegal items.
+* Govts try to disconnect BTC from their local fiat currency.
+* Lessons from the fall of Silk Road :
+  * Hard to keep real and virtual world apart.
+  * Hard to stay anonymous for a long time.
+  * Feds can "follow the money" i.e., Feds were watching specific addresses that were held by Ross Ulbricht and any attempt to convert BTC to fiat would've been a traceable event.
+
+**Anti Money-Laundering**
+* Goal of AML : Stop large amounts of money from (1) crossing borders or (2) moving between underground to legitimate economy without detection.
+* Know your customer (KYC) rules : 
+  * Require businesses to identify and authenticate who their clients are and tie their activities to people in the real world.
+  * Evaluate risk of client.
+  * Watch for anomalous behaviour.
+* Mandatory reporting in the U.S. :
+  * Any transaction over $10k has to be reported.
+  * Structuring transactions (i.e., avoiding $10k transactions by breaking it into multiple transactions) must also be reported.
+* Govts take AML rules very seriously. Bitcoin businesses have been shut down due to this. Business people have been arrested.
+
+**Regulation**
+* Argument for regulation : Markets don't give you the result that you like and regulations can help here.
+* Two types of market failures are discussed (1) Lemons market and (2) Price fixing.
+* Lemons market :
+  * For example, if you have a market with 2 types of used cars, 1 is low quality (LQ) and 1 is high quality (HQ) but costs a bit more. Assume the cars look similar. 
+  * Consumers can't tell the difference between these two types of used cars. So consumer's won't pay extra for the HQ used car while sellers won't produce HQ cars. 
+  * Now market is stuck in equilibrium where LQ cars are produced and consumers are not very happy. This is worse for buyers. Also worse for producers because they make less money selling LQ cars. 
+  * This is market failure called asymmetric information failure, called the lemons market (LQ cars being the lemons).
+* Fixing lemons market :
+  * Market based approach :
+    * Sellers reputation : 
+      * Consumers believe a seller who tells the truth about HQ and LQ products. 
+      * But it takes a while for producers to build the reputation. 
+      * Also, the seller may decide to become dishonest later.
+      * Doesn't work in businesses where there are one-off transactions.
+    * Warranties :
+      * Seller provides warranties for buyer if they buy a product.
+      * But the warranty is another type of product. e.g., Seller may not honor the warranty.
+  * Regulations :
+    * Require products to be labelled and penalize producers for lying.
+    * Minimum quality standards with enforcement.
+    * Required warranties with enforcement.
+* Price fixing :
+  * Sellers raise prices and agree not to compete with each other e.g., bread price fixing by Loblaws.
+  * These are illegals in most jurisdictions, part of "antitrust" or "competition" law.
+
+**New York's BitLicense Proposal**
+* As of July 2014, this was a proposal but as of August 2015, its law. So you need a BitLicense to operate in NY.
+* If you're a NY business, you need a BitLicense if you're :
+  * Receiving virtual currency.
+  * Storing virtual currency (wallet services, exchanges).
+  * Trading virtual currency as a business.
+  * Providing retail conversion services (exchanging fiat to virtual currency or between virtual currency).
+  * Issuing or controlling a virtual currency.
+* You can apply for the license by participating in KYC and paying an application fee.
+* Licensees must :
+  * File reports.
+  * Maintain financial reserve.
+  * Follow rules on : Custody of consumer assets, AML, recordkeeping, cybersecurity and disaster recovery.
+  * Designate a compliance officer and have written policies.
+  * Disclose risks to consumers.
+* As of May 2018, only 5 BitLicenses have been awarded.
