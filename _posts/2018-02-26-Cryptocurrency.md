@@ -760,3 +760,124 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Designate a compliance officer and have written policies.
   * Disclose risks to consumers.
 * As of May 2018, only 5 BitLicenses have been awarded.
+
+# Week 8 : Alternative Mining Puzzles
+
+**Essential Puzzle Requirements**
+* Puzzles are the core of Bitcoin :
+  * Incentives system steers participants.
+  * Puzzle is difficult to solve to attacks are costly. But honest miners are compensated.
+  * What other features could a puzzle have?
+* Puzzle requirements :
+  * Cheap to verify.
+  * Adjustable difficulty.
+  * Change of solving the puzzle should be proportional to hash power.
+  * Don't want a faster miner to always solve the puzzle first.
+
+**ASIC Resistant Puzzles**
+* Goal : To allow ordinary people to mine with their own equipment. Lower barrier to entry. To prevent large ASIC miners to dominate the mining game.
+* Memory hard puzzles : 
+  * Over the last 50 years, the performance of memory has been stable compared to processing power (that follows Moores law). 
+  * This means that the memory that I own probably has similar performance to the memory these ASIC providers own (unlike processing power).
+* Memory hard hash function : scrypt.
+  * Used in Litecoin.
+  * Used in password hashing.
+  * Algorithm :
+    1. A constant N is set by the devs.
+    2. Write random values in each memory cell.
+      * Start with initial value V := X.
+      * Some cell i should have value V_i := H^i(X) where H is some hash function like SHA2.
+    3. Read values in random order.
+      * Start with A = H^(N+1)(X).
+      * For N iterations,
+        * i := A mod N
+        * A := H(A xor V_i)
+      * Return A as hash value of scrypt.
+  * Why is scrypt memory hard?
+    * Lets assume that for the same N, you now have only half the memory where all the even memory indexes were deleted.
+    * In step 3 of the scrypt algoright, if i is an even number, you can only get V_i by computing H(V_(i-1)) because you're only storing odd values in memory.
+    * This means that you're doing an extra hash, and this basically is why scrypt is memory hard i.e., it scales with memory.
+  * Disadvantages :
+    * Requires N steps and N memory cells to verify the solution. This puts limit on the size of N because you want quick verification.
+    * scrypt ASICs available.
+    * Parameter N not set correctly.
+  * Advantages :
+    * If there's any useful research and advancement in password hashing, then this can be used to improve scrypt.
+* Memory hard puzzle : Cuckoo hash cycles.
+  * Doesn't require random hash memory to check puzzle solution (unlike scrypt), so its easy to verify.
+  * Algorithm :
+    * Start with random string X.
+    * Next we add E random edges to a graph (using some math) where there are N nodes in the graph.
+    * Is there a cycle of size K? If so, output X and the K edges.
+  * Why is this memory hard? Because finding cycles in graphs require a lot of memory.
+  * This puzzle is easy to check because you have the K edges and you only need to compute K hash functions.
+* X11 : 11 well known hash functions to be executed in sequence.
+* Moving target hash functions : Change the puzzle periodically.
+* Counter arguments :
+  * Just use SHA2 since its well understood.
+  * ASICs aren't changing much.
+  * Big ASICs are only margninally more performant than smaller ASICs.
+
+**Proof of Useful Work**
+* Bitcoin network consumes same power as a small power plant. And this computation is useless outside of the Bitcoin system.
+* Can we find useful problems instead of solving SHA2?
+* Candidates : Needle in haystack.
+  * Protein folding.
+  * Search for aliens i.e., find anomalous signal.
+  * Chosen problems must be hard but who chooses the problem? Requires a central administrator.
+  * The benefit should be a pure public good so that it doesn't benefit an individual attacker.
+* Primecoin :
+  * Puzzle based on finding large primes in a chain of primes, called a Cunnigham chain.
+  * Is Cunnigham chain useful? Maybe but a lot of the chains found in Primecoin are overkill.
+* There is wastage in buying Bitcoin hardware also because hardware is only useful for mining. What if we could design hardware so that it is useful, even if the software computations are useless.
+* Permacoin :
+  * Use storage for mining.
+  * With more mining equipment, miners buy more storage and so you get a distributed, replicated storage system for backing up data for example.
+  * Storage based puzzle :
+    * Start with file F.
+    * Build Merkle tree where each leaf is a segment of the file F.
+    * Each user has public key pk and randomly selects a subset of the file that they're responsible for storing.
+    * For each mining attempt :
+      * Miner selects a nonce and passes it to a hash function, getting h1.
+      * h1 is used to select k file segments from the subsets that they were assigned.
+      * Another hash function that uses k is used to get h2.
+      * Winner if h2 < TARGET.
+    * Attempts at finding a puzzle solution requires you to store random subset of blocks based on your public key.
+  * There is cost to being a miner in Bitcoin by storing UTXO database to validate transactions. We could use Permacoin puzzle to reward miners for storing the UTXO database.
+
+**Nonoutsourceable Puzzles**
+* Large mining pools are a threat. Consolation of power is against Bitcoins values. Also, large pool operators become targets for coercion and hacking.
+* Pools work because members prove that they're doing work to solve the puzzle via "shares". Members don't really trust each other.
+* Vigilante attack : Angry miner is part of a pool and bahaves as per normal. But if angry miner finds a solution, he can just discard it. The pool is harmed and vigilante loses a little.
+* Nonoutsourceable puzzles encourage vigilantes by funneling the rewards to the vigilate if the vigilante solves the puzzle. The vigilante has incentive now to harm the pool.
+* Approach :
+  * Finding a solution requires signing using private and public key pair, not just hashing.
+  * Private key can be used to spend the reward.
+* Example of nonoutsourceable puzzle : 
+  * Idea is that you need to be able to compute signature s1 using private key in order to find out if you have the puzzle solution.
+  * If you have puzzle solution, you compute signature s2 to choose which transactions are going to be included in the block.
+* Negatives to nonoutsourceable puzzles : 
+  * These puzzles discourage all mining pools including harmless decentralized mining pools.
+  * Miners might choose to go with hosted mining to do their mining for them, and this is worse than mining pools because the hosted mining pool operators are in control of the mining rigs.
+
+**Proof of stake "Vitual mining"**
+* Don't involve any computational work.
+* Mine by sending money to a special address.
+* Winners chosen at random by lottery.
+* Benefits : 
+  * Lower costs. No harm to environment.
+  * Stakeholder incentives
+  * No ASIC advantage.
+  * 51% attack harder.
+    * A wealthy attacker outside Bitcoin network can easily attack Bitcoin network.
+    * If mining were based on coins inside the network, attacker would have to buy up 51% of the coins in the network by acquiring via exchanges. This is more expensive.
+* Variations in virtual mining :
+  * Proof of stake : "Stake" of a coin grows over time as long as its unused.
+  * Proof of burn : mining with a coin destroys it.
+  * Proof of deposit : can reclaim coin after some time (paying with opportunity cost).
+  * Proof of activity : any coin can win by lottery.
+* Recap of puzzle design goals :
+  * Prevent ASIC mining.
+  * Prevent large pools.
+  * Usefulness of puzzle to society.
+  * Eliminate the need for mining hardware.
