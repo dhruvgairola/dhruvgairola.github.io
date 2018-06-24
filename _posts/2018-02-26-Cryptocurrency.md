@@ -881,3 +881,218 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Prevent large pools.
   * Usefulness of puzzle to society.
   * Eliminate the need for mining hardware.
+
+### Week 9 : Bitcoin as a Platform.
+**Bitcoin as an Append-Only Log**
+* What can we build on Bitcoin platform?
+  * Commitments.
+  * Token tracking.
+  * Multiparty lotteries.
+  * Public randomness.
+  * Prediction markets.
+* Application 1 : Secure timestamping.
+  * Goal : 
+    * Prove knowledge of x at time t. If desired, without revealing x at time t. Evidence should be permanent.
+    * Publishing H(x) is a commitment to x i.e., we knew x.
+    * Can't find x' so that H(x) = H(x').
+    * H(x) can't reveal anything about x.
+  * How to timestamp H(x)? 
+    * Send 1 satoshi to H(x). This is easy but this creates UTXO that has to be tracked.
+    * Commitcoin : Find public key that is the same as H(x) for the first n bits. So you don't have UTXO bloat but its expensive to find the public key.
+    * Provably unspendable commitments (works similar to proof of burn). This is cheap and doesn't have UTXO bloat but this is not a standard transaction so it won't be relayed so easily.
+  * Applications : 
+    * Proof of knowledge e.g., Patents.
+    * Proof of receipt.
+    * Hash based signature schemes.
+  * Writing arbitrary data into blockchain may not always be great e.g., H(porn). This is called blockchain poisoning.
+* Application 2 : Overlay currencies.
+  * Just write new data into the blockchain using underlying Bitcoin protocol.
+  * However, invalid transactions may now be included for this new currency. Need new way to prevent double spend.
+  * E.g., Mastercoin.
+    * API is much larger than the Bitcoin API. Can do a lot more. 
+    * However its more inefficient to use.
+
+**Bitcoin as Smart Property**
+* Every Bitcoin has a history that can be traced all the way back to the coinbase transaction. This is bad for anonymity. Every Bitcoin is unique, so Bitcoins are not fungible.
+* We can add authenticated metadata to currency. e.g., Yankee's can sign(Metadata, Serial Number of $1 bill), stamp the signature on the note and sell it as a ticket to watch a game (details of game is the metadata). But why do this?
+  * Currency can represent anything.
+  * Anti-counterfeiting properties are inherited from the currency.
+  * The currency's underlying value is maintained.
+  * The issuer of the metadata has to be trusted.
+  * Can we build this in Bitcoin?
+  * (This idea sounds like Cryptokitties, where the cat is the metadata)
+* Coloured coins :
+  * Colour is the metadata and you can add this to a Bitcoin.
+  * To verify if you own a coloured coin, you have to check the entire history (because it's metadata, and miners don't verify this).
+  * Implementation : Open assets protocol.
+    * Coins issued by passing through pay to hash address that will add the colour.
+    * Everytime you have transaction involving coloured coins, you have to insert special marker output. This is extra metadata to each tansaction. It specifies how the colour is divided between all the outputs in a transaction if the input is a coloured coin.
+  * Applications :
+    * Stock certificates.
+    * Tickets.
+    * Deeds to real-world property.
+    * Ownership of domain names.
+
+**Secure Multi-Party Lotteries in Bitcoin**
+* Betting on coin flip : Have to agree that coin flip was fair and that Alice will pay Bob if Bob wins.
+* How to build online lotteries without trust?
+* A lottery with hash commitments :
+  * A, B and C generate nonce x, y and z.
+  * They then publish H(x), H(y) and H(z).
+  * They then publish x, y and z.
+  * A hash function now uses x, y and z to determine a winner.
+  * Hash function guarantees 1/3 probability of a win.
+  * Problem : C does not reveal her random number z. Because C can see x and y when they're published and knows (by running the hash function) that she will lose if she publishes z. So she doesn't even publish z.
+  * Solution here is timed hash commitments. This forces people to reveal nonce once they've published their commitments. Basically how it works is that A signs a bond with B using multisig. If A doesn't reveal her commitment, she will lose the bond value.
+* A lottery with timed hash commitments :
+  * A, B and C generate nonce x, y and z.
+  * They then publish timed hash commitments H(x), H(y) and H(z).
+  * Now A, B and C have to reveal x, y and z otherwise they will lose their bond value.
+
+**Bitcoin As Randomness Source**
+* Public randomness protocol :
+  * Too many parties to use hashes?
+  * Need to convince the public of randomness?
+  * Real life examples include NBA Drafting, Vietnam conscription. Lot of controversies because perhaps the drafting and consciption are not truly random. And public may not believe it either.
+* Cryptographic beacons :
+  * Service to publish random data.
+  * Uniform randomness.
+  * Nobody can predict values in advance.
+  * All parties see the same values.
+  * Applications : lotteries, auditing, zero knowledge proofs.
+* Sources of randomness : 
+  * Dice, roulette wheels, coins : But hard to do this remotely and still not sure if we can trust those sources of public randomness.
+  * NIST beacon : Provides quantum mechanical randomness. But this assumes we trust NIST.
+  * Natural phenomenons : Sun spots, Weather, Cosmic background radiation. But need a trusted observer and its a pretty slow process to measure these phenomenons.
+  * Stock market randomness : Fairly slow, easy to manipulate, need trusted third party.
+  * Blockchain : Use miners random nonces as source of randomness. Take value of block header and run it through an extractor function. Every time a block is published, publish the output of extractor function as the random number.
+    * Attacker may choose to discard all mined blocks or pay others to discard a block.
+    * So this works if there's less money on the line than 25 BTC, which is the cost to discard a mined block. Otherwise its too cheap to manipulate if there's a ton of money on the line.
+    * Pros : Decentralized beacon, random value every 10 mins, can calculate price of mainpulation.
+    * Cons : Timing is imprecise, manipulation cost may be too low if we have millions of dollars on the line.
+    * Could we extend Bitcoin script to have special opcode to call the beacon? With this opcode, we could replace the entire lottery protocol so that we wouldn't need bonds, wouldn't need a multi-round protocol and there won't be any time delay for refunds.
+
+**Prediction Markets & Real-World Data Feeds**
+* Can we assert facts about the real world into Bitcoin? Then we could bet on results using smart contracts. Could have financial products like futures and options within Bitcoin.
+* Prediction market :
+  * Trade shares in a potential future event.
+  * Shares worth X if event happens, 0 if not.
+  * Price of asset / X = estimated probability.
+  * Examples : 2008 US presedential election, 2014 world cup.
+* Decentralized prediction market :
+  * Decentralized payment and enforcement.
+    * Solution 1 : Use Bitcoin + escrow transactions.
+    * Solution 2 : Use altcoin like Futurecoin.
+  * Decentralized arbitration.
+    * Solution 1 : Trusted arbiters. Anyone can define a market. But they could abscond with the money.
+    * Solution 2 : Users vote on who won in the market.
+    * Solution 3 : Miners vote.
+    * Sometimes reality can be complicated e.g., In superbowl XLVII, what colour gatorade will be dumped on the winning coach? Seattle Seahawks dumped both yellow and orange gatorade on the coach. Or something people didn't have shares in happened.
+  * Decentralized order book.
+    * There isn't an exact market price, there's a little spread.
+    * If centralized address book is dishonest, they may put their own orders first to get a better price, in the lower range of the spread. This is illegal, called front-running.
+    * With decentralized order book, you submit orders to miners and let them match any possible trade. The spread is the transaction fee so that front-running is not possible. But this could have higher fees.
+  * The conclusion is that its not possible to build a decentralized prediction market using Bitcoin. Need altcoins.
+
+### Week 10 : Altcoins and the Cryptocurrency Ecosystem
+**Short History of Altcoins**
+* Features of altcoins :
+  * Different security properties.
+  * Expanded scripting language.
+  * Contract/platform features.
+  * Different parameters.
+* Namecoin :
+  * Decentralized DNS.
+  * Send transactions to Namecoin network in order to maintain your domain name.
+  * Download browser extension in order to use the Namecoin domain names, where the top level domain is .bit.
+  * Names can be transferred/sold.
+  * First coin to feature merge mining.
+* Litecoin :
+  * Launched in 2011.
+  * As of 2014, #2 altcoin.
+  * Has memory hard mining puzzle.
+  * Intended to be GPU resistant.
+  * Blocks are mined faster at 2.5 mins.
+  * Very very similar to Bitcoin.
+* Peercoin :
+  * Launched in 2012.
+  * Uses hybrid mining approach.
+  * Uses proof of stake. Mine by using coins that you're already holding, and this accumulates.
+  * Uses proof of work for mining new coins. This only works for miniting new currency. These aren't included in determining the longest chain.
+  * Has checkpoints as safeguard against attacks. But admins have to do this, so we have to trust the admins who apply the checkpoints.
+* Dogecoin :
+  * Culture : Tipping, charity, sponshorship. Having fun with cryptocurrency.
+  * Has random block rewards. But there was a bug where miners knew the mining rewards beforehand. This feature was removed.
+  * Mining reward rate is cut in half every two months. For Bitcoin, this takes a few years.
+* Metrics for comparing altcoins :
+  * Market cap.
+  * Exchange volume.
+  * Total hashpower.
+  * Merchant support and usage.
+
+**Interaction Between Bitcoin and Altcoins**
+* Mining attacks : Even a smaller miner on a large network can demolish an altcoin. e.g., CoiledCoin by Eligius pool in 2012.
+* Merge mining :
+  * What if it were possible to mine both blocks on Bitcoin and on altcoin at the same time?
+  * Now normally, each mining attempt on Bitcoin uses H(prev | mrkl_root | nonce) while mining attempt on altcoin is H(alt_prev | alt_mrkl_root | nonce). So mining is exclusive.
+  * With merge mining, we can use H(prev | mrkl_root | nonce) as a mining attempt for both Bitcoin and altcoin.
+  * You can embed altcoin data in the scriptsig of the first transaction in the block (coinbase transaction). This data is not validated in the Bitcoin network anyway.
+  * Then, you compute H(prev | mrkl_root | nonce) and if its < Bitcoin target, then you get Bitcoin block. If its < altcoin target, you get an altcoin block. Or both.
+  * Merge mining makes it easy to recruit miners, but its cheaper to get attacked. Also miners may not fully validate the transactions for the altcoins.
+  * Many mining pools merge-mine several coins like ghash.io.
+* Atomic cross chain swaps :
+  * Problem : A wants to send 1 BTC to B. B wants to send 1 LTC to A in return. They want to swap but who goes first? We want an atomic transaction- either both transactions work or neither do.
+  * Step 1 : A generates key x, A and B sign Refund A.
+  * Step 2 : B deposits 1 LTC, A and B sign Refund B.
+  * Step 3 : A reveals x, both players can claim their coin.
+  * If A doesn't reveal x, B can claim his refund and A can claim her refund.
+  * Cons : Requires many different transactions. DDoS risk where strangers may waste your time by starting the protocol that ends up with everyone having to collect their refund everytime. 
+  * Third party centralized exchanges are used for exchanging coins instead.
+
+**Lifecycle of an Altcoin**
+* Easy part is developing the altcoin initially. Hard part is to generate community interest from miners and other stakeholders like dev community and generate liquidity.
+* Altcoin infrastructure :
+  * Tipbots, faucets. To attact new users to the community.
+  * Marketing.
+  * Exchanges.
+  * Building dev tools : wallets, block explorer, testnet.
+  * Steering organization like bitcoin.org.
+* Fundraising :
+  * Pre-mine : Founders mine the coins for themselves.
+  * Pre-sale : Founders sell their altcoins to get a stash of Bitcoin or fiat.
+  * Proof of burn : Destroy 1 BTC to earn 1 unit of altcoin. A lot of risk because you can lose all your BTC.
+  * Grandfathered in : If you own 1 BTC, you get 1 altcoin. No risk of losing BTC.
+  * Airdrop : Give altcoins to a group or community.
+* Auroracoin :
+  * Airdrop to citizens of Iceland.
+  * There was uncertainty in money supply.
+  * Hard to distribute the coin fairly and evenly.
+* Many altcoins are accused of pump and dump. Founders build up hype and then sell once the price rises and end the marketing campaign.
+* Arguments against altcoins :
+  * Divided mining power means weak security.
+  * Dilution of scarcity.
+  * Pump and dump schemes.
+* Arguments for altcoins :
+  * Competition leads to better systems.
+  * Bitcoin community is risk averse to new features so altcoins are useful testbeds.
+  * Hedging against uncertainty.
+  * Reset the allocation of wealth.
+
+**Bitcoin-Backed Altcoins, "Side Chains"**
+* BTC as reserve currency :
+  * Unilateral peg : Burn 1 BTC for altcoin.
+  * Bilateral peg : 1 BTC held in escrow for altcoin. When altcoin is destroyed, you can get BTC back.
+* Side chains :
+  * Extend Bitcoin scripting language to have rules in the altcoin to validate altcoins.
+  * Can only get BTC back after providing evidence that altcoin was deleted.
+  * Naively, every BTC node must store all the data for the altcoin.
+  * Idea : Only support SPV security.
+    * Simplified payment verification.
+    * SPV security involves only ensuring that Tx is in the longest blockchain, not the longest valid blockchain.
+    * BTC mobile clients do this. Since they're not fully validating nodes, they only need to check block headers to ensure transactions are in longest chain e.g., check past 10 node headers for some transaction Tx.
+  * Bilateral peg implementation : BTC script capable of doing SPV proofs about arbitrary altcoin.
+  * If altcoin has very fast block rate, SPV proofs might still be low. Can solve this problem by using probabilistic SPV proofs. The more samples of PoW that you check, the more accurate estimate of PoW in the entire blockchain. Can use skip lists in implementation.
+* Conclusion on side chains :
+  * Potential to have altcoins with lower risks because they're using BTC as reserves.
+  * Requires to BTC in order to support this.
+  * Altcoins could be merge mined.
