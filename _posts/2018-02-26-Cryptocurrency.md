@@ -1034,10 +1034,10 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * Mining attacks : Even a smaller miner on a large network can demolish an altcoin. e.g., CoiledCoin by Eligius pool in 2012.
 * Merge mining :
   * What if it were possible to mine both blocks on Bitcoin and on altcoin at the same time?
-  * Now normally, each mining attempt on Bitcoin uses H(prev | mrkl_root | nonce) while mining attempt on altcoin is H(alt_prev | alt_mrkl_root | nonce). So mining is exclusive.
-  * With merge mining, we can use H(prev | mrkl_root | nonce) as a mining attempt for both Bitcoin and altcoin.
+  * Now normally, each mining attempt on Bitcoin uses H(prev \|\| mrkl_root \|\| nonce) while mining attempt on altcoin is H(alt_prev \|\| alt_mrkl_root \|\| nonce). So mining is exclusive.
+  * With merge mining, we can use H(prev \|\| mrkl_root \|\| nonce) as a mining attempt for both Bitcoin and altcoin.
   * You can embed altcoin data in the scriptsig of the first transaction in the block (coinbase transaction). This data is not validated in the Bitcoin network anyway.
-  * Then, you compute H(prev | mrkl_root | nonce) and if its < Bitcoin target, then you get Bitcoin block. If its < altcoin target, you get an altcoin block. Or both.
+  * Then, you compute H(prev \|\| mrkl_root \|\| nonce) and if its < Bitcoin target, then you get Bitcoin block. If its < altcoin target, you get an altcoin block. Or both.
   * Merge mining makes it easy to recruit miners, but its cheaper to get attacked. Also miners may not fully validate the transactions for the altcoins.
   * Many mining pools merge-mine several coins like ghash.io.
 * Atomic cross chain swaps :
@@ -1062,6 +1062,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Pre-sale : Founders sell their altcoins to get a stash of Bitcoin or fiat.
   * Proof of burn : Destroy 1 BTC to earn 1 unit of altcoin. A lot of risk because you can lose all your BTC.
   * Grandfathered in : If you own 1 BTC, you get 1 altcoin. No risk of losing BTC.
+  * Using BTC as reserve : 1 BTC held in escrow. If altcoin dies, you can get the 1 BTC back from the escrow.
   * Airdrop : Give altcoins to a group or community.
 * Auroracoin :
   * Airdrop to citizens of Iceland.
@@ -1096,3 +1097,131 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Potential to have altcoins with lower risks because they're using BTC as reserves.
   * Requires to BTC in order to support this.
   * Altcoins could be merge mined.
+
+### Week 11 : The Future of Bitcoin?
+**The Blockchain as a Vehicle for Decentralization**
+* Smart property basics :
+  * Car is controlled by cryptographic public key.
+  * It is activated by receiving message (via bluetooth for example) of the corresponding private key.
+* Smart property using blockchain :
+  * Car is running a Bitcoin node and is listening to the blockchain. 
+  * Car dynamically updates its public key based on the blockchain.
+  * Whoever owns the corresponding private key owns the car.
+  * Lets say that there is a transaction in a new block from A to B, the car will update its public key to the public key of B.
+  * Now B's private key can activate the car.
+  * New problem : B has to also pay A for the car that A sent to B.
+  * Create a transaction that combines B's payment to A and A's ownership transfer to B. Can use coinjoin.
+  * Note that this transaction doesn't prove to B that A has transferred him the car that he wants to buy.
+* Decentralized property ownership.
+  * Currently to transfer a car, you need ownership certificate issued (by the DMV) to be transfered.
+  * You also need to re-register at the DMV.
+  * DMV is centralized.
+* Representation : How do you encode a complex transaction in the real world into the blockchain.
+* Atomicity : How do you couple multiple transactions so that either both happen or neither happens.
+
+**Routes to Blockchain Integration**
+* Route 1 : Directly on Bitcoin
+  * Easy to setup.
+  * Limited representation and atomicity.
+  * Example : Crowdfunding. Single Tx with multiple inputs and 1 large output. Spendable only if sum of inputs is greater than output.
+  * Example : Pay for proof. Imagine A claims that she knows x st H(x)=c where c is some publicly known value. B wants to pay A for knowledge of value x. B's payment has to be atomically coupled with A's revelation of x. This is unwieldy to do with Bitcoin.
+* Route 2 : Embedding.
+  * Recall colour coin, master coin, etc.
+  * Advantages : Complex representations possible, security of blockchain.
+  * Disadvantages : Limited scripting and atomicity, results in unwanted Tx in the blockchain.
+* Route 3 : Side chains.
+  * 1-1 pegged Bitcoin testbed.
+  * Advantages : Avoids polluting the blockchain.
+  * Disadvantages : Bitcoin modifications necessary.
+* Route 4 : Altcoins.
+  * Ethereum : General framework for ledger based consensus.
+  * Turing complete scripts. How to avoid infinite loops? Pay for computation using gas.
+  * Dream solution for representation and atomicity.
+* Any of the 4 approaches is feasable for implementing smart properties.
+* Going back to the car example, what happens in case of a dispute?
+  * Recall : Use 2-out-of-3 escrow.
+  * Advantage : A and B have freedom to choose intermediary. Different intermediaries can compete.
+  * Disadvantage : Intermediaries can be bribed. In the escrow process, the funds are tied up during the mediation process.
+* Improving security in blockchain paradigm :
+  * Reputation : Cold start problem.
+  * Escrow and dispute mediation : Ties up funds.
+  * Atomic exchange.
+  * Trusted hardware.
+* But there is lack of real world enforcement, and no punitive measures for misbehavior.
+* Security vocabulary :
+  * Trust minimization is not a goal. It is a starting point.
+* Decentralization template :
+  * What is being decentralized.
+  * Type of blockchain integration (embedding, side chains, etc).
+  * Level of decentralization (1 intermediary, multiple intermediaries, threshold of intermediaries, no intermediaries).
+  * How security is achieved.
+  * Examples :
+    * Smart properties : Disintermediates property ownership and trading. Uses Bitcoin. Security property is atomicity.
+    * Decentralized prediction market : It allows anybody to run prediction markets. Uses altcoin. Security mechanism is atomicity.
+    * StorJ : "Agent" that lives in the cloud. Pay agent to store info for a certain period of time. Decentralizes file storage using Bitcoin. Security mechanism is reputation.
+    * Zerocoin : Decentralizes mixing using altcoin. Security property is atomicity.
+
+**What Can We Decentralize?**
+* Idea 1 : Can decentralize purely digital things :
+  * DNS. e.g., Namecoin.
+  * Storage. e.g., StorJ.
+  * Pay for proof.
+  * Random number generation.
+  * Lotteries. e.g., Satoshi Dice.
+* Idea 2 : Can decentralize things that can be represented digitally :
+  * Real world currencies.
+  * Stocks.
+  * Other assets.
+  * Note : It's hard to ensure equivalence between digital assets and real-world assets.
+* Idea 3 : Can decentralize property ownership and trade.
+* Idea 4 : Can decentralize complex contracts.
+  * Crowdfunding.
+  * Financial derivatives.
+* Idea 5 : Can decentralize markets and auctions.
+  * EBay.
+  * Paypal.
+  * Craigslist.
+* How to decentralize markets?
+  * Bitcoin can decentralize payments.
+  * Transfers can be done via atomicity.
+  * Disputes via escrow.
+  * What about matching participants?
+  * Decentralized matching :
+    * Broadcast partiallly complete transaction to P2P network.
+    * Counterparty finds, signs and broadcasts it.
+    * This is pretty inefficient since every transaction has to be broadcast to everyone.
+  * For auctions, the seller has to sign once more at the end. This way, seller can acquire multiple bids.
+* Idea 6 : Can decentralize data feeds.
+  * Assert real world facts within the blockchain e.g., price movements.
+  * But there are incentives to lie.
+  * Solution : Decentralization by voting.
+    * In a centralized version, an arbiter can add Tx (outcome of some event) to blockchain.
+    * In a decentralized version, if number of arbiters who agree on Tx is greater than some threshold, then Tx can be added to the blockchain. Can use multisig to accomplish this.
+* Idea 7 : Can decentralize autonomous agents.
+  * Autonomous agents (e.g., autonomous corporations) can enter contracts with participants, can have access to data feeds, humans can vote as a way to change the rules of the agent.
+  * Hostile takeover can happen.
+* Idea 8 : Can decentralize exchanges.
+  * A wants to trade dollars for BTC while B wants to trade BTC for dollars but they don't trust each other.
+  * Can build an efficient network of IOUs. e.g., A sends 1 BTC to B while B sends IOU of $100 to A.
+  * Ripple does this. This disintermediates currency exchange.
+
+**When Is Decentralization a Good Idea?**
+* Decentralization : Technological alternatives to human institutions.
+* Going back to the car example, what are the problems with car ownership and trade?
+  * Security (theft).
+  * Disputes about sale terms.
+  * Security has 3 measures : preventive, detective and corrective.
+  * In the real world, law enforcement is heavily relied on. They mostly do detective and corrective work.
+  * What happens in a smart property model? It's mostly a preventive measures.
+* Smart property model disadvantages :
+  * Bitcoin security is a partly human problem e.g., bugs in code.
+  * Excessive reliance on security can cause serious problems e.g., loss of key results in a bricked car.
+  * Dispute mediation is very complex. A complex human problem.
+  * In a crowfunding system, an entrepreneur could just take the money and run.
+  * In a smart property model, existing social problems are not solved. In fact, new problems are created e.g., software security in addition to physical security of the car.
+* Smart property model advantages :
+  * Efficiency is a key advantage to smart property model. Could be used for trading smaller items like phones where dispute mediation is easier.
+  * Privacy benefits.
+  * Freedom to choose mediator.
+* Need to find compelling use cases for decentralization.
+* How can the blockchain be integrated into existing systems?
