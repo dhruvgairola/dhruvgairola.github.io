@@ -3,7 +3,7 @@ layout: post
 title: Bitcoin and Cryptocurrency Technologies (Princeton University)
 ---
 
-I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Technologies (Princeton University) below :
+I spent the past few months diving deep into 11 weeks worth of lectures on "Bitcoin and Cryptocurrency Technologies" offered by Princeton University on coursera.com. I have painstakingly compiled a summmary of my learnings from the course.
 
 [Week 1 : Intro to Crypto.](#Week1:IntrotoCrypto.)
 
