@@ -6,18 +6,28 @@ title: Bitcoin and Cryptocurrency Technologies (Princeton University)
 I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Technologies (Princeton University) below :
 
 [Week 1 : Intro to Crypto.](#Week1:IntrotoCrypto.)
+
 [Week 2 : How Bitcoin achieves Decentralization.](#Week2:HowBitcoinachievesDecentralization.)
+
 [Week 3 : Mechanics of Bitcoin.](#Week3:MechanicsofBitcoin.)
+
 [Week 4 : How to Store and Use Bitcoins.](#Week4:HowtoStoreandUseBitcoins.)
+
 [Week 5 : Bitcoin Mining.](#Week5:BitcoinMining.)
+
 [Week 6 : Bitcoin and Anonymity.](#Week6:BitcoinandAnonymity.)
+
 [Week 7 : Community, Politics, and Regulation.](#Week7:CommunityPoliticsandRegulation.)
+
 [Week 8 : Alternative Mining Puzzles](#Week8:AlternativeMiningPuzzles)
+
 [Week 9 : Bitcoin as a Platform.](#Week9:BitcoinasaPlatform.)
+
 [Week 10 : Altcoins and the Cryptocurrency Ecosystem](#Week10:AltcoinsandtheCryptocurrencyEcosystem)
+
 [Week 11 : The Future of Bitcoin?](#Week11:TheFutureofBitcoin)
 
-###<a name='Week1:IntrotoCrypto.'></a>Week 1 : Intro to Crypto.
+### <a name='Week1:IntrotoCrypto.'></a>Week 1 : Intro to Crypto.
 **Crypto Hash Functions**
 * Bitcoin hash is 256 bits.
 * Cryptograpic hash functions are hash functions that have the following properties :
@@ -79,7 +89,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Problem is that its centralized (Scrooge) i.e., Scrooge signs each block to validate transactions so we have to trust Scrooge. Scrooge could deny service to specific users by never validating their transactions.
 * Coins are immutable. So in a transaction, they are destroyed and recreated as change. You can subdivide or even combine coins.
 
-###<a name='Week2:HowBitcoinachievesDecentralization.'></a>Week 2 : How Bitcoin achieves Decentralization.
+### <a name='Week2:HowBitcoinachievesDecentralization.'></a>Week 2 : How Bitcoin achieves Decentralization.
 **Decentralization**
 * Not all systems are all-or-nothing. Mix between centralization and decentralization.
 * Aspects of decentralization in Bitcoin :
@@ -198,7 +208,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
 * As a block gets deeper in the chain, it gets more difficult to fork the chain from that earlier point. This is because to create a longer chain, you now need to add a lot more blocks and adding blocks requires PoW.
 * What else can we do with consensus?
 
-###<a name='Week3:MechanicsofBitcoin.'></a>Week 3 : Mechanics of Bitcoin.
+### <a name='Week3:MechanicsofBitcoin.'></a>Week 3 : Mechanics of Bitcoin.
 **Bitcoin Transactions**
 * Consider an account based ledger :
   * Have to keep track of balance in each participants account.
@@ -303,7 +313,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * e.g., Pay to script hash was implemented via a soft fork.
   * New soft-fork possibilities : new signature schemes, extra per-block metadata (e.g., put in "coinbase" parameter in a transaction).
 
-###<a name='Week4:HowtoStoreandUseBitcoins.'></a>Week 4 : How to Store and Use Bitcoins.
+### <a name='Week4:HowtoStoreandUseBitcoins.'></a>Week 4 : How to Store and Use Bitcoins.
 **Simple Local Storage**
 * To spend Bitcoin :
   * Info from blockchain.
@@ -389,7 +399,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * T/P = number of coins needed per sec to serve all the transactions. This models the demand for BTC.
   * When S/D=T/P, then price of BTC is in equilibrium i.e., P = TD/S. So if people hold BTC as investment, S goes down so P goes up. If people want to use BTC for transaction mediation, TD goes up and P goes up.
 
-###<a name='Week5:BitcoinMining.'></a>Week 5 : Bitcoin Mining.
+### <a name='Week5:BitcoinMining.'></a>Week 5 : Bitcoin Mining.
 **Recap**
 * Miners :
   * Store and boradcast the blockchain.
@@ -527,7 +537,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * If you have alpha = 0.2, then you can publicly announce your blacklist and smaller miners might follow you (as they want to avoid finding blocks that might be overwritten by you).
 * As of 2014, transaction fees don't matter much as miners get 99% of revenue from mining rewards. But later on, miners will be making their revenue from the transaction fees. But how will they enforce higher transaction fees? Mining pools?
 
-###<a name='Week6:BitcoinandAnonymity.'></a>Week 6 : Bitcoin and Anonymity.
+### <a name='Week6:BitcoinandAnonymity.'></a>Week 6 : Bitcoin and Anonymity.
 **Anonymity Basics**
 * Bitcoin addresses are public key hashes and not your real identity. This is called pseudonymity and Bitcoin is only pseudonymous.
 * Anonymity = Pseudonymity + Unlinkability (as user interacts with system repeatedly, these interactions cannot be linked to each other).
@@ -673,7 +683,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   3. Client connects to rendezvous point using the Tor browser by inputting the onion addresses.
 * Anonymity is morally ambiguous but also important to protect.
 
-###<a name='Week7:CommunityPoliticsandRegulation.'></a>Week 7 : Community, Politics, and Regulation.
+### <a name='Week7:CommunityPoliticsandRegulation.'></a>Week 7 : Community, Politics, and Regulation.
 **Consensus in Bitcoin**
 * Consensus about rules :
   * What makes a transaction valid.
@@ -772,7 +782,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Disclose risks to consumers.
 * As of May 2018, only 5 BitLicenses have been awarded.
 
-###<a name='Week8:AlternativeMiningPuzzles'></a>Week 8 : Alternative Mining Puzzles
+### <a name='Week8:AlternativeMiningPuzzles'></a>Week 8 : Alternative Mining Puzzles
 **Essential Puzzle Requirements**
 * Puzzles are the core of Bitcoin :
   * Incentives system steers participants.
@@ -892,7 +902,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Usefulness of puzzle to society.
   * Eliminate the need for mining hardware.
 
-###<a name='Week9:BitcoinasaPlatform.'></a>Week 9 : Bitcoin as a Platform.
+### <a name='Week9:BitcoinasaPlatform.'></a>Week 9 : Bitcoin as a Platform.
 **Bitcoin as an Append-Only Log**
 * What can we build on Bitcoin platform?
   * Commitments.
@@ -1004,7 +1014,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
     * With decentralized order book, you submit orders to miners and let them match any possible trade. The spread is the transaction fee so that front-running is not possible. But this could have higher fees.
   * The conclusion is that its not possible to build a decentralized prediction market using Bitcoin. Need altcoins.
 
-###<a name='Week10:AltcoinsandtheCryptocurrencyEcosystem'></a>Week 10 : Altcoins and the Cryptocurrency Ecosystem
+### <a name='Week10:AltcoinsandtheCryptocurrencyEcosystem'></a>Week 10 : Altcoins and the Cryptocurrency Ecosystem
 **Short History of Altcoins**
 * Features of altcoins :
   * Different security properties.
@@ -1108,7 +1118,7 @@ I'm compiling my notes from the coursera course on Bitcoin and Cryptocurrency Te
   * Requires to BTC in order to support this.
   * Altcoins could be merge mined.
 
-###<a name='Week11:TheFutureofBitcoin'></a>Week 11 : The Future of Bitcoin?
+### <a name='Week11:TheFutureofBitcoin'></a>Week 11 : The Future of Bitcoin?
 **The Blockchain as a Vehicle for Decentralization**
 * Smart property basics :
   * Car is controlled by cryptographic public key.
