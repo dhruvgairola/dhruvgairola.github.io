@@ -9,8 +9,8 @@ With the release of the 3rd Edition of "Effective Java" a few months back, I dec
 * Consider static factory methods instead of constructors.
 * Consider a builder when faced with many constructor parameters.
 * Creating a Pattern instance is expensive because it requires compiling the regular expression into a finite state machine.
-* As is often the case with lazy initialization, it would complicate the implementation with no measurable performance improvement
-* Generally speaking, however, maintaining your own object pools clutters your code, increases memory footprint, and harms performance
+* As is often the case with lazy initialization, it would complicate the implementation with no measurable performance improvement.
+* Generally speaking, however, maintaining your own object pools clutters your code, increases memory footprint, and harms performance.
 * Whenever a class manages its own memory, the programmer should be alert for memory leaks
 * A common source of memory leaks is listeners and other callbacks. If you implement an API where clients register callbacks but don’t deregister them explicitly, they will accumulate unless you take some action. One way to ensure that callbacks are garbage collected promptly is to store only weak references to them, for instance, by storing them only as keys in a WeakHashMap.
 * The Java 9 replacement for finalizers is cleaners. Cleaners are less dangerous than finalizers, but still unpredictable, slow, and generally unnecessary.

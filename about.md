@@ -9,11 +9,11 @@ I started my career building games as an Android app developer. Soon after, I tr
 
 **Education**
 
-I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf) and lead to 2 publications (ACM JDIQ Journal and ACM CIKM Conference). Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham, graduating with First Class Honours and a departmental rank of 1/55.
+I completed my MSc degree in Computer Science at McMaster University as a member of the [Data Science Research Lab](http://db.cas.mcmaster.ca). My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf) and lead to 3 publications (1 ACM JDIQ Journal and 2 ACM CIKM Conference). Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham, graduating with First Class Honours and a departmental rank of 1/55.
 
 **Technical Interests**
 
-Broadly, my interests include distributed systems, classical machine learning and software architecture. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
+Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
 
 The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm (written in R).
 ![_config.yml]({{ site.baseurl }}/images/skills.png)
@@ -24,8 +24,7 @@ The image below depicts a few of my interests. It is a [dendrogram](http://en.wi
 * Drumming
 * Swimming
 * Scrabble
-* Poker
 * Entrepreneurship
-* Reading sci-fi books or lit classics
+* Reading sci-fi books or classics
 * Table tennis
-* Trivia
+* Foosball
