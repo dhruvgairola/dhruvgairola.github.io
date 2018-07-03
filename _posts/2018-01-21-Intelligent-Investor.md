@@ -3,7 +3,7 @@ layout: post
 title: Intelligent Investor
 ---
 
-The current cryptocurrency craze inspired me to re-read the Intelligent Investor by Benjamin Graham. I've compiled a list of my learnings, and will keep adding chapters as I read them.
+I've compiled a list of my learnings from the book "Intelligent Investor" by Benjamin Graham.
 
 **Commentary on the introduction**
 * Intelligent investor : Being patient, disciplined and eager to learn. Harness your emotions and think for yourself.
@@ -52,7 +52,7 @@ The current cryptocurrency craze inspired me to re-read the Intelligent Investor
 * Footnote : Bernstein disagrees with Graham, stating that gold is really robust in out pacing inflation. Recommendation is to invest in a well-diversified mutual fund specializing in the stocks of precious metal companies and charging below 1% in annual expenses. Limit your stake to 2% of your total financial assets.
 
 **Commentary on Chapter 2**
-* REIT (Real estate investment trusts) : Companies taht own and collect rent from commercial and residential properties. They do a decent job combating inflation.
+* REIT (Real estate investment trusts) : Companies that own and collect rent from commercial and residential properties. They do a decent job combating inflation.
 * TIPS (Treasury inflation-protected securities) : US govt bonds that automatically go up when inflation rises. There is one catch- when the TIPS bond rises, IRS regards the increase in value as taxable income (even though its paper gain). Because of this TIPS are best suited for a tax-deferred retirement account like RRSP. TIPS are ideal substitute for the proportion of your retirement funds you would otherwise keep in case. TIPS work best as lifelong holding. They are volatile in the short run. Allocate 10% of retirement assets to TIPS.
 
 **Chapter 3 : A century of stock market history : level of stock prices in early 1972**
@@ -139,4 +139,8 @@ The current cryptocurrency craze inspired me to re-read the Intelligent Investor
 * IPOs should stand for "It's probably overpriced".
 
 **Chapter 7 : Portfolio policy for the enterprising investor : positive side**
-* 
+* Operations in common stock :
+  1. Buying low selling high.
+  2. Buying growth stocks.
+  3. Buying bargains.
+  4. Buying "special situations".
