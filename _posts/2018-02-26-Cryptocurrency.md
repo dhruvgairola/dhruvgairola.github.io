@@ -290,6 +290,7 @@ I spent the past few months diving deep into 11 weeks worth of lectures on "Bitc
   * Store block headers only, so they can't verify that other transactions in the block are valid.
   * They trust the fully validating nodes.
   * Need only 20 Mb of storage.
+  * SPV nodes only download the block headers, verify PoW on the headers and then download the branches (in the block's Merkle tree) that are relevant to them.
 
 **Limitations to the Bitcoin Protocol**
 * Hard coded limits :
@@ -1110,7 +1111,8 @@ I spent the past few months diving deep into 11 weeks worth of lectures on "Bitc
   * Idea : Only support SPV security.
     * Simplified payment verification.
     * SPV security involves only ensuring that Tx is in the longest blockchain, not the longest valid blockchain.
-    * BTC mobile clients do this. Since they're not fully validating nodes, they only need to check block headers to ensure transactions are in longest chain e.g., check past 10 node headers for some transaction Tx.
+    * BTC mobile clients do this. Since they're not fully validating nodes, they only need to check block headers to ensure transactions are in longest chain.
+    * SPV nodes only download the block headers, verify PoW on the headers and then download the branches (in the block's Merkle tree) that are relevant to them.
   * Bilateral peg implementation : BTC script capable of doing SPV proofs about arbitrary altcoin.
   * If altcoin has very fast block rate, SPV proofs might still be low. Can solve this problem by using probabilistic SPV proofs. The more samples of PoW that you check, the more accurate estimate of PoW in the entire blockchain. Can use skip lists in implementation.
 * Conclusion on side chains :
