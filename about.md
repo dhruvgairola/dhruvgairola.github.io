@@ -13,10 +13,7 @@ I completed my MSc degree in Computer Science at McMaster University as a member
 
 **Technical Interests**
 
-Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Python and Ruby.
-
-The image below depicts a few of my interests. It is a [dendrogram](http://en.wikipedia.org/wiki/Dendrogram) produced by a hierarchical text clustering algorithm (written in R).
-![_config.yml]({{ site.baseurl }}/images/skills.png)
+Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Elixir and Python.
 
 **Other Interests**
 
