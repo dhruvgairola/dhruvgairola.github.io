@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effective Java
+title: Effective Java, 3rd Edition by Joshua Bloch
 ---
 
 With the release of the 3rd Edition of "Effective Java" a few months back, I decided to re-read it and compile a few notes for future reference. These notes only represent points that are specifically useful to my development as a Java programmer.
@@ -80,9 +80,9 @@ With the release of the 3rd Edition of "Effective Java" a few months back, I dec
 ```
 // BROKEN difference-based comparator - violates transitivity!
 static Comparator<Object> hashCodeOrder = new Comparator<>() {
-public int compare(Object o1, Object o2) {
-    return o1.hashCode() - o2.hashCode();
-}
+    public int compare(Object o1, Object o2) {
+        return o1.hashCode() - o2.hashCode();
+    }
 };
 ```
 
@@ -91,9 +91,9 @@ Do not use this technique. It is fraught with danger from integer overflow and I
 ```
 // Comparator based on static compare method
 static Comparator<Object> hashCodeOrder = new Comparator<>() {
-public int compare(Object o1, Object o2) {
-    return Integer.compare(o1.hashCode(), o2.hashCode());
-}
+    public int compare(Object o1, Object o2) {
+        return Integer.compare(o1.hashCode(), o2.hashCode());
+    }
 };
 ```
 
@@ -101,8 +101,16 @@ or a comparator construction method:
 
 ```
 // Comparator based on Comparator construction method
-static Comparator<Object> hashCodeOrder = Comparator.comparingInt(o -> o.hashCode());
+static Comparator<Object> hashCodeOrder = 
+    Comparator.comparingInt(o -> o.hashCode());
 ```
 
 ### Chapter 4 : Classes and Interfaces
 #### Item 15: Minimize the accessibility of classes and members
+* (Dhruv) Package private is the default class level if no modifier is specified. Classes within the package have access AND subclasses from any other packages. Compare this with protected, where only classes within the package have access, but other subclasses don't have access.
+* A protected member is part of the class’s exported API and must be supported forever. Also, a protected member of an exported class represents a public commitment to an implementation detail (Item 19). The need for protected members should be relatively rare.
+* To facilitate testing your code, you may be tempted to make a class, interface, or member more accessible than otherwise necessary. This is fine up to a point. It is acceptable to make a private member of a public class package-private in order to test it, but it is not acceptable to raise the accessibility any higher. In other words, it is not acceptable to make a class, interface, or member a part of a package’s exported API to facilitate testing.
+* Classes with public mutable fields are not generally thread-safe.
+* As of Java 9, there are two additional, implicit access levels introduced as part of the module system. A module is a grouping of packages, like a package is a grouping of classes. A module may explicitly export some of its packages via export declarations in its module declaration (which is by convention contained in a source file named module-info.java). Public and protected members of unexported packages in a module are inaccessible outside the module; within the module, accessibility is unaffected by export declarations. **Using the module system allows you to share classes among packages within a module without making them visible to the entire world.** (Dhruv : This is better than protected access because a protected member is a part of of the class's exported API). Public and protected members of public classes in unexported packages give rise to the two implicit access levels, which are intramodular analogues of the normal public and protected levels. The need for this kind of sharing is relatively rare and can often be eliminated by rearranging the classes within your packages.
+* Not only is the access protection afforded by modules of limited utility to the typical Java programmer, and largely advisory in nature; in order to take advantage of it, you must group your packages into modules, make all of their dependencies explicit in module declarations, rearrange your source tree, and take special actions to accommodate any access to non-modularized packages from within your modules [Reinhold, 3]. It is too early to say whether modules will achieve widespread use outside of the JDK itself. In the meantime, it seems best to avoid them unless you have a compelling need.
+* Ensure that objects referenced by public static final fields are immutable.
