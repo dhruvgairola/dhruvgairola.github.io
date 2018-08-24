@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java User Group Meetup (Structure101)
+type: blog
 ---
 
 I attended my very first Java User Group meetup today held at Free Times Cafe near College and Spadina. The meetup room was packed, and most of the attendees were senior java devs. The presentation was about bridging the gap between the low level architecture of the application and the actual code. 

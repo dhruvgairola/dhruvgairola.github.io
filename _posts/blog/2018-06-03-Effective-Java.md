@@ -1,18 +1,20 @@
 ---
 layout: post
 title: Effective Java (3rd Edition) by Joshua Bloch
+type: blog
 ---
 
 With the release of the 3rd Edition of "Effective Java" a few months back, I decided to re-read it and compile a few notes for future reference. These notes only represent points that are specifically useful to my development as a Java programmer.
 
 ### Chapter 2 : Creating and Destroying Objects
 #### Item 1 : Consider static factory methods instead of constructors
-* Consider static factory methods instead of constructors.
 
 #### Item 2 : Consider a builder when faced with many constructor parameters
-* Consider a builder when faced with many constructor parameters.
 
 #### Item 3 : Enforce the singleton property with a private constructor or an enum type
+* Keep the constructor private and export a public static member to provide access to the private static final instance.
+* To make a singleton class that uses the above approach serializable (Chapter 12), it is not sufficient merely to add implements Serializable to its declaration. To maintain the singleton guarantee, declare all instance fields transient and provide a readResolve method.
+* Use enums to create singletons.
 
 #### Item 4 : Enforce noninstantiability with a private constructor
 
@@ -114,3 +116,9 @@ static Comparator<Object> hashCodeOrder =
 * As of Java 9, there are two additional, implicit access levels introduced as part of the module system. A module is a grouping of packages, like a package is a grouping of classes. A module may explicitly export some of its packages via export declarations in its module declaration (which is by convention contained in a source file named module-info.java). Public and protected members of unexported packages in a module are inaccessible outside the module; within the module, accessibility is unaffected by export declarations. **Using the module system allows you to share classes among packages within a module without making them visible to the entire world.** (Dhruv : This is better than protected access because a protected member is a part of of the class's exported API). Public and protected members of public classes in unexported packages give rise to the two implicit access levels, which are intramodular analogues of the normal public and protected levels. The need for this kind of sharing is relatively rare and can often be eliminated by rearranging the classes within your packages.
 * Not only is the access protection afforded by modules of limited utility to the typical Java programmer, and largely advisory in nature; in order to take advantage of it, you must group your packages into modules, make all of their dependencies explicit in module declarations, rearrange your source tree, and take special actions to accommodate any access to non-modularized packages from within your modules [Reinhold, 3]. It is too early to say whether modules will achieve widespread use outside of the JDK itself. In the meantime, it seems best to avoid them unless you have a compelling need.
 * Ensure that objects referenced by public static final fields are immutable.
+
+#### Item 16 : In public classes, use accessor methods, not public fields
+
+#### Item 17: Minimize mutability
+* Immutable classes are easier to design, implement, and use than mutable classes. They are less prone to error and are more secure.
+* 

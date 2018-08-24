@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Microservices From Design to Development
+blog: blog
 ---
 
 I have provided a summary of the book [Microservices : From Design to Development](https://www.nginx.com/resources/library/designing-deploying-microservices/) here.
