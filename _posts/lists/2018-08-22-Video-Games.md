@@ -33,3 +33,6 @@ When half life 2 came out in 1998, my cousin was one of the first ones to buy it
 
 ### 1. Pokemon Red/Blue
 My first gameboy cartridge was a bootleg Pokemon Yellow that my dad found in some shady store in Singapore. The cartridge was a piece of junk because any game progress could not be saved. I had to convince one of my rich friends to loan me his **original**, non-bootleg Pokemon Blue cartridge. It was love at first sight (or rather at first save). Still in primary school, I was obsessed with trying to collect all 150 Pokemon. I wanted to be a real life pokemon trainer. I remember playing the gameboy at recess, in the bus, battling with my pokemon obsessed friends, trading pokemon. It was a cultural phenomenon at the time. Trading cards, cartoons, toys, an entire industry built on pokemon. Fast forward even 15 years later, the pokemon franchise still holds strong, a testament to the game that started it all.
+
+### Honorable Mentions
+Doom, Bioshock, Super Mario Bros, Mario Kart, Tekken 3, Medal of Honor Allied Assault, Prince of Persia Sands of Time, Tony Hawk's Pro Skater, Street Fighter 2
