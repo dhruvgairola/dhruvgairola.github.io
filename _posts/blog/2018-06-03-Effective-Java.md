@@ -135,5 +135,20 @@ static Comparator<Object> hashCodeOrder =
 
 #### Item 18: Favor composition over inheritance
 * Inheriting from ordinary concrete classes across package boundaries is dangerous.
+* **Inheritance violates encapsulation.**
 * A subclass depends on the implementation details of its superclass for its proper function. The superclass’s implementation may change from release to release, and if it does, the subclass may break, even though its code has not been touched. As a consequence, a subclass must evolve in tandem with its superclass, unless the superclass’s authors have designed and documented it specifically for the purpose of being extended.
 * A related cause of fragility in subclasses is that their superclass can acquire new methods in subsequent releases. Both of these problems stem from overriding methods.
+* Instead of extending an existing class, give your new class a private field that references an instance of the existing class. This design is called composition because the existing class becomes a component of the new one. Each instance method in the new class invokes the corresponding method on the contained instance of the existing
+class and returns the results. This is known as forwarding, and the methods in the new class are known as forwarding methods. The resulting class will be rock solid, with no dependencies on the implementation details of the existing class. Even adding new methods to the existing class will have no impact on the new class.
+* For example, Guava provides forwarding classes for all of the collection interfaces.
+* A class B should extend a class A only if an “is-a” relationship exists between the two classes.
+* Not only are wrapper classes more robust than subclasses, they are also more powerful.
+
+#### Item 19: Design and document for inheritance or else prohibit it
+* The class must document its self-use of overridable methods.
+* When you design for inheritance a class that is likely to achieve wide use, realize that you are committing forever to the self-use patterns that you document and to the implementation decisions implicit in its protected methods and fields. These commitments can make it difficult or impossible to improve the performance or functionality of the class in a subsequent release. Therefore, you must test your class by writing subclasses before you release it.
+* Constructors must not invoke overridable methods, directly or indirectly. If you violate this rule, program failure will result. **The superclass constructor runs before the subclass constructor**, so the overriding method in the subclass will get invoked before the subclass constructor has run.
+* The Cloneable and Serializable interfaces present special difficulties when designing for inheritance. It is generally not a good idea for a class designed for inheritance to implement either of these interfaces because they place a substantial burden on programmers who extend the class.
+* neither clone nor readObject may invoke an overridable method, directly or indirectly. In the case of readObject, the overriding method will run before the subclass’s state has been deserialized. In the case of clone, the overriding method will run before the subclass’s clone method has a chance to fix the clone’s state.
+* Finally, if you decide to implement Serializable in a class designed for inheritance and the class has a readResolve or writeReplace method, you must make the readResolve or writeReplace method protected rather than private. If these methods are private, they will be silently ignored by subclasses.
+* **Prohibit subclassing in classes that are not designed and documented to be safely subclassed.** There are two ways to prohibit subclassing. The easier of the two is to declare the class final. The alternative is to make all the constructors private or package-private and to add public static factories in place of the constructors. This alternative, which provides the flexibility to use subclasses internally, is discussed in Item 17. Either approach is acceptable.
