@@ -9,11 +9,11 @@ Quake 3 Arena is like a really fast paced Counter Strike with futuristic weapons
 ![_config.yml]({{ site.baseurl }}/images/games/q3.jpg)
 
 ### 9. Age of Empires 2
-AOE 2 is a strategy game where players select an ancient civilization and battle it out against others in various terrains. What I loved about AOE apart from the gameplay was the opportunity to learn about early technologies that our ancestors developed as you built your civilization.
+AOE 2 is a strategy game where players select an ancient civilization and battle it out against others in various terrains. What I loved about AOE apart from the gameplay was learning about the ancient peoples of the world, from their unique weapons to their technological advancements.
 ![_config.yml]({{ site.baseurl }}/images/games/aoe2.jpg)
 
 ### 8. GTA San Andreas
-I remember wasting my summer away playing GTA San Andreas. I was introduced to so many classic rap songs through the game. It was only years later that I even saw the connection between N.W.A and the characters in GTA.
+I remember wasting my summer away playing GTA San Andreas, cruising down Los Santos, and listening to awesome music. I was introduced to so many classic rap songs through the game. It was only years later that I even saw the connection between N.W.A and the characters in GTA.
 ![_config.yml]({{ site.baseurl }}/images/games/gta.jpg)
 
 ### 7. Sims 1
@@ -21,7 +21,7 @@ The Sims was such an interesting concept when it first came out. It was a video 
 ![_config.yml]({{ site.baseurl }}/images/games/sims1.jpg)
 
 ### 6. Half Life 1
-I played half life 1 way too late when I was already in my late teens. In fact, I played it after completing half life 2. However, this game deserves a place on any list of greatest games.
+I played half life 1 way too late when I was already in my late teens. In fact, I played it after completing half life 2. When it was first released, it's graphics and immersive gameplay stood out. For me, the storyline and characters are the most compelling part of the game.
 ![_config.yml]({{ site.baseurl }}/images/games/hl1.jpg)
 
 ### 5. Star Wars Knights of the Old Republic (Kotor)
