@@ -12,7 +12,7 @@ Here is my summary of the book Priciples by Ray Dalio.
 * To be a successful entrepreneur, one has to be an independent thinker who correctly bets against the consensus, which means being painfully wrong a fair amount.
 * Write down your system for decision making.
 
-###Part 1
+### Part 1
 **Chapter 1**
 * Great is better than terrible, and terrible is better than mediocre, because at least terrible gives life flavor.
 
