@@ -66,17 +66,17 @@ Here is my summary of the book Priciples by Ray Dalio.
   * **You will be more likely to succeed and find happiness if you take responsibility for making your decisions well instead of complaining about things being beyond your control.**
   * Distinguish between you as the designer of your machine (an algorithm to reach your goal) and you as a worker with your machine. This way, when you compare your outcome with your goal, you can tweak the design of your machine. If you're just a worker in your machine, you're only living in the moment and not reflecting.
   * When encountering your weaknesses, you have 4 choices :
-    1. Deny them.
-    2. Accept them and work on them.
-    3. Accept them and find ways around them.
-    4. Change what you are going after.
+      1. Deny them.
+      2. Accept them and work on them.
+      3. Accept them and find ways around them.
+      4. Change what you are going after.
   * **Asking others who are strong in areas where you are weak to help you** is a great skill that you should develop no matter what, as it will help you develop guardrails that will prevent you from doing what you shouldn't be doing.
   * **If you are open-minded enough and determined, you can get virtually anything you want.**
   * Don't blame bad outcomes on anyone but yourself.
   * Face the harsh realities.
 2. Personal evolutionary process takes place in 5 steps :
-  1. Have clear goals.
-  2. Identify and don't tolerate problems that stand in the way of achieving these goals.
-  3. Accurately diagnose the problems to get to their root causes.
-  4. Design plans that will get you around them.
-  5. Do what's necessary to push these designs through to results.
+    1. Have clear goals.
+    2. Identify and don't tolerate problems that stand in the way of achieving these goals.
+    3. Accurately diagnose the problems to get to their root causes.
+    4. Design plans that will get you around them.
+    5. Do what's necessary to push these designs through to results.
