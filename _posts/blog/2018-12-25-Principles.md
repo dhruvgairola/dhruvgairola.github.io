@@ -55,25 +55,25 @@ Here is my summary of the book Priciples by Ray Dalio.
 
 ### Life Principles
 1. Embrace reality and deal with it.
-  * Dreams + Reality + Determination = A Successful Life
-  * Radical open-mindedness and radical transparency are invaluable for rapid learning and effective change.
-  * Don't let fears of what others think of you stand in your way.
-  * Don't get hung up on your views of how things "should" be because you will miss out on learning how they really are.
-  * Evolve or die.
-  * Adaptation through rapid trial and error is invaluable.
-  * In order to gain strength, one has to push one's limits, which is painful. If you're not pushing your limits, you're not maximizing your potential.
-  * There are a whole host of ways that something will get you. At such times, you will be in pain and might think that you don't have the strength to go on. You almost always do, however; your ultimate success will depend on you realizing that fact, even though it might not seem that way at the moment.
-  * **You will be more likely to succeed and find happiness if you take responsibility for making your decisions well instead of complaining about things being beyond your control.**
-  * Distinguish between you as the designer of your machine (an algorithm to reach your goal) and you as a worker with your machine. This way, when you compare your outcome with your goal, you can tweak the design of your machine. If you're just a worker in your machine, you're only living in the moment and not reflecting.
-  * When encountering your weaknesses, you have 4 choices :
-      1. Deny them.
-      2. Accept them and work on them.
-      3. Accept them and find ways around them.
-      4. Change what you are going after.
-  * **Asking others who are strong in areas where you are weak to help you** is a great skill that you should develop no matter what, as it will help you develop guardrails that will prevent you from doing what you shouldn't be doing.
-  * **If you are open-minded enough and determined, you can get virtually anything you want.**
-  * Don't blame bad outcomes on anyone but yourself.
-  * Face the harsh realities.
+    * Dreams + Reality + Determination = A Successful Life
+    * Radical open-mindedness and radical transparency are invaluable for rapid learning and effective change.
+    * Don't let fears of what others think of you stand in your way.
+    * Don't get hung up on your views of how things "should" be because you will miss out on learning how they really   are.
+    * Evolve or die.
+    * Adaptation through rapid trial and error is invaluable.
+    * In order to gain strength, one has to push one's limits, which is painful. If you're not pushing your limits,   you're not maximizing your potential.
+    * There are a whole host of ways that something will get you. At such times, you will be in pain and might think   that you don't have the strength to go on. You almost always do, however; your ultimate success will depend on you   realizing that fact, even though it might not seem that way at the moment.
+    * **You will be more likely to succeed and find happiness if you take responsibility for making your decisions well   instead of complaining about things being beyond your control.**
+    * Distinguish between you as the designer of your machine (an algorithm to reach your goal) and you as a worker with your machine. This way, when you compare your outcome with your goal, you can tweak the design of your machine. If you're just a worker in your machine, you're only living in the moment and not reflecting.
+    * When encountering your weaknesses, you have 4 choices :
+        1. Deny them.
+        2. Accept them and work on them.
+        3. Accept them and find ways around them.
+        4. Change what you are going after.
+    * **Asking others who are strong in areas where you are weak to help you** is a great skill that you should develop   no matter what, as it will help you develop guardrails that will prevent you from doing what you shouldn't be doing.
+    * **If you are open-minded enough and determined, you can get virtually anything you want.**
+    * Don't blame bad outcomes on anyone but yourself.
+    * Face the harsh realities.
 2. Personal evolutionary process takes place in 5 steps :
     1. Have clear goals.
     2. Identify and don't tolerate problems that stand in the way of achieving these goals.
