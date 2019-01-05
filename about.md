@@ -15,7 +15,7 @@ Additionally, I completed my BSc degree (Hons) in Computer Science at the Univer
 
 **Technical Interests**
 
-Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript, Elixir and Python.
+Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Ruby, Python and Javascript.
 
 **Other Interests**
 
