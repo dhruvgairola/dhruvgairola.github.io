@@ -58,25 +58,38 @@ Here is my summary of the book Priciples by Ray Dalio.
     * Dreams + Reality + Determination = A Successful Life
     * Radical open-mindedness and radical transparency are invaluable for rapid learning and effective change.
     * Don't let fears of what others think of you stand in your way.
-    * Don't get hung up on your views of how things "should" be because you will miss out on learning how they really   are.
+    * Don't get hung up on your views of how things "should" be because you will miss out on learning how they really are.
     * Evolve or die.
     * Adaptation through rapid trial and error is invaluable.
-    * In order to gain strength, one has to push one's limits, which is painful. If you're not pushing your limits,   you're not maximizing your potential.
-    * There are a whole host of ways that something will get you. At such times, you will be in pain and might think   that you don't have the strength to go on. You almost always do, however; your ultimate success will depend on you   realizing that fact, even though it might not seem that way at the moment.
-    * **You will be more likely to succeed and find happiness if you take responsibility for making your decisions well   instead of complaining about things being beyond your control.**
+    * In order to gain strength, one has to push one's limits, which is painful. If you're not pushing your limits, you're not maximizing your potential.
+    * There are a whole host of ways that something will get you. At such times, you will be in pain and might think that you don't have the strength to go on. You almost always do, however; your ultimate success will depend on you realizing that fact, even though it might not seem that way at the moment.
+    * **You will be more likely to succeed and find happiness if you take responsibility for making your decisions well instead of complaining about things being beyond your control.**
     * Distinguish between you as the designer of your machine (an algorithm to reach your goal) and you as a worker with your machine. This way, when you compare your outcome with your goal, you can tweak the design of your machine. If you're just a worker in your machine, you're only living in the moment and not reflecting.
     * When encountering your weaknesses, you have 4 choices :
         1. Deny them.
         2. Accept them and work on them.
         3. Accept them and find ways around them.
         4. Change what you are going after.
-    * **Asking others who are strong in areas where you are weak to help you** is a great skill that you should develop   no matter what, as it will help you develop guardrails that will prevent you from doing what you shouldn't be doing.
+    * **Asking others who are strong in areas where you are weak to help you** is a great skill that you should develop no matter what, as it will help you develop guardrails that will prevent you from doing what you shouldn't be doing.
     * **If you are open-minded enough and determined, you can get virtually anything you want.**
     * Don't blame bad outcomes on anyone but yourself.
     * Face the harsh realities.
 2. Personal evolutionary process takes place in 5 steps :
     1. Have clear goals.
+        * Never rule out a goal because you think it's unattainable. Be audacious. There is always a best possible path.
+        * If you limit your goals to what you know you can achieve, you are seting the bar too low.
     2. Identify and don't tolerate problems that stand in the way of achieving these goals.
     3. Accurately diagnose the problems to get to their root causes.
     4. Design plans that will get you around them.
+        * Be granular with your plans and make sure progress is measurable.
+        * It doesn't take a lot of time to design a good plan.
     5. Do what's necessary to push these designs through to results.
+        * Everyone has at least one big thing that stands in their way of success. Find yours and deal with it.
+3. Be Radically Open-Minded
+    * The two biggest barriers to good decision making are your ego and your blind spots.
+    * Radical open-mindedness allows you to escape from the control of your lower-level (emotional) you and ensures that your upper-level (logical) you sees and considers all the good choices and makes the best possible decisions.
+    * Don't worry about looking good; worry about achieving your goal.
+    * If one person is clearly more knowledgeable than the other, it is preferable for the less knowledgeable person to approach the more knowledgeable one as a student. Believable people are those who have repeatedly and successfully accomplished the think in question and have great explanations of their approach when probed.
+    * Triangulate your view with believable people who are willing to disagree.
+    * Be evidence based and encourage others to be the same.
+
