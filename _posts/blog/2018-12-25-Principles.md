@@ -4,7 +4,7 @@ title: Principles by Ray Dalio
 type: blog
 ---
 
-Here is my summary of the book Priciples by Ray Dalio.
+Lately, I've felt that I'm spending a lot of time on computer science and software development and not enough time on self-development. This is not aligned with my personal goal of becoming a more well-rounded person. Hence, I decided to take a step back and learn more about goal setting and people management by picking up a copy of the book "Priciples" by Ray Dalio (one of my good friends recommended this book to me). I have provided a short summary of my learnings below.
 
 ### Introduction
 * #1 What do you want. #2 What is true. #3 What are you going to do about it?
@@ -85,11 +85,47 @@ Here is my summary of the book Priciples by Ray Dalio.
         * It doesn't take a lot of time to design a good plan.
     5. Do what's necessary to push these designs through to results.
         * Everyone has at least one big thing that stands in their way of success. Find yours and deal with it.
-3. Be Radically Open-Minded
+3. Be Radically Open-Minded.
     * The two biggest barriers to good decision making are your ego and your blind spots.
     * Radical open-mindedness allows you to escape from the control of your lower-level (emotional) you and ensures that your upper-level (logical) you sees and considers all the good choices and makes the best possible decisions.
     * Don't worry about looking good; worry about achieving your goal.
     * If one person is clearly more knowledgeable than the other, it is preferable for the less knowledgeable person to approach the more knowledgeable one as a student. Believable people are those who have repeatedly and successfully accomplished the think in question and have great explanations of their approach when probed.
     * Triangulate your view with believable people who are willing to disagree.
-    * Be evidence based and encourage others to be the same.
+    * Be evidence-based and encourage others to be the same.
+4. Understand that people are wired very differently.
+    * The human brain comes pre-programmed with the need for and enjoyment of social cooperation.
+    * If you stick with a behavior for eighteen months, you will build a strong tendency to stick to it nearly forever.
+    * Habits control people's behavior.
+    * **If you really want to change, the best thing you can do is choose which habits to acquire and which to get rid of.**
+    * Shaper = Visionary + Practical Thinker + Determined.
+    * Shapers love to knock things around with other really smart people and can easily navigate back and forth between the big picture and the granular details, counting both as equally important.
+    * **Getting the right people in the right roles in support of your goal is the key to succeeding at whatever you choose to accomplish.**
+    * Manage yourself and orchestrate others to get what you want.
+    * One of the conductor's hardest and most thankless jobs is getting rid of people who consistently don't play well individually or with others.
+5. Learn How to Make Decisions Effectively.
+    * Recognize that the biggest thread to good decision making is harmful emotions. And that decision making is a 2 step process : first learning and then deciding.
+    * Learning requires being radically open-minded and seek out believable others. **Deciding involves playing different scenarios** through time to visualize how to get an outcome consistent with what you want.
+    * One of the most important things is to ask believable people. Listening to uninformed people is worse than having no answers at all.
+    * Be an imperfectionist. Perfectionists spend too much time on little differences at the margins at the expense of the important things. The marginal gains of studying even the important things past a certain point are limited.
+    * **Use the terms "above the line" and "below the line" to establish which level a conversation is on. A "above the line" conversation addresses the main points and a "below the line" conversation focuses on the sub-points.**
+    * Don't jumble and tangle "above the line" and "below the line" conversations. Be organized and ensure some level of separation/organization.
+    * (Probability of being right on a decision * Winnings) - (Probability of being wrong on a decision * Losses) = Expected value. If expected value is positive, its probably a good decision.
+    * **Simplify : get rid of irrelevant details so that essential things stand out.**
+    * Use priciples to make decisions.
+    * Let believability weight your decision making.
+    * In order to have the best life possible, you have to (1) know what the best decisions are and (2) have the courage to make them.
+    * Embrace reality and deal with them well.
+    * My work principles are basically the life priciples you just read, applied to groups.
 
+### Work Principles
+
+* For any group to function well, its work principles must be aligned with its members' life principles.
+* A great organization has both great people and great culture.
+* Great people have both great character and great capabilities.
+* Great cultures bring problems to the surface and solve them well. And they love imagining and building great things that haven't been built before.
+* I was looking for meaningful work and meaningful relationships. Great partnerships come from sharing common values and interests, having similar approaches to pursuing them and being reasonable with each other.
+* **Tough love is effective for achieving both great work and great relationships.**
+* A believability-weighted idea meritocracy is the best system for making effective decisions.
+* **Idea meritocracy = Radical Truth + Radical Transparency + Believability-Weighted Decision Making**
+* Independent thinkers with audacious goals -> Idea meritocracy -> Principles decisions -> Successes (Failures and Learnings) -> Happy employees -> More independent thinkers and audacious goals.
+* **Make your passion and your work one and the same and do it with people you want to be with.**
