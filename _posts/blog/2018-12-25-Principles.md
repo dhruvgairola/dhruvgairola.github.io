@@ -4,15 +4,27 @@ title: Principles by Ray Dalio
 type: blog
 ---
 
-Lately, I've felt that I'm spending a lot of time on computer science and software development and not enough time on self-development. This is not aligned with my personal goal of becoming a more well-rounded person. Hence, I decided to take a step back and learn more about goal setting and people management by picking up a copy of the book "Priciples" by Ray Dalio (one of my good friends recommended this book to me). I have provided a short summary of my learnings below.
+Lately, I've felt that I'm spending a lot of time on computer science and software development and not enough time on self-development. This is not aligned with my personal goal of becoming a more well-rounded person. Hence, I decided to take a step back and learn more about goal setting and people management by picking up a copy of the book "Priciples" by Ray Dalio (one of my good friends recommended this book to me). 
+
+The parts I enjoyed revolved around goal setting, planning, execution, self-reflection, overcoming failures, being bold and ambitious, being open-minded, data-driven, frank and truthful, understanding that people are wired differently, etc. I like that these were distilled succintly, logical and well exemplified given the context (even if the book repeats a lot).
+
+However, I felt that some sections of the book were Darwinian, unfeeling, unrealistic and possibly mumbo-jumbo. Using baseball cards to rank employees oversimplifies complex human behavior and pigeonholes people. This also assumes that the evaluations to create the cards are accurate. A better solution might be to document real results that were delivered by employees and using that to create profiles instead of relying on things like Myers-Briggs personality tests to build baseball cards (Myers-Briggs strikes me as pseudo-science). I pity the poor souls who encounter extenuating personal problems in Bridgewater- I get the impression that they'll be forced to jump off a plank.
+
+Ideas like ignoring personal loyalty in favor of the organizational well-being and being radically truthful are admirable. However, in an organization that is not aligned with these principles, following such mantras will likely get you fired. The truth is that nobody likes jerks, even they are completely unbiased and data driven. Even with the proper directives, I'm not sure how "radical" an employee can possibly be without coming across as cold-blooded. Nobody likes politicans either but I feel that navigating relationships is an art and involves tradeoffs. It's better being frank than a phony but being "radical" is unrealistic.
+
+In defense of Ray, a lot of the principles are within the context of Ray's own life learnings and his own organizational setting. Obviously being "radically transparent" in a military or political setting would be ill-advised but it could likely make-or-break an investment firm where billions of dollars are at stake. I imagine that the software equivalent of Ray's organizational environment would be an innovative startup solving big problems. 
+
+Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my life, especially those concerning strategy and goal-setting. However, I believe that emotion and intuition can engender creativity (e.g., Steve Jobs' intuition around the development of the ipod, a scenario where no data was available), so we shouldn't completely discount these factors when making creative decisions, especially in the software industry (which is a creative field) and as an entrepreneur.
 
 ### Introduction
+
 * #1 What do you want. #2 What is true. #3 What are you going to do about it?
 * Key to success lies in striving for a lot and learning from failures.
 * To be a successful entrepreneur, one has to be an independent thinker who correctly bets against the consensus, which means being painfully wrong a fair amount.
 * Write down your system for decision making.
 
-### Part 1
+### Part 1 : Where I'm Coming From
+
 **Chapter 1**
 * Great is better than terrible, and terrible is better than mediocre, because at least terrible gives life flavor.
 
@@ -53,8 +65,9 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
 * I cannot say that having an intense life filled with accomplishments is better than having a relaxed life filled with savoring.
 * **The happiest people discover their own nature and match their life to it.** 
 
-### Life Principles
-1. Embrace reality and deal with it.
+### Part 2 : Life Principles
+
+1. **Embrace reality and deal with it.**
     * Dreams + Reality + Determination = A Successful Life
     * Radical open-mindedness and radical transparency are invaluable for rapid learning and effective change.
     * Don't let fears of what others think of you stand in your way.
@@ -74,7 +87,7 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
     * **If you are open-minded enough and determined, you can get virtually anything you want.**
     * Don't blame bad outcomes on anyone but yourself.
     * Face the harsh realities.
-2. Personal evolutionary process takes place in 5 steps :
+2. **Personal evolutionary process takes place in 5 steps :**
     1. Have clear goals.
         * Never rule out a goal because you think it's unattainable. Be audacious. There is always a best possible path.
         * If you limit your goals to what you know you can achieve, you are seting the bar too low.
@@ -85,14 +98,14 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
         * It doesn't take a lot of time to design a good plan.
     5. Do what's necessary to push these designs through to results.
         * Everyone has at least one big thing that stands in their way of success. Find yours and deal with it.
-3. Be Radically Open-Minded.
+3. **Be Radically Open-Minded.**
     * The two biggest barriers to good decision making are your ego and your blind spots.
     * Radical open-mindedness allows you to escape from the control of your lower-level (emotional) you and ensures that your upper-level (logical) you sees and considers all the good choices and makes the best possible decisions.
     * Don't worry about looking good; worry about achieving your goal.
     * If one person is clearly more knowledgeable than the other, it is preferable for the less knowledgeable person to approach the more knowledgeable one as a student. Believable people are those who have repeatedly and successfully accomplished the think in question and have great explanations of their approach when probed.
     * Triangulate your view with believable people who are willing to disagree.
     * Be evidence-based and encourage others to be the same.
-4. Understand that people are wired very differently.
+4. **Understand that people are wired very differently.**
     * The human brain comes pre-programmed with the need for and enjoyment of social cooperation.
     * If you stick with a behavior for eighteen months, you will build a strong tendency to stick to it nearly forever.
     * Habits control people's behavior.
@@ -102,7 +115,7 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
     * **Getting the right people in the right roles in support of your goal is the key to succeeding at whatever you choose to accomplish.**
     * Manage yourself and orchestrate others to get what you want.
     * One of the conductor's hardest and most thankless jobs is getting rid of people who consistently don't play well individually or with others.
-5. Learn How to Make Decisions Effectively.
+5. **Learn How to Make Decisions Effectively.**
     * Recognize that the biggest thread to good decision making is harmful emotions. And that decision making is a 2 step process : first learning and then deciding.
     * Learning requires being radically open-minded and seek out believable others. **Deciding involves playing different scenarios** through time to visualize how to get an outcome consistent with what you want.
     * One of the most important things is to ask believable people. Listening to uninformed people is worse than having no answers at all.
@@ -117,7 +130,7 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
     * Embrace reality and deal with them well.
     * My work principles are basically the life priciples you just read, applied to groups.
 
-### Work Principles
+### Part 3 : Work Principles
 
 * For any group to function well, its work principles must be aligned with its members' life principles.
 * A great organization has both great people and great culture.
@@ -129,3 +142,8 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
 * **Idea meritocracy = Radical Truth + Radical Transparency + Believability-Weighted Decision Making**
 * Independent thinkers with audacious goals -> Idea meritocracy -> Principles decisions -> Successes (Failures and Learnings) -> Happy employees -> More independent thinkers and audacious goals.
 * **Make your passion and your work one and the same and do it with people you want to be with.**
+
+#### To get the culture right...
+
+**Trust in Radical Truth and Radical Transparency**
+* Never say anything about someone that you wouldn't say to them directly and don't try people without accusing them to their faces.
