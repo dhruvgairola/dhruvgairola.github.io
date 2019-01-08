@@ -8,13 +8,13 @@ Lately, I've felt that I'm spending a lot of time on computer science and softwa
 
 The parts I enjoyed revolved around goal setting, planning, execution, self-reflection, overcoming failures, being bold and ambitious, being open-minded, data-driven, frank and truthful, understanding that people are wired differently, etc. I like that these were distilled succintly, logical and well exemplified given the context (even if the book repeats a lot).
 
-However, I felt that some sections of the book were Darwinian, unfeeling, unrealistic and possibly mumbo-jumbo. Using baseball cards to rank employees oversimplifies complex human behavior and pigeonholes people. This also assumes that the evaluations to create the cards are accurate. A better solution might be to document real results that were delivered by employees and using that to create profiles instead of relying on things like Myers-Briggs personality tests to build baseball cards (Myers-Briggs strikes me as pseudo-science). I pity the poor souls who encounter extenuating personal problems in Bridgewater- I get the impression that they'll be forced to jump off a plank.
+However, I felt that some of the principles were Darwinian, punitive, unfeeling, unrealistic and possibly pseudo-science. Using baseball cards to rank employees oversimplifies complex human behavior and pigeonholes people. This also assumes that the evaluations to create the cards are accurate. A better solution might be to document real results that were delivered by employees and using that to create profiles instead of relying on things like Myers-Briggs personality tests to build baseball cards (Myers-Briggs strikes me as pseudo-science). I pity the poor souls who encounter extenuating personal problems in Bridgewater- I get the impression that they'll be forced to jump off a plank.
 
-Ideas like ignoring personal loyalty in favor of the organizational well-being and being radically truthful are admirable. However, in an organization that is not aligned with these principles, following such mantras will likely get you fired. The truth is that nobody likes jerks, even they are completely unbiased and data driven. Even with the proper directives, I'm not sure how "radical" an employee can possibly be without coming across as cold-blooded. Nobody likes politicans either but I feel that navigating relationships is an art and involves tradeoffs. It's better being frank than a phony but being "radical" is unrealistic.
+Ideas like ignoring personal loyalty in favor of the organizational well-being and being radically truthful are admirable. However, in an organization that is not aligned with these principles, following such mantras is difficult as an individual. The truth is that nobody likes jerks, even they are completely unbiased and data driven. Even with the proper directives, I'm not sure how "radical" an employee can possibly be without coming across as cold-blooded. Nobody likes politicans either but I feel that navigating relationships is an art and involves tradeoffs. It's better being frank than a phony but being "radical" seems unrealistic.
 
 In defense of Ray, a lot of the principles are within the context of Ray's own life learnings and his own organizational setting. Obviously being "radically transparent" in a military or political setting would be ill-advised but it could likely make-or-break an investment firm where billions of dollars are at stake. I imagine that the software equivalent of Ray's organizational environment would be an innovative startup solving big problems. 
 
-Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my life, especially those concerning strategy and goal-setting. However, I believe that emotion and intuition can engender creativity (e.g., Steve Jobs' intuition around the development of the ipod, a scenario where no data was available), so we shouldn't completely discount these factors when making creative decisions, especially in the software industry (which is a creative field) and as an entrepreneur.
+Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my life, especially those concerning strategy and goal-setting. However, I believe that emotion and intuition can engender creativity (e.g., Steve Jobs' intuition around the development of the ipod), so we shouldn't completely discount these factors when making creative decisions, especially in the software industry (which is a creative field) and as an entrepreneur.
 
 ### Introduction
 
@@ -60,6 +60,7 @@ Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my
 * Heroes inevitably experience at least one very big failure that tests whether they have the resilience to come back and fight smarter and with more determination.
 
 **Chapter 7**
+* Wrong to assume either that a person in one role will be successful in another role or that the ways one person operates will work well for another.
 
 **Chapter 8**
 * I cannot say that having an intense life filled with accomplishments is better than having a relaxed life filled with savoring.
@@ -145,5 +146,31 @@ Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my
 
 #### To get the culture right...
 
-**Trust in Radical Truth and Radical Transparency**
+**Chapter 1 : Trust in Radical Truth and Radical Transparency**
 * Never say anything about someone that you wouldn't say to them directly and don't try people without accusing them to their faces.
+* Speak up, own it or get out.
+* Push the limits of being transparent while remaining prudent.
+* Provide transparence to people who handle it well and either deny or fire the others.
+* Don't share sensitive info with enemies.
+* **Meaningful relationships and meaninful work are mutually reinforcing**, especially when supported by radical truth and radical transparency.
+
+**Chapter 2 : Cultivate Meaningful Work and Meaningful Relationships**
+* Be loyal to the common mission and not to anyone who is not operating consistently with it.
+* Generosity is good, entitlement is bad.
+* Give more consideration to others than you would give yourself.
+* Having groups of about hundred (+/- 50) that are bound collectively by our common mission is the best way to scale meaningful relationships.
+
+**Chapter 3 : Create a culture in which it is okay to make mistake and unacceptable not to learn from them**
+* Error logs : Bad outcomes are recorded so we can track and address them systematically.
+* Mistakes are an important part of the evolutionary process.
+* Observe patterns of mistakes and see if they're caused by weaknesses.
+* Pain + Reflection = Progress.
+* Teach the merits of mistake-based learning.
+* Some mistakes are acceptable while others are unacceptable.
+
+**Chapter 4 : Get and stay in sync**
+* **People who suppress minor conflicts tend to have much bigger conflicts later on. People who address them early have the best and longest-lasting relationships.**
+* Thoughtful disagreement is about reaching the truth, not about being right.
+* Spend lavishly on time and energy you devote to getting is sync, because its the best investment you can make.
+* **Distinguish between idle complaints and complaints meant to lead to improvement.**
+* 
