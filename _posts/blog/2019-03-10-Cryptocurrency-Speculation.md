@@ -36,7 +36,7 @@ Instead of paying for goods and services using cryptocurrency in a peer-to-peer 
 
 ![_config.yml]({{ site.baseurl }}/images/plaid.png)
 
-The diagram above shows how a payment flows through the ecosystem [1] (similar diagrams can be found in [2][3]). In this system, merchants are charged around 3% by the third-parties. Of the 3%, majority of the fees are paid to the issuing bank, and smaller fees are paid to the acquirers and the payment network providers. The settlement between the acquirer and issuer takes a few days. For remittance, a $500 billion market [R1], these fees can reach 7%, and settlement is even longer [tapscott, 48]. For international payments, there is an additional issue where banks have to hold foreign currency in foreign accounts to mitigate exchange rate risk. This has an opportunity cost because the foreign currency is sitting idle in those foreign accounts. Can cryptocurrency solve some of these payment-related problems?
+The diagram above shows how a payment flows through the ecosystem [1] (similar diagrams can be found in [2][3]). In this system, merchants are charged around 3% by the third-parties. Of the 3%, majority of the fees are paid to the issuing bank, and smaller fees are paid to the acquirers and the payment network providers. The settlement between the acquirer and issuer takes a few days. For remittance, a $500 billion market [4], these fees can reach 7%, and settlement is even longer [5]. For international payments, there is an additional issue where banks have to hold foreign currency in foreign accounts to mitigate exchange rate risk. This has an opportunity cost because the foreign currency is sitting idle in those foreign accounts. Can cryptocurrency solve some of these payment-related problems?
 
 A company called Ripple promises solutions for speedier settlements via one of its products, called xRapid.
 
@@ -44,7 +44,7 @@ A company called Ripple promises solutions for speedier settlements via one of i
 
 The idea is for banks to buy XRP coins when they need it and send the XRP to other banks in the Ripple network for cross-border settlements. However, banks would not actually want to hold XRP coins for too long because XRP is very volatile and banks, being heavily regulated, cannot take such a high risk. If banks don't buy and hold XRP coins, then its unclear how regular folk (non-traders) could profit by holding XRP long term. Similar points can be made against competitors like Stellar.
 
-Ripple also has products like xCurrent and xVia, which allow the various players in the ecosystem to move money more efficiently and for cheaper. However, xCurrent and xVia do not use XRP. Thus, investing in Ripple (the company) makes more sense than buying the XRP, but that is a separate discussion involving comparisons with encumbent competitors like SWIFT. Useful articles about Ripple can be found online [5][6].
+Ripple also has products like xCurrent and xVia, which allow the various players in the ecosystem to move money more efficiently and for cheaper. However, xCurrent and xVia do not use XRP. Thus, investing in Ripple (the company) makes more sense than buying the XRP, but that is a separate discussion involving comparisons with encumbent competitors like SWIFT. Useful articles about Ripple can be found online [6][7].
 
 ### Platforms
 **Prelude**
@@ -61,3 +61,7 @@ Before examining specific use cases, we must note how the various tokens on a pl
 4. https://ripple.com/ripplenet/on-demand-liquidity/
 5. https://hackernoon.com/4-alarming-reasons-ripple-might-not-be-what-you-think-9debc3c86985
 6. https://www.reddit.com/r/CryptoCurrency/comments/ayiuww/14_common_misunderstandings_about_ripple_and_xrp/
+5. https://www.worldbank.org/en/news/press-release/2018/04/23/record-high-remittances-to-low-and-middle-income-countries-in-2017
+6. Blockchain Revolution (pg 48), Tapscott et. Al.
+7. https://hackernoon.com/4-alarming-reasons-ripple-might-not-be-what-you-think-9debc3c86985
+8. https://www.reddit.com/r/CryptoCurrency/comments/ayiuww/14_common_misunderstandings_about_ripple_and_xrp/
