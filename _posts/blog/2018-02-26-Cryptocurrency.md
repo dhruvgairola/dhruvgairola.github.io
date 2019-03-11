@@ -340,8 +340,8 @@ I spent the past few months diving deep into 11 weeks worth of lectures on "Bitc
 **Hot and Cold Storage**
 * Hot storage : Online. Its convenient buy risky.
 * Cold storage : Offline. Archival but safer.
-* Hot storage knows addresses of cold storage. Just sent it to that address. Cold storage does not need to be connected to the network at all!
-* Problem : Want to use new address for each coin sent to cold for privacy. But cold wallet is offline.
+* Hot storage knows addresses of cold storage. You can send coins to cold storage address and cold storage does not need to be connected to the network at all!
+* Problem : Want to use new address for each coin sent to cold storage for privacy. But cold wallet is offline.
   * Solution 1 : Cold generates a batch of addresses and sends it to hot side before going offline.
     * Not so good because have to do this periodically.
   * Solution 2 : Hierarchical wallets.
@@ -975,7 +975,7 @@ I spent the past few months diving deep into 11 weeks worth of lectures on "Bitc
 * Public randomness protocol :
   * Too many parties to use hashes?
   * Need to convince the public of randomness?
-  * Real life examples include NBA Drafting, Vietnam conscription. Lot of controversies because perhaps the drafting and consciption are not truly random. And public may not believe it either.
+  * Real life examples include NBA Drafting, Vietnam conscription. Lot of controversies because perhaps the drafting and conscription are not truly random. And public may not believe it either.
 * Cryptographic beacons :
   * Service to publish random data.
   * Uniform randomness.
