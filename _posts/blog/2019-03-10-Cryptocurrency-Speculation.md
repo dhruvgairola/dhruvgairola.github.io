@@ -40,11 +40,11 @@ The diagram above shows how a payment flows through the ecosystem [1] (similar d
 
 A company called Ripple promises solutions for speedier settlements via one of its products, called xRapid.
 
-> xRapid : "International payments, especially in emerging markets, require businesses to hold pre-funded accounts in destination currencies. It’s a costly endeavor that ties up resources. RippleNet provides an alternative. Customers have the option to source liquidity required for cross-border payments with XRP and enable instant payments to and from any country in the world." [4]
+> xRapid : "International payments, especially in emerging markets, require businesses to hold pre-funded accounts in destination currencies. It’s a costly endeavor that ties up resources. RippleNet provides an alternative. Customers have the option to source liquidity required for cross-border payments with XRP and enable instant payments to and from any country in the world." [6]
 
 The idea is for banks to buy XRP coins when they need it and send the XRP to other banks in the Ripple network for cross-border settlements. However, banks would not actually want to hold XRP coins for too long because XRP is very volatile and banks, being heavily regulated, cannot take such a high risk. If banks don't buy and hold XRP coins, then its unclear how regular folk (non-traders) could profit by holding XRP long term. Similar points can be made against competitors like Stellar.
 
-Ripple also has products like xCurrent and xVia, which allow the various players in the ecosystem to move money more efficiently and for cheaper. However, xCurrent and xVia do not use XRP. Thus, investing in Ripple (the company) makes more sense than buying the XRP, but that is a separate discussion involving comparisons with encumbent competitors like SWIFT. Useful articles about Ripple can be found online [6][7].
+Ripple also has products like xCurrent and xVia, which allow the various players in the ecosystem to move money more efficiently and for cheaper. However, xCurrent and xVia do not use XRP. Thus, investing in Ripple (the company) makes more sense than buying the XRP, but that is a separate discussion involving comparisons with encumbent competitors like SWIFT. Useful articles about Ripple can be found online [7][8].
 
 ### Platforms
 **Prelude**
@@ -58,10 +58,9 @@ Before examining specific use cases, we must note how the various tokens on a pl
 1. https://fin.plaid.com/articles/major-players-in-payment-processing
 2. https://www.mastercard.us/en-us/merchants/start-accepting/payment-process.html
 3. https://qr.ae/TUfmNO
-4. https://ripple.com/ripplenet/on-demand-liquidity/
-5. https://hackernoon.com/4-alarming-reasons-ripple-might-not-be-what-you-think-9debc3c86985
-6. https://www.reddit.com/r/CryptoCurrency/comments/ayiuww/14_common_misunderstandings_about_ripple_and_xrp/
-5. https://www.worldbank.org/en/news/press-release/2018/04/23/record-high-remittances-to-low-and-middle-income-countries-in-2017
-6. Blockchain Revolution (pg 48), Tapscott et. Al.
+4. https://www.worldbank.org/en/news/press-release/2018/04/23/record-high-remittances-to-low-and-middle-income-countries-in-2017
+5. Blockchain Revolution (pg 48), Tapscott et. Al.
+6. https://ripple.com/ripplenet/on-demand-liquidity/
 7. https://hackernoon.com/4-alarming-reasons-ripple-might-not-be-what-you-think-9debc3c86985
 8. https://www.reddit.com/r/CryptoCurrency/comments/ayiuww/14_common_misunderstandings_about_ripple_and_xrp/
+
