@@ -51,19 +51,21 @@ Ripple also has products like xCurrent and xVia, which allow the various players
 
 ## Internet of Things (IoT)
 
-One of the issues with using the blockchain as a public ledger is that transaction fees are prohibitively large for micro-payments (because high fees incentivize nodes to spend resources to create new blocks). In the age of self-driving cars, wearables, drones, robots, smart homes, etc, micro-payments will become increasingly important. Hence, researchers have developed alternatives to the blockchain which confer lower transaction fees. These newer public ledgers are organized as Directed Acyclic Graphs (DAGs), a well known datastructure in computer science.
+One of the issues with using the blockchain as a public ledger is that transaction fees are prohibitively large for micro-payments (because high fees incentivize nodes to spend resources to create new blocks). In the age of self-driving cars, wearables, drones, robots, smart homes, etc, micro-payments will become increasingly important. Hence, researchers have developed alternatives to the blockchain which confer lower transaction fees and promise increased scalability. These newer public ledgers are organized as Directed Acyclic Graphs (DAGs).
 
 ### IOTA
 
-IOTA is a cryptocurrency targeted at solving problems in the IoT space. Transactions are stored on a public ledger called the Tangle, which is a DAG. When a node publishes a transaction to the Tangle, it must approve two other transactions. Additionally, a cryptographic puzzle (PoW) has to be solved by this node as a means of spam prevention. This puzzle is far far easier to solve compared to the puzzle involved in Bitcoin. Due to this, transaction fees are negligible.
+IOTA is a cryptocurrency targeted at solving problems in the IoT space. Transactions are stored on a public ledger called the Tangle, which is a DAG. When a node publishes a transaction to the Tangle, it must approve two other transactions. Additionally, a cryptographic puzzle (PoW) has to be solved by this node as a means of spam prevention. This puzzle is far far easier to solve compared to the puzzle involved in Bitcoin. Due to this, transaction fees are negligible. Theoretically, the Tangle can also scale far better than a traditional blockchain because multiple nodes can quickly add transactions to the Tangle in parallel while on the blockchain, miners have to compete in order to gain the right to add transactions. The figure below illustrates this [9].
+
+![_config.yml]({{ site.baseurl }}/images/dag.png)
 
 IOTA's current network involves special nodes called coordinators which are controlled by the IOTA foundation. The purpose of these nodes is to prevent attacks on the network. However, the drawback is that the network is highly dependent on the existence of these nodes, making the network centralized. Long term, the IOTA foundation has promised to remove these coordinators from the network and ensure a decentralized design.
 
-The IOTA foundation also periodically publishes snapshots of Tangle ledger. Nodes rely on these snapshots to avoid having to store the entire ledger (which is massive) from the beginning of time. However, this is another point of centralization in the network. To solve this, IOTA plans to incentivize nodes to store the entire history of the Tangle [9].
+The IOTA foundation also periodically publishes snapshots of Tangle ledger. Nodes rely on these snapshots to avoid having to store the entire ledger (which is massive) from the beginning of time. However, this is another point of centralization in the network. To solve this, IOTA plans to incentivize nodes to store the entire history of the Tangle [10].
 
 #### Thoughts
 
-The current use cases of IOTA have yet to achieve widespread adoption. For example, a data marketplace was developed by the IOTA foundation where it is possible to use IOTA tokens to publish data from various IoT sensors. Other use case include autonomous vehicles which can earn money, vehicles which can pay tolls, etc [10]. However, none of these use-cases are production-ready, despite the IOTA foundation's impressive list of industry partners.
+The current use cases of IOTA have yet to achieve widespread adoption. For example, a data marketplace was developed by the IOTA foundation where it is possible to use IOTA tokens to publish data from various IoT sensors. Other use case include autonomous vehicles which can earn money, vehicles which can pay tolls, tracking the movement of products in the supply chain, etc [11][12]. However, none of these use-cases are production-ready, despite the IOTA foundation's impressive list of industry partners.
 
 Many of the above challenges arise due to the laundry list of difficult technical challenges which have yet to be solved by the IOTA foundation. For one, it's not clear if they will succeed in removing coordinators and snapshots anytime soon and achieve proper decentralization. In addition, their PoW puzzle is too difficult to solve for many of the weaker IoT devices. If these devices cannot publish transactions, they will not be able to join the IOTA network. Finally, the IOTA foundation has also promised to build a smart contract layer, which is going to involve signifiant development effort.
 
@@ -76,11 +78,11 @@ Before examining specific use cases, we must note how the various tokens on a pl
 
 ## Stablecoins
 
-Stablecoins provide a solution for the high volatility of cryptocurrency. These stablecoins are cyptocurrencies which are pegged to a stable asset like USD. There are 2 general flavors of stablecoins. IOU stablecoins are those which are backed by fiat and managed by centralized organizations. However, trusting these organizations can be a significant challenge. In the case of Tether, its tokens are backed by fiat (allegedly) but fiat reserves are loaned out to shady websites owned by the same company [11]. Until banks start issuing their own stablecoins someday, it's probably best to avoid IOU stablecoins by shady companies. The far more interesting stablecoins are crypto-stablecoins which are backed by cryptocurrencies. These crypto-stablecoins and are managed by DAOs entirely on the blockchain and completely (well, mostly) decentralized.
+Stablecoins provide a solution for the high volatility of cryptocurrency. These stablecoins are cyptocurrencies which are pegged to a stable asset like USD. There are 2 general flavors of stablecoins. IOU stablecoins are those which are backed by fiat and managed by centralized organizations. However, trusting these organizations can be a significant challenge. In the case of Tether, its tokens are backed by fiat (allegedly) but fiat reserves are loaned out to shady websites owned by the same company [13]. Until banks start issuing their own stablecoins someday, it's probably best to avoid IOU stablecoins by shady companies. The far more interesting stablecoins are crypto-stablecoins which are backed by cryptocurrencies. These crypto-stablecoins and are managed by DAOs entirely on the blockchain and completely (well, mostly) decentralized.
 
 ### MakerDAO
 
-MakerDAO is a DAO which manages its own stablecoin called Dai, where 1 Dai is pegged to US$1 [12]. Dai can be bought on cryptocurrency exchanges just like any other cryptocurrency. However, an increase in demand for Dai will cause its price to rise. To keep the Dai price pegged to $1, MakerDAO would like to increase the supply of Dai to counteract the increase in demand. Supply is increased when new coins are minted, and new coins are minted when users send MakerDAO a collateral (in exchange for new coins). MakerDAO encourages users to send a collateral by lowering interest/fees on the collateral, allowing users to borrow Dai cheaply from MakerDAO.
+MakerDAO is a DAO which manages its own stablecoin called Dai, where 1 Dai is pegged to US$1 [14]. Dai can be bought on cryptocurrency exchanges just like any other cryptocurrency. However, an increase in demand for Dai will cause its price to rise. To keep the Dai price pegged to $1, MakerDAO would like to increase the supply of Dai to counteract the increase in demand. Supply is increased when new coins are minted, and new coins are minted when users send MakerDAO a collateral (in exchange for new coins). MakerDAO encourages users to send a collateral by lowering interest/fees on the collateral, allowing users to borrow Dai cheaply from MakerDAO.
 
 #### Borrowing creates new Dai
 
@@ -90,7 +92,7 @@ This debt has to be paid one way or another. The happy path happens when the use
 
 #### Borrowing risks
 
-It is entirely possible that the $2 ETH that the user put up as collateral may crash to $1.50 ETH. This increases risk for MakerDAO because the value of the collateral is falling rapidly while the 1 Dai debt remains unpaid. Hence, MakerDAO has to cover the debt and sell off the risky collateral. MakerDAO creates a new type of token called MKR and sells MKR to traders to raise the 1 Dai to cover the debt (called a debt auction). MKR represents voting power in MakerDAO, allowing holders to control interest rates, risk parameters, etc. In addition, MKR is also a store of value and buying MKR is how MakerDAO distributes profits to shareholders. After the debt auction, the price of MKR is lowered since MKR supply was increased to raise funds to cover the debt. MakerDAO will then auction the $1.50 ETH collateral to traders, raising 1.5 Dai (called a collateral auction). Finally, MakerDAO will buy 1 Dai worth of MKR (to compensate for the debt it paid off) plus 0.2 Dai worth of MKR which represents a 13% liquidation penalty plus around 0.1 Dai worth of MKR which represents interest/fees of 6% (these fees are variable). Now, only 0.2 Dai is left (1.5 - 1 - 0.2 - 0.1 = 0.2) and this is returned to the user as $0.20 ETH. In the end, the user is holding 1 Dai from before and $0.20 ETH. More examples can be found online [13]. Note that if ETH spikes instead, nothing would happen. 
+It is entirely possible that the $2 ETH that the user put up as collateral may crash to $1.50 ETH. This increases risk for MakerDAO because the value of the collateral is falling rapidly while the 1 Dai debt remains unpaid. Hence, MakerDAO has to cover the debt and sell off the risky collateral. MakerDAO creates a new type of token called MKR and sells MKR to traders to raise the 1 Dai to cover the debt (called a debt auction). MKR represents voting power in MakerDAO, allowing holders to control interest rates, risk parameters, etc. In addition, MKR is also a store of value and buying MKR is how MakerDAO distributes profits to shareholders. After the debt auction, the price of MKR is lowered since MKR supply was increased to raise funds to cover the debt. MakerDAO will then auction the $1.50 ETH collateral to traders, raising 1.5 Dai (called a collateral auction). Finally, MakerDAO will buy 1 Dai worth of MKR (to compensate for the debt it paid off) plus 0.2 Dai worth of MKR which represents a 13% liquidation penalty plus around 0.1 Dai worth of MKR which represents interest/fees of 6% (these fees are variable). Now, only 0.2 Dai is left (1.5 - 1 - 0.2 - 0.1 = 0.2) and this is returned to the user as $0.20 ETH. In the end, the user is holding 1 Dai from before and $0.20 ETH. More examples can be found online [15]. Note that if ETH spikes instead, nothing would happen. 
 
 #### Other risks
 
@@ -114,7 +116,25 @@ Unlike traditional digital assets (like online videos, images), CK tokens are ve
 
 Admittedly crypto-kitties may not be the best showcase for NFTs since the utility of owning digital cats is marginal at best. Moreover, the value of owning a CK token is due to the image of a cat. The mapping of a CK token to a cat image is controlled by a centralized website, and if this website goes out of business, CK tokens lose all their value. This is different from owning physical collectibles like baseball cards which can exist independently of the issuing organization. 
 
-It is important to note that crypto-collectibles are initial attempts at utilizing NFTs and that better use-cases could gain popularity in the future [14]. For example, distributing event tickets on the blockchain can enable P2P ticket sales, eliminating fees charged by ticket issuing companies while also solving ticketing fraud [15]. However, these applications are in very early stages.
+It is important to note that crypto-collectibles are initial attempts at utilizing NFTs and that better use-cases could gain popularity in the future [16]. For example, distributing event tickets on the blockchain can enable P2P ticket sales, eliminating fees charged by ticket issuing companies while also solving ticketing fraud [17]. However, these applications are in very early stages.
+
+## Other Use-cases
+
+* Distributed exchanges.
+* DAOs.
+* Prediction markets.
+* Advertising.
+* **Gambling.** The majority of the dApps on the Ethereum ecosystem are gambling-related. Moreover, many of them have really low volumes.
+* Distributed data storage.
+* ICOs.
+
+# My Recommendation
+
+If you had $100 to gamble away and wanted to invest in cryptocurrencies for profit, I would recommend putting the majority of that into Ethereum ($60), a portion into Bitcoin ($20) and a smaller chunk into Maker ($10). The remaining $10 could go anywhere as you please, but I would personally pick Stellar ($5) and Ripple ($5). The best moment to withdraw these investments would be when major news outlets restart the hype on cryptocurrencies or when regular Joes want to get in on the action.
+
+Ethereum is great because it enables developers to build a vast array of applications on its platform and since all fees are paid in ETH, there is some justification for an investment. Bitcoin is the next logical investment, not necessarily because of usefulness but rather because the entire cryptocurrency market follows the price movement of BTC. A smaller investment in Maker is supported by my belief that stablecoins are crucial to any widespread adoption. Stellar and Ripple are solving problems in the B2B space which is probably where cryptocurrency is the most useful (in the short term).
+
+Coins which I considered but rejected include Nano and Litecoin (I'm not bullish on P2P payments), IOTA and Cardano (research projects), Monero and Zcash (amazing tech but cannot be regulated), NEO (completely centralized) and Tron and EOS (general shadyness).
 
 # References
 
@@ -126,10 +146,12 @@ It is important to note that crypto-collectibles are initial attempts at utilizi
 6. https://ripple.com/ripplenet/on-demand-liquidity/
 7. https://hackernoon.com/4-alarming-reasons-ripple-might-not-be-what-you-think-9debc3c86985
 8. https://www.reddit.com/r/CryptoCurrency/comments/ayiuww/14_common_misunderstandings_about_ripple_and_xrp/
-9. https://medium.com/konfid-io-blockchain-reports/iota-report-decoding-the-tangle-part-1-a7705c458583
-10. https://blog.iota.org/modelling-new-business-models-with-iota-fadd53c6a192
-11. https://www.reddit.com/r/CryptoCurrency/comments/b0wmuo/tether_once_again_pulls_a_sneaky_update/
-12. https://www.reddit.com/r/CryptoCurrency/comments/b15hrp/with_the_news_tether_isnt_gasp_backed_11_with_usd/
-13. https://www.reddit.com/r/MakerDAO/comments/8efk5q/faq_possibly_everything_you_ever_wanted_to_know/
-14. https://www.forbes.com/sites/andrewrossow/2018/08/08/with-blockchain-technology-you-gotta-collect-them-all/#77cb5e891b70
-15. https://guts.tickets/
+9. https://blog.iota.org/on-the-tangle-white-papers-proofs-airplanes-and-local-modifiers-44683aff8fea
+10. https://medium.com/konfid-io-blockchain-reports/iota-report-decoding-the-tangle-part-1-a7705c458583
+11. https://blog.iota.org/modelling-new-business-models-with-iota-fadd53c6a192
+12. https://www.youtube.com/watch?v=Gr-LstcDcAw
+13. https://www.reddit.com/r/CryptoCurrency/comments/b0wmuo/tether_once_again_pulls_a_sneaky_update/
+14. https://www.reddit.com/r/CryptoCurrency/comments/b15hrp/with_the_news_tether_isnt_gasp_backed_11_with_usd/
+15. https://www.reddit.com/r/MakerDAO/comments/8efk5q/faq_possibly_everything_you_ever_wanted_to_know/
+16. https://www.forbes.com/sites/andrewrossow/2018/08/08/with-blockchain-technology-you-gotta-collect-them-all/#77cb5e891b70
+17. https://guts.tickets/
