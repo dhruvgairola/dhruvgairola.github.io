@@ -120,17 +120,15 @@ It is important to note that crypto-collectibles are initial attempts at utilizi
 
 ## Other Use-cases
 
-* Distributed exchanges.
-* DAOs.
-* Prediction markets.
-* Advertising.
-* **Gambling.** The majority of the dApps on the Ethereum ecosystem are gambling-related. Moreover, many of them have really low volumes.
-* Distributed data storage.
-* ICOs.
+There exist plenty of coins with a diverse set of use cases but not all of them are investable in my opinion. Some of my rejections were based on having too small a market (e.g., Aragon, most dApps), being in the R&D stage (e.g., StorJ), tough competition (e.g., BAT), a lack of personal interest (e.g., Playtowin.io, Augur), or associated with scams (e.g., ICOs).
 
 # My Recommendation
 
-If you had $100 to gamble away and wanted to invest in cryptocurrencies for profit, I would recommend putting the majority of that into Ethereum ($60), a portion into Bitcoin ($20) and a smaller chunk into Maker ($10). The remaining $10 could go anywhere as you please, but I would personally pick Stellar ($5) and Ripple ($5). The best moment to withdraw these investments would be when major news outlets restart the hype on cryptocurrencies or when regular Joes want to get in on the action.
+The cryptocurrency ecosystem is mostly unregulated and is a hotbed for fraudulent exchanges (Mt Gox, Quadriga, BitGrail), exchanges/coins with fake volumes (there are a ton), pyramid schemes (Bitconnect, Centratech, most ICOs) and wallet-related scams (e.g., iotaseed.io). Moreover, cryptocurrencies can also contain bugs in their protocols [18]. Smart contracts are especially susceptible.
+
+It is important not to invest more than you can afford to lose. Additionally, basic knowledge on how to securely store cryptocurrency would minimize risk from being burned by scummy exchanges. Basic research can also help. For example, understanding that the blockchain is not the same as a currency, or that increased adoption of a coin doesn't guarantee an increase in price (and vice versa).
+
+However, if you had $100 to gamble away and wanted to invest in cryptocurrencies for profit, I would recommend putting the majority of that into Ethereum ($60), a portion into Bitcoin ($20) and a smaller chunk into Maker ($10). The remaining $10 could go anywhere as you please, but I would personally pick Stellar ($5) and Ripple ($5). The best moment to withdraw these investments would be when major news outlets restart the hype on cryptocurrencies or when regular Joes want to get in on the action.
 
 Ethereum is great because it enables developers to build a vast array of applications on its platform and since all fees are paid in ETH, there is some justification for an investment. Bitcoin is the next logical investment, not necessarily because of usefulness but rather because the entire cryptocurrency market follows the price movement of BTC. A smaller investment in Maker is supported by my belief that stablecoins are crucial to any widespread adoption. Stellar and Ripple are solving problems in the B2B space which is probably where cryptocurrency is the most useful (in the short term).
 
@@ -155,3 +153,5 @@ Coins which I considered but rejected include Nano and Litecoin (I'm not bullish
 15. https://www.reddit.com/r/MakerDAO/comments/8efk5q/faq_possibly_everything_you_ever_wanted_to_know/
 16. https://www.forbes.com/sites/andrewrossow/2018/08/08/with-blockchain-technology-you-gotta-collect-them-all/#77cb5e891b70
 17. https://guts.tickets/
+18. https://www.reddit.com/r/CryptoCurrency/comments/avj06n/
+
