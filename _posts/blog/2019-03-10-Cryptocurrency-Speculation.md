@@ -47,7 +47,9 @@ A company called Ripple promises solutions for speedier settlements via one of i
 
 The idea is for banks to buy XRP coins when they need it and send the XRP to other banks in the Ripple network for cross-border settlements. However, banks would not actually want to hold XRP coins for too long because XRP is very volatile and banks, being heavily regulated, cannot take such a high risk. If banks don't buy and hold XRP coins, then its unclear how regular folk (non-traders) could profit by holding XRP long term. Similar points can be made against competitors like Stellar (Stellar has applications outside of the financial industry though).
 
-Ripple also has products like xCurrent and xVia, which allow the various players in the ecosystem to move money more efficiently and for cheaper. However, xCurrent and xVia do not use XRP. Thus, investing in Ripple (the company) makes more sense than buying the XRP, but that is a separate discussion involving comparisons with encumbent competitors like SWIFT. Useful articles about Ripple can be found online [7][8].
+Ripple also has products like xCurrent and xVia, which allow the various players in the ecosystem to move money more efficiently and for cheaper. However, xCurrent and xVia do not use XRP. Thus, investing in Ripple (the company) makes more sense than buying the XRP, but that is a separate discussion involving comparisons with encumbent competitors like SWIFT. 
+
+Another argument against Ripple is that most of the supply of XRP is held by the founders. There are policies in place to prevent these whales from manipulating the price of XRP but I'd still be wary placing a big bet on XRP. Useful articles about Ripple can be found online [7][8].
 
 ## Internet of Things (IoT)
 
@@ -130,7 +132,7 @@ It is important not to invest more than you can afford to lose. Additionally, ba
 
 However, if you had $100 to gamble away and wanted to invest in cryptocurrencies for profit, I would recommend putting the majority of that into Ethereum ($60), a portion into Bitcoin ($20) and a smaller chunk into Maker ($10). The remaining $10 could go anywhere as you please, but I would personally pick Stellar ($5) and Ripple ($5). The best moment to withdraw these investments would be when major news outlets restart the hype on cryptocurrencies or when regular Joes want to get in on the action.
 
-Ethereum is great because it enables developers to build a vast array of applications on its platform and since all fees are paid in ETH, there is some justification for an investment. Bitcoin is the next logical investment, not necessarily because of usefulness but rather because the entire cryptocurrency market follows the price movement of BTC. A smaller investment in Maker is supported by my belief that stablecoins are crucial to any widespread adoption. Stellar and Ripple are solving problems in the B2B space where I believe cryptocurrency can have the highest impact (in the short term).
+Ethereum is great because it enables developers to build a vast array of applications on its platform and since all fees are paid in ETH, there is some justification for an investment. Bitcoin is the next logical investment, not necessarily because of usefulness but rather because the entire cryptocurrency market follows the price movement of BTC. A smaller investment in Maker is supported by my belief that stablecoins are crucial to any widespread adoption. Stellar and Ripple are solving problems in the B2B space where I believe cryptocurrency can have the highest impact in the short term. However, it would be prudent to only allocate a small amount of investment in these since they're largely centralized systems.
 
 Coins which I considered but rejected include Nano and Litecoin (I'm not bullish on P2P payments), IOTA and Cardano (research projects), Monero and Zcash (amazing tech but cannot be regulated), NEO (centralized) and Tron and EOS (general shadyness).
 
