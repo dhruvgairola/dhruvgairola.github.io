@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cryptocurrency Speculation
+title: Cryptocurrency Evaluation
 type: blog
 ---
 
@@ -10,7 +10,31 @@ As I conducted my research, I couldn't help but feel a tinge of sympathy for the
 
 In this post, I want to evaluate opportunities mostly from an investment/speculation perspective i.e., if I had $100, which currencies would I buy and why? My examination is based on factors such as : the team/organization developing the currency, the use-cases or pain points addressed, the market impact in solving these pain points, the competitive advantage offered by the technology, the riskiness of the investment and the timing of the investment.
 
-# Background
+# Table of Contents
+
+1. [Background](#Background)
+
+2. [Payments](#Payments)
+
+    2.1 [Direct to Merchants/P2P](#Payments:P2P)
+
+    2.2 [Indirect via Intermediaries/B2B](#Payments:B2B)
+
+    2.3 [Internet of Things (IoT)](#Payments:IoT)
+
+3. [Platforms](#Platforms)
+
+    3.1 [Stablecoins](#Platforms:Stablecoins)
+
+    3.2 [Non-Fungible Tokens (NFTs)](#Platforms:NFTs)
+
+    3.3 [Other Use-cases](#Platforms:Others)
+
+4. [My Recommendation](#Recommendation)
+
+5. [Conclusion](#Conclusion)
+
+# <a name='Background'></a>Background
 
 If you have some familiarity with how cryptocurrencies work, you can skip this section.
 {:.hint}
@@ -19,8 +43,9 @@ I'll provide a simplified overview of how blockchains and cryptocurrencies work 
 
 The blockchain ledger doesn't just store transactions; it can also store smart contracts. Smart contracts are programs that are executed when a set of conditions are met. When two or more nodes agree to participate in a smart contract transaction, and if the conditions of the contract are met, then tokens are exchanged between the parties. These tokens are usually cryptocurrencies which the software accepts in its network. The software accepts these tokens as long as they conform to some standard (e.g., ERC-20) and provided that they are also developed using a prescribed software development platform. The Ethereum software for example, allows a variety of tokens developed by third-parties to be accepted for use within its network in addition to its own native currency ETH. This also means that fully validating nodes which store the Ethereum blockchain have to record all transactions involving the various tokens, not just ETH. Smart contracts are created using a programming language. The Ethereum platform offers Solidity, a turing-complete language, while Bitcoin also offers a scripting language, which is a stack-based language with limited functionality. In Ethereum's case, arbitrarity complex programs (smart contracts) can be added to the blockchain and each smart contract transaction is carried out using the computing power of the the fully validating nodes. Hence, transaction fees paid by participants of an Ethereum based smart contract factors in the time it takes to execute this smart contract (gas cost) and the price per unit of time (gas price). These transaction fees are paid in ETH, no matter the tokens being exchanged.
 
-# Payments
-## Direct to Merchants/P2P
+# <a name='Payments'></a>Payments
+
+## <a name='Payments:P2P'></a>Direct to Merchants/P2P
 
 Reading /r/cryptocurrency or cryptocurrency blogs, it seems like many readers are excited about purchasing goods online or in-store using cryptocurrency. However, it is not clear why paying with cryptocurrency would be preferable over cash or credit (leaving aside countries with hyperinflation). As a consumer, I would use cryptocurrency only if it were cheaper and easier to buy goods and services and if I also had existing conveniences like being able to access credit, reverse transactions, perform chargebacks, recover my account credentials, etc. However, for me to even access cryptocurency, I would have to either mine the currency or buy it over an exchange, which is expensive and tedious. For the vast majority, even understanding cryptocurrency is challenging, let alone accessing it or loading it into a credit card (e.g., Wirex). Managing your private keys is not intuitive for consumers.  Merchants would also have to manage volatile cryptocurrency by converting the various payments into stablecoins. Crucially, the anonymity benefits of cryptocurrency are at complete odds with regulation. Widespread adoption seems unlikely without solutions to many of these difficult problems, and even then, competing or existing solutions might outperform cryptocurrency based solutions.
 
@@ -28,7 +53,7 @@ Reading /r/cryptocurrency or cryptocurrency blogs, it seems like many readers ar
 
 Perhaps consumers would be more willing to use cryptocurrency daily if they had the same level of convenience that most banks offer. Consumers would open an account at our fictional bank, Acme bank. This bank would manage credentials in a centralized manner so that customers wouldn't have to manage private keys. In order to obtain Acme coins, customers would deposit fiat into their accounts, and these would be automatically be converted into Acme stablecoins (e.g., Dai) by a smart contract. These Acme coins would be available for use immediately in laptop and mobile wallets. For customers, online payments become easy using these wallets, and in-store payments can be performed via NFC phones or an Acme credit card (e.g., Wirex). The various payments-middlemen would be replaced by smart contracts. Acme ATMs would allow customers to withdraw fiat by selling Acme stablecoins. For transfers from an Acme account to an account in another bank or country, or for remittance, Acme stablecoins could be used for settlement between banks. Transactions between accounts would be held in escrow (e.g., Ethereum Safe Remote Purchase) for longer if the transactions are deemed risky (e.g., cross border transactions) by machine learning algorithms, and these transactions could be cancelled by customers if needed. Acme bank would have to be compliant with the financial laws in the countries it operates. This also means that Acme bank could freeze your funds if deemed necessary. Acme bank would offer interest to customers, similar to how holding coins accumulates dividends. For all intents and purposes, Acme would function like a regular bank, except that many of its operations would be performed on the blockchain.
 
-## Indirect via Intermediaries
+## <a name='Payments:B2B'>Indirect via Intermediaries/B2B
 
 Instead of paying for goods and services using cryptocurrency in a peer-to-peer setting, a more realistic scenario is for cryptocurrency to "play nice" with existing financial institutions. Already, banks are exploring blockchain based technology and even issuing their own "cryptocurrencies" (e.g., Goldman Sachs) to "improve various business operations". While this is probably more marketing speak than actual advancement, we should consider how cryptocurrency could be applied to improve payments in the B2B setting. Typically, the payments ecosystem consists of :
   1. Issuers : These are the organizations that issue credit cards to their customers (e.g., banks, credit unions, retailers).
@@ -41,6 +66,7 @@ Instead of paying for goods and services using cryptocurrency in a peer-to-peer 
 The diagram above shows how a payment flows through the ecosystem [1] (similar diagrams can be found in [2][3]). In this system, merchants are charged around 3% by the third-parties. Of the 3%, majority of the fees are paid to the issuing bank, and smaller fees are paid to the acquirers and the payment network providers. The settlement between the acquirer and issuer takes a few days. For remittance, a $500 billion market [4], these fees can reach 7%, and settlement is even longer [5]. For international payments, there is an additional issue where banks have to hold foreign currency in foreign accounts to mitigate exchange rate risk. This has an opportunity cost because the foreign currency is sitting idle in those foreign accounts. Can cryptocurrency solve some of these payment-related problems?
 
 ### Ripple
+
 A company called Ripple promises solutions for speedier settlements via one of its products, called xRapid.
 
 > xRapid : "International payments, especially in emerging markets, require businesses to hold pre-funded accounts in destination currencies. It’s a costly endeavor that ties up resources. RippleNet provides an alternative. Customers have the option to source liquidity required for cross-border payments with XRP and enable instant payments to and from any country in the world." [6]
@@ -51,7 +77,7 @@ Ripple also has products like xCurrent and xVia, which allow the various players
 
 Another argument against Ripple is that most of the supply of XRP is held by the founders. There are policies in place to prevent these whales from manipulating the price of XRP but I'd still be wary placing a big bet on XRP. Useful articles about Ripple can be found online [7][8].
 
-## Internet of Things (IoT)
+## <a name='Payments:IoT'>Internet of Things (IoT)
 
 One of the issues with using the blockchain as a public ledger is that transaction fees are prohibitively large for micro-payments (because high fees incentivize nodes to spend resources to create new blocks). In the age of self-driving cars, wearables, drones, robots, smart homes, etc, micro-payments will become increasingly important. Hence, researchers have developed alternatives to the blockchain which confer lower transaction fees and promise increased scalability. These newer public ledgers are organized as Directed Acyclic Graphs (DAGs).
 
@@ -71,14 +97,15 @@ The current use cases of IOTA have yet to achieve widespread adoption. For examp
 
 Many of the above challenges arise due to the laundry list of difficult technical challenges which have yet to be solved by the IOTA foundation. For one, it's not clear if they will succeed in removing coordinators and snapshots anytime soon and achieve proper decentralization. In addition, their PoW puzzle is too difficult to solve for many of the weaker IoT devices. If these devices cannot publish transactions, they will not be able to join the IOTA network. Finally, the IOTA foundation has also promised to build a smart contract layer, which is going to involve signifiant development effort.
 
-# Platforms
+# <a name='Platforms'></a>Platforms
+
 ## Prelude
 
 Platforms like Ethereum have unlocked human creativity on the blockchain. Developers have implemented various tokens and smart contracts on the Ethereum platform. The basic building block (pardon the pun) of the blockchain, smart contracts, can enforce contracts programmatically thus invalidating the need for trusted middlemen. When pretty web or mobile interfaces are layered on top of smart contracts to create apps, these become dApps or distributed applications (e.g., Cryptokitties). With dApps, it's typically the case that only a part of the app logic is stored and executed on the blockchain while the rest is stored in private/public repositories and executed in traditional web servers (usually UI facing logic). However, the entirety of the app logic can also be stored and executed on the blockchain. For example, DAOs (decentralized autonomous organization) are special types of dApps where the app is "an online company". In a DAO, tokens are distributed to company shareholders and these shareholders can then vote on proposals. The governance and voting rules are completely embedded in the blockchain.
 
 Before examining specific use cases, we must note how the various tokens on a platform and the native currency interact. Using Ethereum as an example, when a company issues new tokens, buyers use ETH coins to purchase them. When smart contracts are executed, the transaction fees are also paid in ETH irrespective of the token. So if a token is wildy successful, there might be a mild impact on the price of ETH via these direct interactions. However, the price correlation beteween ETH and a token is a lot more complex, so for simplicity's sake it's probably better to examine ETH independently from a token.
 
-## Stablecoins
+## <a name='Platforms:Stablecoins'></a>Stablecoins
 
 Stablecoins provide a solution for the high volatility of cryptocurrency. These stablecoins are cyptocurrencies which are pegged to a stable asset like USD. There are 2 general flavors of stablecoins. IOU stablecoins are those which are backed by fiat and managed by centralized organizations. However, trusting these organizations can be a significant challenge. In the case of Tether, its tokens are backed by fiat (allegedly/unaudited) but fiat reserves are loaned out to Bitfinex, a disreputable exchange owned by the same parent company [13]. Until banks start issuing their own stablecoins someday, it's probably best to avoid IOU stablecoins. The far more interesting stablecoins are crypto-stablecoins which are backed by cryptocurrencies. These crypto-stablecoins and are managed by DAOs entirely on the blockchain and are mostly decentralized.
 
@@ -108,7 +135,7 @@ MakerDAO also claims "​Hedging,​ ​Derivatives,​ ​Leverage" as a potent
 
 It is possible to use Dai without understanding any of the complexity of MakerDAO but it is not possible to borrow and repay Dai or take part in debt and collateral auctions without a deep understanding of MakerDAO. Similarly, investing in MKR requires a high amount of sophistication and ideally, some amount of participation in the governance of MakerDAO.
 
-## Non-Fungible Tokens (NFTs)
+## <a name='Platforms:NFTs'></a>Non-Fungible Tokens (NFTs)
 
 Crypto-kitties popularized the notion of non-fungibility in the digital world. Crypto-kitties is a dApp where users can purchase or breed digital cats online from https://www.cryptokitties.co/. These digital cats are represented as images on the website. To buy cats, users send ETH tokens to a smart contract and receive a CK token in return. Each token has metadata attached to it which indicates the "genes" of a cat. Rarer or desirable genes influence the price of these cats. These genes ensure the uniqueness of a CK token, which makes these tokens non-fungible.
 
@@ -120,11 +147,11 @@ Admittedly crypto-kitties may not be the best showcase for NFTs since the utilit
 
 It is important to note that crypto-collectibles are initial attempts at utilizing NFTs and that better use-cases could gain popularity in the future [17]. For example, distributing event tickets on the blockchain can enable P2P ticket sales, eliminating fees charged by ticket issuing companies while also solving ticketing fraud [18]. However, these applications are in very early stages.
 
-## Other Use-cases
+## <a name='Platforms:Others'></a>Other Use-cases
 
 There exist plenty of coins with a diverse set of use cases but not all of them are investable in my opinion. Some of my rejections were based on having too small a market (e.g., Aragon, most dApps), being in the R&D stage (e.g., StorJ), tough competition (e.g., BAT), a lack of personal interest (e.g., Augur, gambling dApps), associated with scams (e.g., ICOs), private cloud products (e.g., IBM Hyperledger, Amazon Managed Blockchain), private blockchains (e.g., Facebook, Goldman Sachs, Kik), etc.
 
-# My Recommendation
+# <a name='Recommendation'></a>My Recommendation
 
 The cryptocurrency ecosystem is mostly unregulated and is a hotbed for fraudulent exchanges (Mt Gox, Quadriga, BitGrail), exchanges/coins with fake volumes (there are a ton), pyramid schemes (Bitconnect, Centratech, most ICOs) and wallet-related scams (e.g., iotaseed.io). Moreover, cryptocurrencies can also contain bugs in their protocols [19]. Smart contracts are especially susceptible.
 
@@ -136,7 +163,7 @@ Ethereum is great because it enables developers to build a vast array of applica
 
 Coins which I considered but rejected include Nano and Litecoin (I'm not bullish on P2P payments), IOTA and Cardano (research projects), Monero and Zcash (amazing tech but cannot be regulated), NEO (centralized) and Tron and EOS (general shadyness).
 
-# Conclusion
+# <a name='Conclusion'></a>Conclusion
 
 The average Joe isn't going to be using cryptocurrency for day-to-day payments anytime soon. It's too complicated, volatile, fundamentally difficult to manage and challenging to regulate. Any attempts to solve these problems will involve a heavy amount of centralization, defeating the whole point of decentralized cryptocurrencies. Centralized financial systems already work really well for most consumers outside of countries with hyperinflation. Even from a technological viewpoint, centralized databases can easily outshine centralized blockchains or DAGs in terms of performance and scalability.
 

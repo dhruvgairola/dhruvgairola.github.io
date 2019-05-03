@@ -6,6 +6,8 @@ type: blog
 
 I spent the past few months diving deep into 11 weeks worth of lectures on "Bitcoin and Cryptocurrency Technologies" offered by Princeton University on coursera.com. I have painstakingly compiled a summmary of my learnings from the course.
 
+### Table of Contents
+
 [Week 1 : Intro to Crypto.](#Week1:IntrotoCrypto.)
 
 [Week 2 : How Bitcoin achieves Decentralization.](#Week2:HowBitcoinachievesDecentralization.)
