@@ -149,11 +149,11 @@ It is important to note that crypto-collectibles are initial attempts at utilizi
 
 ## <a name='Platforms:Others'></a>Other Use-cases
 
-There exist plenty of coins with a diverse set of use cases but not all of them are investable in my opinion. Some of my rejections were based on having too small a market (e.g., Aragon, most dApps), being in the R&D stage (e.g., StorJ), tough competition (e.g., BAT), a lack of personal interest (e.g., Augur, gambling dApps), associated with scams (e.g., ICOs), private cloud products (e.g., IBM Hyperledger, Amazon Managed Blockchain), private blockchains (e.g., Facebook, Goldman Sachs, Kik), etc.
+There exist plenty of coins with a diverse set of use cases but not all of them are investable in my opinion. Some of my rejections were based on having too small a market (e.g., Aragon, most dApps), being in the R&D stage (e.g., StorJ), tough competition (e.g., BAT), a lack of personal interest (e.g., Augur, gambling dApps), associated with scams (e.g., ICOs), private cloud products (e.g., IBM Hyperledger, Amazon Managed Blockchain), private blockchains (e.g., Facebook, Goldman Sachs, Kik), etc. Some I'm planning to analyze in a follow up article (e.g., VeChain, Stellar).
 
 # <a name='Recommendation'></a>My Recommendation
 
-The cryptocurrency ecosystem is mostly unregulated and is a hotbed for fraudulent exchanges (Mt Gox, Quadriga, BitGrail), exchanges/coins with fake volumes (there are a ton), pyramid schemes (Bitconnect, Centratech, most ICOs) and wallet-related scams (e.g., iotaseed.io). Moreover, cryptocurrencies can also contain bugs in their protocols [19]. Smart contracts are especially susceptible.
+The cryptocurrency ecosystem is mostly unregulated and is a hotbed for fraudulent exchanges (Mt Gox, Quadriga, BitGrail), exchanges/coins with fake volumes (there are a ton), market manipulation [19], pyramid schemes (Bitconnect, Centratech, most ICOs) and wallet-related scams (e.g., iotaseed.io). Moreover, cryptocurrencies can also contain bugs in their protocols [20]. Smart contracts are especially susceptible.
 
 It is important not to invest more than you can afford to lose. Additionally, basic knowledge on how to securely store cryptocurrency would minimize risk from being burned by scummy exchanges. Basic research can also help. For example, understanding that the blockchain is not the same as a currency, or that **increased adoption of a coin doesn't guarantee an increase in price (and vice versa).** Keeping up to date with the latest news is also recommended.
 
@@ -193,4 +193,5 @@ In the grand scheme of things, will cryptocurrencies ever cross the chasm and ac
 16. https://makerdao.com/da/whitepaper
 17. https://www.forbes.com/sites/andrewrossow/2018/08/08/with-blockchain-technology-you-gotta-collect-them-all/#77cb5e891b70
 18. https://guts.tickets/
-19. https://www.reddit.com/r/CryptoCurrency/comments/avj06n/
+19. https://www.reddit.com/r/CryptoCurrency/comments/bpm2u0/what_just_happened/
+20. https://www.reddit.com/r/CryptoCurrency/comments/avj06n/
