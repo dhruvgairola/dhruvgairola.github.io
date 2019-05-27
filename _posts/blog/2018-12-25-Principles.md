@@ -152,7 +152,7 @@ Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my
 * Push the limits of being transparent while remaining prudent.
 * Provide transparence to people who handle it well and either deny or fire the others.
 * Don't share sensitive info with enemies.
-* **Meaningful relationships and meaninful work are mutually reinforcing**, especially when supported by radical truth and radical transparency.
+* **Meaningful relationships and meaningful work are mutually reinforcing**, especially when supported by radical truth and radical transparency.
 
 **Chapter 2 : Cultivate Meaningful Work and Meaningful Relationships**
 * Be loyal to the common mission and not to anyone who is not operating consistently with it.
@@ -173,4 +173,19 @@ Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my
 * Thoughtful disagreement is about reaching the truth, not about being right.
 * Spend lavishly on time and energy you devote to getting is sync, because its the best investment you can make.
 * **Distinguish between idle complaints and complaints meant to lead to improvement.**
-* 
+* Watch out for people who think it's embarassing not to know.
+* Look out for misinterpretations or misunderstandings.
+* **If either party to a disagreement is too emotional to be logical, the conversation should be deferred.** Pausing a few hours or days where decisions do not have to be made immediately is sometimes the best approach.
+* If it is your meeting to run, manage the conversation.
+* Be precise what you're talking about to aviod confusion.
+* Topic slip is random drifting from topic to topic without achieving completion on any of them.
+* Assign action items after the group has made decisions.
+* Great collaboration feels like jazz.
+* **3 to 5 smart people seeking the right answers in an open-minded way will generally lead to the best answers compared to a larger group.** Of course this depends on the quality of the poeple, differences in perspectives and how well the group is managed. 
+* If you can't get in sync with someone on shared values, you should consider whether that person is worth keeping in your life.
+
+**Chapter 5 : Believability weight your decision making**
+* The most believable opinions are those of people who 1) have repeatedly and successfully accomplished the thing in question and 2) have demonstrated that they can logically explain the cause effect relationships behind their conclusions.
+* When a decision needs to be made, consider who is more likely to be right.
+* Remember that everyone has opinions and they are often bad.
+* Don't pay as much attention to people's conclusions as to the reasoning that lead them to the conclusions.
