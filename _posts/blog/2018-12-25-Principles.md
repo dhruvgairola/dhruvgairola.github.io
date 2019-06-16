@@ -189,3 +189,74 @@ Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my
 * When a decision needs to be made, consider who is more likely to be right.
 * Remember that everyone has opinions and they are often bad.
 * Don't pay as much attention to people's conclusions as to the reasoning that lead them to the conclusions.
+* Less experienced, less believeable people may not be necessary to decide an issue but if the issue involves them and you aren't in sync, this can impact long term efficiency.
+
+**Chapter 6 : Recognize How to Get Beyond Disagreements**
+* Don't let the little things divide you when your agreement on the big things should bind you.
+* Once a decision is made, everyone should get behind it even though individuals may still disagree.
+* Encountered people, especially junior people, who mistakenly think that they are entitled to argue about whatever they want with whomever they please. They must abide by the system and not threaten it.
+
+#### To get the people right...
+* Steve Jobs "The secret to my success is that we've gone to exceptional lengths to hire the best people in the world."
+* Hire people who understand the distinction between their lower level selves and their higher level selves. Give them tools and information they need to flourish in their jobs and not micromanage them.
+
+**Chapter 7 : Remember that the WHO is more important than the WHAT**
+* What you need to do :
+  1. Remember the goal.
+  2. Give the goal to people who can achieve it or tell them how to achieve it.
+  3. Hold them accountable.
+  4. If they still can't do the job after training, fire them.
+* Make sure everyone has someone they report to, so that they can hold them responsible.
+* Most people see the things around them without consider the forces that created them.
+
+**Chapter 8 : Hire right because the penalties for hiring wrong are huge**
+* At high level we look for people who think independently, argue open-mindedly and assertively and above all else value the the intense pursuit of truth and excellence, and through it, the rapid improvement of themselves and the organization.
+* **For long term relationships, values are most important, abilities come next and skill are the least important. Yet people make the mistake of choosing skills and abilities first and overlooking values.**
+* Look for people who sparkle, not just any ol one of those.
+* Personality assessments are valuable tools for getting a quick picture of what people are like in terms of their abilities, preferences and style.
+* Think of your teams the way that sports managers do : no one person possesses everything required to produce success, yet everyone must excel.
+* A persons performance in academia doesn't tell you much about their values.
+* Look for people who ask lots of great questions.
+* Pay the person, not the job. Never pay based on the job title alone.
+
+**Chapter 9 : Constantly train, test, evaluate and sort people**
+* Radical truth doesn't require you to be negative all the time. Point out examples of jobs done well and the causes of their success.
+* Make your metrics clear and impartial.
+* It is much worse to keep someone in a job unsuitable for them than it is to fire or reassign them.
+
+**Chapter 10 : Manage as someone operating a machine to achieve a goal.**
+* Understand that a great manager is an organizational engineer. They create process-flow diagrams to show how the machine works, and evaluate its design. They build metrics to light up how well each of the individual parts of the machine and the machine as a whole are working. **And they tinker constantly with its designs and its people to make both better.**
+* Build great metrics.
+* Delegate theh details.
+* No manager should delegate responsibilities to people they don't know well.
+* Vary your involvement based on your confidence.
+* Use daily updates as a tool for staying on top of what your people are doing and thinking. I usually ask each person who reports to me to take about 10 to 15 mins to write a brief description of what they did that day, the issues pertaining to them and their reflections.
+* People's answers could be erroneous theories or spin so you need to occasionally double-check them, especially when they sound questionable.
+* Allowing small problems to go unnoticed and unaddressed creates the perception that it's acceptable to tolerate such things.
+* Going on vacation doesn't mean one can neglect one's responsibilities. This needn't take much time.
+* Don't worry about whether or not your people like you and don't look to them to tell you what you should do. Just worry about making the best decisions possible, recognizing that what you do, most everyone will think you're doing something wrong.
+* If you've agreed with someone that something is supposed to go a certain way make sure it goes that way- unless you get in sync about doing it differently.
+* **Watch out for pepole who confuse goals and tasks because if they can't see the distinction, you can't trust them with responsibilities.**
+
+**Chapter 11 : Perceive and Don't Tolerate Problems**
+* People have a tendency to slowly get used to unacceptable things that would shock them if they saw them with fresh eyes.
+* Avoid the anonymous we and they because they mask personal responsibility.
+
+**Chapter 12 : Diagnose Problems to Get at their Root Causes**
+* What are common mistakes in failing to diagnose problems?
+  1. Dealing with problems as one offs without fixing root causes.
+  2. **Not connecting problems to the people who failed.**
+  3. Not connecting what one is learning to what was learned in the prior ones.
+* Ask yourself "who should do what differently?"
+* Identifying the fact that someone else doesn't know what to do doesn't mean that you know what to do.
+* Root causes are not actions but reasons.
+* **Root cause discovery process might proceed like this :**
+  * The problem was bad programming.
+  * Why was there bad programming? Because Harry programmed it badly.
+  * Why did Harry program it badly? Because he wasn't well trained and was in a rush.
+  * Why wasn't he well trained? Did his manager know he wasn't well trained?
+* **Use the "drill down" technique to understand the department that is having problems.**
+  * Step 1 : List the problems. Be specific. Don't try to find solutions yet.
+  * Step 2 : Identify root causes. Most problems happen due to one of two reasons. 1) It isn't clear who the RP is or 2) The RP isn't handling his/her responsibility well. To get to the root cause, keep asking "Why?"
+  * Step 3 : Create a plan. Step away from the group and develop a plan that addresses the root causes. They should have specific tasks, outcomes, RPs, tracking metrics and timelines.
+  * Step 4 : Execute on the plan.
