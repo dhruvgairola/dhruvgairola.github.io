@@ -260,3 +260,52 @@ Overall, I enjoyed Ray's life story. I will apply many of Ray's principles to my
   * Step 2 : Identify root causes. Most problems happen due to one of two reasons. 1) It isn't clear who the RP is or 2) The RP isn't handling his/her responsibility well. To get to the root cause, keep asking "Why?"
   * Step 3 : Create a plan. Step away from the group and develop a plan that addresses the root causes. They should have specific tasks, outcomes, RPs, tracking metrics and timelines.
   * Step 4 : Execute on the plan.
+
+**Chapter 13 : Design Improvements to your machine to get around your problems**
+* Consider second and third-order consequences not just first order ones.
+* Build around goals rather than tasks.
+* **Make sure you hire managers before you hire their reports.**
+* Everyone must be overseen by a believable person who has high standards.
+* Make departments as self-sufficient as possible so that they have control over the resources they need to achieve their goals.
+* Generally the raio of managers to reports should not be more than 1:10 and preferably closer to 1:5. Of course this depends on the managers ability and complexity of jobs they're doing.
+* Don't just pay attention to your job, pay attention to how your job will be done if you are no longer around.
+* Hiring a consultant can get you specialized expertise to tackle a problem, but beware at the same time because this will cost you in the long run and erode your culture.
+* When evaluating whether to use a consultant, consider :
+  1. Quality control. The company you hire from must have high standards.
+  2. If a full-time consultant is required, the annual cost will be more than creating a new internal role.
+  3. Institutionalization of knowledge. An internal employee will gain knowledge and an appreciation of your culture over time which no consultant can.
+  4. Security risks.
+* **Don't do work for people in another dept or grab people from another dept unless you speak to the person responsible for overseeing the other dept.**
+* Effective managers pay attention both to imminent problems and to problems that haven't hit them yet.
+* When you catch someone violating your rules and contorls, make sure everyone sees the consequences. (?)
+* **Constantly think about how to produce leverage.** At Bridgewater, I typically work at a 50:1 leverage, meaning that for every hour I spend with each person who works for me, they spend around 50 hours working to move the project along.
+
+**Chapter 14 : Do what you set out to do.**
+* While there might be more glamour in coming up with new brilliant ideas, most of the success comes from doing mundane and often distasteful stuff, like identifying and dealing with probblems and pushing hard over a long time.
+* Work for goals that you are excited about. If you're excited aobut achieving it and recognize that doing some undesirable tasks to achieve the goal is required, you will have the right perspective and will be appropriately motivated.
+* **Don't act before thinking. Take time to come up with a game plan.**
+* Recognize thhat everyone has too much to do. Other than working harder for longer hours, there are 3 ways to fix the problem. 1) Having fewer things to do by prioritizing and saying no, 2) Finding the right people to delegate to and 3) Improving your productivity.
+* Cross items off a checklist.
+* Celebrate when your team achieves a goal.
+
+**Chapter 15 : Use tools and protocols to shape how work is done.**
+* Put your learnings and principles into practice; no point just reading about them.
+
+**Chapter 16 : And for heavens sake, don't overlook governance.**
+* All organizations must have checks and balances.
+* Make sure no one is more powerful than the system or so important that they're irreplaceable.
+* **Make sure reporting lines are clear.**
+* My wishes for you are 1) You can make your work and passion one and the same. 2) You can struggle well with others on your common mission to produce previously mentioned rewards. 3) You can savor your struggles and rewards. 4) You will evolve quickly and contribute to evolution in significant ways.
+
+**Tools**
+* Coach : Library of common situations which are linked to relevant principles to help people handle them.
+* Dot collector : Used in meetings to assess each other using "dots", positive or negative, on any number of several dozen attributes.
+* Baseball cards : Collect data on people (reviews, tests, past results, etc) and create baseball cards, a simple way of presenting a person's strengths and weaknesses and the evidence behind them.
+* Issue log : Record mistakes and learn from them.
+* Pain button : pain + reflection = progress. It's an app to record people's emotions as they feel them and then come back later to reflect on them using guided reflection questions.
+* Dispute resolver : Asks a series of questions to guide people towards resolution. One feature is that it locates believable people who can help determine wheteher a disagreement is worth taking up at a higher mgmt level. You must have a clear and fair system to resolve disputes in order to ensure an idea meritocracy.
+* **Daily update tool** : Each person who reports to me take about 10-15 mins to write a brief email of what they did that day, issues and reflections. I can use this to gauge how they are working together and which threads I should pull. It's invaluable for staying in sync.
+* **Contract tool** : App that lets people make and monitor their commitments to each other.
+* Process flow diagram.
+* Policy and procedures manual.
+* Metrics : Four helpful steps in creating good metrics: 1) Know what goal your business is achieving. 2) Understand the process for reaching that goal. 3) Identify key parts in the process to measure. 4) Explore how to create levers tied to metrics that allow you to adjust your process. **The test of effective metrics lies in whether they can tell you what and who is doing well and poorly, all the way down to specific people.**
