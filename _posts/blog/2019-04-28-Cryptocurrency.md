@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cryptocurrency Evaluation
+title: Cryptocurrency
 type: blog
 ---
 
