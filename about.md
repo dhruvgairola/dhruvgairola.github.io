@@ -5,7 +5,7 @@ permalink: /about/
 
 **Experience**
 
-I started my career building games as an Android app developer. Soon after, I transitioned to backend web development. After my masters studies, I started my own firm, delving deep into distributed systems development. I created an enterprise platform to empower business analysts to work with big-data. Transitioning to e-commerce, I worked on complex distributed systems in the e-grocery business. Currently, I'm solving difficult problems at scale in the food pickup business.
+I started my career building games as an Android app developer. Soon after, I transitioned to backend web development. After my masters studies, I started my own firm, delving deep into distributed systems development. I created an enterprise platform to empower business analysts to work with big-data. Transitioning to e-commerce, I worked on complex distributed systems in the e-grocery business and then later in the food pickup business. Currently, I'm solving difficult problems at scale in the robo-advisory and electronic trading space.
 
 **Education**
 
