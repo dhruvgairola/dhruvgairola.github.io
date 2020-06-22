@@ -40,3 +40,5 @@ I picked up the book "Founders at work" on the airport bookstore while I was tra
 * Hiring slowly and more carefully is important.
 * You have to be willing to move move on, even if you've got real success.
 * Treat your customer how you'd like to be treated.
+* You'd be surprised that there are a lot of people rooting for you to be successful.
+* Competitors rarely kill companies. Usually they're self-inflicted wounds.
