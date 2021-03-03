@@ -6,6 +6,8 @@ type: blog
 
 I spent the last 5 months implementing the first kafka system at Wealthsimple, rolling it into production and scaling it to many millions of events everyday. Our old system that would update customer balances used a poller and we knew it was slow. However, I was shocked when our new system increased our throughput (of balance updates) by 5x within first month of deployment in-part due to the meme-stock/Gamestop frenzy that lead to a massive growth in our trade volume.
 
+<img src="/images/ws-mag.png" alt="_config.yml" style="height:350px;">
+
 Our work was also featured in the [Wealthsimple magazine](https://www.wealthsimple.com/en-ca/magazine/trade-engineering) by our CTO and VP, quote "they moved a key microservice to an event stream instead of polling, and that led to an 87% increase in how fast Wealthsimple can execute trades when the market opens". 87% was based on partial rollout - the actual increase was 800%!
 
 It was a difficult journey since we had no prior art for kafka in-house. Still 3 of us senior devs put our hearts into it and came out with a slew of learnings. I'd like to share a few of them.
