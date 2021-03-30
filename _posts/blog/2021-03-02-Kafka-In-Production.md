@@ -8,7 +8,7 @@ I spent the last 5 months implementing the first kafka system at Wealthsimple, r
 
 <img src="/images/ws-mag.png" alt="_config.yml" style="height:350px;">
 
-Our work was also featured in the [Wealthsimple magazine](https://www.wealthsimple.com/en-ca/magazine/trade-engineering) by our CTO and VP, quote "they moved a key microservice to an event stream instead of polling, and that led to an 87% increase in how fast Wealthsimple can execute trades when the market opens". 87% was based on partial rollout - the actual increase was 800%!
+Our work was also featured in the [Wealthsimple magazine](https://www.wealthsimple.com/en-ca/magazine/trade-engineering) by our CTO and VP, quote "they moved a key microservice to an event stream instead of polling, and that led to an 87% increase in how fast Wealthsimple can execute trades when the market opens". 87% was based on partial rollout - the actual increase was 400% (5x scale)!
 
 It was a difficult journey since we had no prior art for kafka in-house. Still 3 of us senior devs put our hearts into it and came out with a slew of learnings. I'd like to share a few of them.
 
