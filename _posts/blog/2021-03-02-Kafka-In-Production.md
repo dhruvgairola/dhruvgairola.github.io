@@ -21,6 +21,9 @@ Both the producer and consumers will need to be tuned depending on the specific 
 ### Offset lag
 If you're moving fast, the most important metric you should focus on is the offset lag. This tells you how far behind your consumer is from your producer. You will need to tune this like crazy if you really care about latency. Over time, you will track other metrics  (e.g., number of events over time) and create alerts for those, but offset lag is #1.
 
+### Increase memory
+As a general rule, I found that a kafka consumer/producer seems to require about 1.5 GB extra memory. We were getting out-of-memory errors frequently on the consumer. We had to profile the memory dump to figure out that our app logic didn't contain memory leaks. Increasing the container memory helped solve this problem. Interestingly, the producer also had this issue.
+
 ### Data processing and Javascript?
 We were stuck with Javascript for the consumer (for reasons I won't go into) so we had to pick a JS library. It was actually pretty decent but the bad part was the Avro plugin that came with it. We actually had to fork the plugin and patch it internally. Anyway, this should be obvious but you really need to vet your third party libs. As a general rule, with data-processing, stick to Python or Java libs.
 
