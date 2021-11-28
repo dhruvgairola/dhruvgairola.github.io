@@ -5,7 +5,7 @@ permalink: /about/
 
 **Experience**
 
-I started my career building games as an Android app developer. Soon after, I transitioned to backend web development. After my masters studies, I started my own firm, delving deep into distributed systems development. I created an enterprise platform to empower business analysts to work with big-data. Transitioning to e-commerce, I worked on complex distributed systems in the e-grocery business and then later in the food pickup business. Currently, I'm solving difficult problems at scale in the online stock-trading domain.
+I'm currently an engineering manager at Wealthsimple in our stock-trading product line. In the past, I've been in software engineering roles at both Series-B startups and large enterprises. My fondest memory is starting my own business and spending 2 years as a CTO where I hired devs, raised funds and managed on-prem relationships with customers (we built an excel-like platform for big-data).
 
 **Education**
 
@@ -15,15 +15,12 @@ Additionally, I completed my BSc degree (Hons) in Computer Science at the Univer
 
 **Technical Interests**
 
-Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Ruby, Python and Javascript.
+Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Javascript and Python.
 
 **Other Interests**
 
-* Playing the guitar
-* Drumming
+* Guitar
 * Swimming
-* Gaming
 * Scrabble
 * Entrepreneurship
-* Reading sci-fi books or classics
-* Foosball
+* Reading sci-fi or lit classics
