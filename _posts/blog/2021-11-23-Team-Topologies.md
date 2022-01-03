@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Team Topologies WIP
+title: Team Topologies
 type: blog
 ---
 
 * Conways Law - Orgs will produce system designs that are copies of the communication structures of those orgs.
-* Org design is about designing for collaborative tech for the voice of the customer.
+* Org design is about designing for collaborative tech for the voice of the customer. 
 
 ## Part 1 - Teams as the means of delivery
 ### The problem with org charts
@@ -62,15 +62,73 @@ type: blog
   2. Storming - working through personality differences.
   3. Norming - evolving standard ways of working together.
   4. Performing - reaching high effectiveness.
-* 
+* The danger in allowing multiple teams to change the same system is that no one owns either the changes made or the resulting mess.
+* Every part of the software system needs to be owned by exactly one team. This means no shared ownership of components, libs or code. Ownership doesn't mean policing, more like caretaking.
+* **Team members should put the needs of the team above their own.**
+* They should 
+  * Arrive for standups on time.
+  * Keep investigations on track.
+  * Encourage a focus on team goals.
+  * **Help unblock other folks before starting new work.**
+  * Mentor less experienced folks.
+  * Agree to explore options - don't try to win the argument.
+* Research suggests that diverse teams tend to produce more creative solutions more rapidly and tend to be better at empathizing with other's team needs.
+* Diversity fosters better results as members make fewer assumptions about their users.
+* Looking to reward indiv perf in modern orgs tends to drive poor results and damages staff behavior.
+* Teams can suffer from cognitive load in terms of responsibility, number of apps, number of tools. They spend less time coding and more time on ops.
+* **If we stress the team by giving it responsibility for part of the system that is beyond it's cognitive load capacity, it ceases to act like a high-performing unit and starts to behave like a loosely associated group of individuals, each doing their own tasks and failing to consider the best interests of the team.**
+* Simple way to assess cognitive load - "Do you feel like you're effective and able to respond in a timely fashion to the work you're asked to do?"
+* Identify distinct domains that each team has to deal with and classify these into simple, complicated or complex.
+* First heuristic is to assign a single domain to a single team. If its too large, split the domain into subdomains and assign each new subdomain to a single team.
+* Second heuristic - A single team can accomodate 2-3 simple domains.
+* Third heuristic - A team responsible for a complex domain should not have any more domains assigned to them, not even a simple one.
+* The last heuristic - Avoid a single team being responsible for 2 complicated domains. It's best to split them into 2 separate teams of 5 people so they can be more focused and autonomous.
+* These are recommendations, not a definitive path to success.
+* Use a team-first approach to deciding sw subsystem boundaries.
+* Create a team API
+  * Code produced by team.
+  * How team communicates changes to its code.
+  * Wikis.
+  * Principles and preferred way of working.
+  * Comms - chat and video tools.
+  * Work info - what team is working on now, what's coming and priorities in the short to medium term.
+* Instead of need a thick skin in order to survive in an org that atomizes individuals, people in a team-first org have the space and support to develop their skills and practices within the context of the team.
 
+## Part 2 - Team Topologies that work for flow
+### Static team topologies
+* We will discuss 2 anti-patterns for team formation.
+* The first is ad hoc team design - too much comms overhead.
+* The other is shuffling team members - too much context switching.
+* Ask these questions - give our skills, contraints, eng maturity and business goals, which TT will help us deliver faster and safer? How can we reduce hadovers to deployment? Where should the boundaries be?
+* **Orgs with many handoffs involving separate sioloed divisions is incompatible with the speed of change and complexity of modern systems. Instead, we must ensure teams have all the skills necessary to design, develop, test, deploy and operate within the team. Teams can improve sw more rapidly and develop a heightened responsiveness to users.**
+* Cross-functional/e2e/feature team require high-engineering maturity and trust. Otherwise folks might take shortcuts (e.g., not automating tests), which leads to breakdown of trust between teams as tech debt increases.
+* Product teams (own all features for a product) need a support system e.g., self-service infra, CI, monitoring, etc). Otherwise, product teams will be frequently blocked/bottlenecked by other teams.
+* Cloud team/infra team should work on infra-as-code and self-serve capabilities.
+* SRE team makes sense at scale - SRE is what happens when you ask a sw engineer to design an ops function. They make improvements to ops and app layer to deal with global multi-million user systems.
+* Spotify uses a spreadsheet to track inter-dependencies bet squads and tribes. Knowledge, tasks and resources are dependencies.
 
-
-
-
-
-
-
-
-
-
+### Four Fundamental Team Topologies
+* 4 fundamental TTs are- stream aligned team, enabling team, complicated subsystem team and platform team.
+* Stream aligned teams (e.g., product team, service team).
+  * e.g., single service, or product, single set of features, single user journey, etc.
+  * Build and deliver value quickly, safely and indepdendently.
+  * This is the primary team type in an org.
+  * This team is funded in a long-term sustainable manner, not as a fleeting project.
+  * Different streams can coexist e.g., customer stream, business area streams, product streams, user-personal streams, etc.
+  * Why not call this e2e product team? Bec calling it "stream aligned" is a better generalization and a better term to emphasize fast "flow" of output.
+  * A stream aligned team produces steady flow of work, quick to incorporate feedback, experiments, 0 handoffs to other teams, address tech debt, members must achieve "autonomy, mastery and purpose".
+* Platform teams (e.g., internal tooling team, infra team).
+  * Provides internal services to reduce the cognitive load that we be required from stream-aligned teams to develop underlying services.
+  * Platform teams knowledge is made available via API that stream-aligned teams can easily consume.
+  * Common platforms abstract away infra, netwroking and other cross-cutting capabilities at the lower level of the stakc. This is a good first step but a platform can also refer to a higher level of abstraction.
+  * e.g., logging, monitoring services, APIs for creating test envs, facilities for querying resource usage.
+* Enabling teams (e.g., internal training team, internal evangelizing)
+  * These teams cross cut multiple stream aligned teams and make informed suggestions on adequate tooling, practice, frameworks and ecosystem choices around the app stack.
+  * This team is ahead of the curve in keeping abreast of new tech and promote learning across stream aligned teams, acting as a curator that facilitates knowledge sharing.
+  * The purpose is to help stream aligned team deliver working sw. They don't exist to fix problems that arise from poor practices or poor code quality.
+  * A stream aligned team should expect to work with an enabling team only for a short time in order to increase their capability around a new tech or concept.
+* Complicated subsystem teams (e.g., algo team).
+  * Build and maintain a system that depends heavily on specialist knowledge, to the extent that most team members must be specialists in that area.
+  * This expertise is hard to find or grow.
+  * e.g., mathematical model, face-recognition sw, real-time trade reconciliation algo.
+* Avoid team silos in the flow of change as this requires handoffs and slows things down.
