@@ -9,9 +9,9 @@ type: lists
 AOE 2 is a strategy game where players select an ancient civilization and battle it out against others in various terrains. What I loved about AOE apart from the gameplay was learning about the ancient peoples of the world, from their unique weapons to their technological advancements.
 ![_config.yml]({{ site.baseurl }}/images/games/aoe2.jpg)
 
-### 9. GTA San Andreas
-I remember wasting my summer away playing GTA San Andreas, cruising down Los Santos, and listening to awesome music. I was introduced to so many classic rap songs through the game. It was only years later that I even saw the connection between N.W.A and the characters in GTA.
-![_config.yml]({{ site.baseurl }}/images/games/gta.jpg)
+### 9. The Elder Scrolls V, Skyrim
+The main storyline is compelling, and the open-world setting where you can interact with any item or NPCs is very immersive. The gameplay in the early stages of the game feels like a grind, but with better powers and items, the game opens up. One gripe I have is the long loading time between maps especially on the xbox 360 but that is the price for loading beautiful cities.
+![_config.yml]({{ site.baseurl }}/images/games/skyrim.jpg)
 
 ### 8. Sims 1
 The Sims was such an interesting concept when it first came out. It was a video game version of real life. Decorating houses, managing careers, building relationships, Sims let us build our own world and live in it too.
@@ -46,4 +46,4 @@ My first gameboy cartridge was a bootleg Pokemon Yellow that my dad found in som
 ![_config.yml]({{ site.baseurl }}/images/games/pokemon.jpg)
 
 ### Honorable Mentions
-Quake 3 Arena, Doom, Bioshock, Super Mario Bros, Mario Kart, Tekken 3, Medal of Honor Allied Assault, Prince of Persia Sands of Time, Tony Hawk's Pro Skater, Street Fighter 2
+GTA San Andreas, Quake 3 Arena, Doom, Bioshock, Super Mario Bros, Mario Kart, Tekken 3, Medal of Honor Allied Assault, Prince of Persia Sands of Time, Tony Hawk's Pro Skater, Street Fighter 2
