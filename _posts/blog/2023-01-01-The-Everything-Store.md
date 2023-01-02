@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The everything store, Jeff Bezos and the age of Amazon
+title: Jeff Bezos and the age of Amazon
 type: blog
 ---
 
