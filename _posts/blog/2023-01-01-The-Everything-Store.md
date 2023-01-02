@@ -1,4 +1,9 @@
-# The everything store, Jeff Bezos and the age of Amazon
+---
+layout: post
+title: The everything store, Jeff Bezos and the age of Amazon
+type: blog
+---
+
 I recently read the Amazon book by Brad Stone and got a glimpse into the mind Jeff Bezos. I'm awestruck by how deeply and ferociously Bezos focuses on the needs of the customer. His openness to risk, innovation and relentless drive has made Amazon a successs.
 
 At the same time, Amazon is unsympathetic to warehouse workers, independent publishers and marketplace sellers. By undercutting prices, Amazon focuses on gaining a short-term advantage with a longer-term focus on eliminating competition and (probably) raising prices.
