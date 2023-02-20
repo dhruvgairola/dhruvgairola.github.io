@@ -4,8 +4,10 @@ title: Team Topologies
 type: blog
 ---
 
+![_config.yml]({{ site.baseurl }}/images/topologies.png)
+
 * Conways Law - Orgs will produce system designs that are copies of the communication structures of those orgs.
-* Org design is about designing for collaborative tech for the voice of the customer. 
+* Org design is about designing for collaborative tech for the voice of the customer.
 
 ## Part 1 - Teams as the means of delivery
 ### The problem with org charts
