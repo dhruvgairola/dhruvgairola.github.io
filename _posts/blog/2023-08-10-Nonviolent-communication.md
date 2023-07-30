@@ -17,3 +17,9 @@ type: blog
 
 # Chapter 4
 * Build a larger vocabulary to express how you feel.
+
+# Chapter 5
+* "I feel .. because I" is a good way to express your needs rather than blame.
+* Stage 1 : Emotional slavery. We feel ourselves responsible for the feelings of others. If others don't appear happy, we feel responsible and view them as burdens. 
+* Stage 2 : We are aware of the high costs of assuming responsibility for other's. This is the obnoxious stage as we don't want to be responsible for other's feelings.
+* Stage 3 : Emotional libration. We respond to the needs of others out of compassion, never out of fear, guilt or shame.
