@@ -4,19 +4,19 @@ title: Anti-patterns for engineering leaders
 type: blog
 ---
 
-Will Larson, the current CTO of Carta, did an [interview](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) with a VC firm about anti-patterns for engineering leaders.
-
-In the article, Will describes that there's no clear formula for shipping value more quickly as engineering leaders. Additionally, applying rules from previous firms too universally is counter-productive since the context is different in a new firm.
+Will Larson, the current CTO of Carta, did an [interview](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) with a VC firm about anti-patterns for engineering leaders. In the article, Will describes that there's no clear formula for shipping value more quickly as engineering leaders. Additionally, applying rules from previous firms too universally is counter-productive since the context is different in a new firm.
 
 Will describes that the best eng leaders have to balance three hats -
  * As executives, who focus on business decisions.
  * As eng managers, who optimize people and processes.
  * As engineers, who are responsible for technical excellence.
+
 Eng leaders are often told to distance themselves from code and delegate, however this makes it difficult to balance the three hats. Leaders also become distanced from decisions and lack conviction around decisions. Instead, a leader needs to shift and adapt according to context, and micromanage if necessary. Some leadership [approaches](https://lethain.com/developing-leadership-styles/?ref=review.firstround.com) are.
  * Leading with policy- create a predictable and consistent process to make decisions e.g., determining promotions.
  * Leading from consensus- pull together relevant stakeholders to find a shared approach to a problem. This works well when none of them have full context and a good decision is important.
  * Leading with conviction- pulling context into your head, evaludating and personally making a decision. This is good when no one has a clear view on making a decision.
-Tacical approaches are-
+
+Tacical approaches to dive deeper-
  * Conflict mining- Have conversations with experienced people with differing opinions from you. The wrong approach here is to simply implement the conflict-heavy thing, the right approach is to improve your understanding.
  * Writing the details- Building a culture of documentation is important in improving strategy, to share context and ultimately to unlock an engineering org.
 
