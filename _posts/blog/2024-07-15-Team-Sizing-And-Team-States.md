@@ -4,7 +4,7 @@ title: Team Sizing and Team States
 type: blog
 ---
 
-In the past, some of my managers had a large number of reports (>10). It was really difficult to find time to discuss career growth. When I came across an [article](https://review.firstround.com/how-to-size-and-assess-teams-from-an-eng-lead-at-stripe-uber-and-digg/#keep-innovation-and-maintenance-together) about team sizing, I was curious to learn more. 
+I've had managers with a large number of reports and found it difficult to receive meaningful feedback to grow my career. When I came across an [article](https://review.firstround.com/how-to-size-and-assess-teams-from-an-eng-lead-at-stripe-uber-and-digg/#keep-innovation-and-maintenance-together) about team sizing, I was curious to learn more. 
 
 The author (Will Larson) explains that a manager should ideally have 6-8 reports and Sr managers should have 4-6 reports in order to do their role effectively.
 
