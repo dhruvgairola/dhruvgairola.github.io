@@ -16,7 +16,7 @@ Eng leaders are often told to distance themselves from code and delegate, howeve
  * Leading from consensus- pull together relevant stakeholders to find a shared approach to a problem. This works well when none of them have full context and a good decision is important.
  * Leading with conviction- pulling context into your head, evaluating and personally making a decision. This is good when no one has a clear view on making a decision.
 
-Tacical approaches to dive deeper-
+Tactical approaches to dive deeper-
  * Conflict mining- Have conversations with experienced people with differing opinions from you. The wrong approach here is to simply implement the conflict-heavy thing, the right approach is to improve your understanding.
  * Writing the details- Building a culture of documentation is important in improving strategy, to share context and ultimately to unlock an engineering org.
 
