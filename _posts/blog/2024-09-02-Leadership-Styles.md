@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Team Sizing and Team States
+title: Leadership styles
 type: blog
 ---
 Daniel Goleman [explains](https://hbr.org/2000/03/leadership-that-gets-results) that effective leaders need to be flexible in their leadership approach depending on business needs. He describes 6 approaches based on his research across 3,871 executives and mentions that the best leaders should have mastered at least 4 of the 6 approaches.
