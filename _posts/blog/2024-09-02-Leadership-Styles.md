@@ -4,10 +4,10 @@ title: Leadership styles
 type: blog
 ---
 Daniel Goleman [explains](https://hbr.org/2000/03/leadership-that-gets-results) that effective leaders need to be flexible in their leadership approach depending on business needs. He describes 6 approaches based on his research across 3,871 executives and mentions that the best leaders should have mastered at least 4 of the 6 approaches.
-![_config.yml]({{ site.baseurl }}/images/leadership.png)
+![_config.yml]({{ site.baseurl }}/images/leadershipstyles.png)
 
 Daniel also explains that leaders with high emotional intelligence tend to be able to switch fluidly between these leadership styles, and that it is possible to improve emotional intelligence over time with self-reflection.
-![_config.yml]({{ site.baseurl }}/images/eq.png)
+![_config.yml]({{ site.baseurl }}/images/eiprimer.png)
 
 A quick summary of the 6 leadership approaches-
 * The coercive approach is about extreme top-down decision making. It is forceful and effective only in very specific circumstances e.g., emergencies, hostile takeovers, problem employees. It should be avoided otherwise as it kills morale.
