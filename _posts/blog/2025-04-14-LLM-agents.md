@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Can LLM agents analyze unstructured data
+title: Can LLM agents analyze unstructured data?
 type: blog
 ---
-LLMs aren't great at analytics. If we upload structured CSV to Claude and ask it to "count the number of rows in this file", it's frequently incorrect. If the CSV is unstructured, the accuracy is even worse as the LLM struggles with noisy data. LLMs also have limited context windows and a few thousand rows can exceed its capabilities. I wanted to dive a little deeper to learn what would be necessary for LLMs to get better and analyzing unstructured data for analytics queries. My goal was to analyze a few unstructured rows and ask aggregation questions over these rows.
+LLMs aren't great at analytics. If we upload structured CSV to Claude and ask it to "count the number of rows in this file", it's frequently incorrect. If the CSV is unstructured, the accuracy is even worse as the LLM struggles with noisy data. LLMs also have limited context windows and a few thousand rows can exceed its capabilities.
+
+I wanted to dive a little deeper to learn what would be necessary for LLMs to get better and analyzing unstructured data for analytics queries. My goal was to analyze a few unstructured rows and ask aggregation questions over these rows.
 
 Initially I tested a RAG architecture. In this approach, the documents were first chunked and stored in a special type of database called a vector database. I used Postgres with Pgvector extension. I then created an agentic app that could query the vector DB to execute semantic search and reason about the results. Semantic search is when a user can query simialr concepts (e.g., education, kids, children would be grouped together).
 
