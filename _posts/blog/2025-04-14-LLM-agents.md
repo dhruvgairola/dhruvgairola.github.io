@@ -7,7 +7,7 @@ LLMs aren't great at analytics. If we upload structured CSV to Claude and ask it
 
 I wanted to dive a little deeper to learn what would be necessary for LLMs to get better and analyzing unstructured data for analytics queries. My goal was to analyze a few unstructured rows and ask aggregation questions over these rows.
 
-Initially I tested a RAG architecture. In this approach, the documents were first chunked and stored in a special type of database called a vector database. I used Postgres with Pgvector extension. I then created an agentic app that could query the vector DB to execute semantic search and reason about the results. Semantic search is when a user can query simialr concepts (e.g., education, kids, children would be grouped together).
+Initially I tested a RAG architecture. In this approach, the documents were first chunked and stored in a special type of database called a vector database. I used Postgres with Pgvector extension. I then created an agentic app that could query the vector DB to execute semantic search and reason about the results. Semantic search is when a user can query similar concepts (see image below).
 ![_config.yml]({{ site.baseurl }}/images/semantic.png)
 
 I found that the vector DBs require a lot of hardcoded tuning specific to the type of data being stored e.g., size of chunk, chunk overlap, embedding algorithm. **However they can be effective for top-k queries compared to keyword search.**
