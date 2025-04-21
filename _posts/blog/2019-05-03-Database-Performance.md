@@ -2,6 +2,7 @@
 layout: post
 title: Database Performance
 type: blog
+tags: [Technology]
 ---
 
 Here is a summary of relevant statements from ["Use the index, Luke"](https://use-the-index-luke.com/sql/preface), pertaining to database indexing.

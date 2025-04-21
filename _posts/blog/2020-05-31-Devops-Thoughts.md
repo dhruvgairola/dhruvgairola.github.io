@@ -2,6 +2,7 @@
 layout: post
 title: Devops Thoughts
 type: blog
+tags: [Technology]
 ---
 
 Containerization has resulted in a slew of systems the past few years. While it is convenient to be able to create containers that work on any server, managing and deploying these in production has necessitated the need for orchestration systems such as Kubernetes and Nomad. Cloud providers have been quick to jump on the orchestration bandwagon by creating products such as GCP GKE and AWS ECS. I recently took time to dive deep and configure a complex side project with both GKE and ECS.

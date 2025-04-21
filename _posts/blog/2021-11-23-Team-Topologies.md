@@ -2,6 +2,7 @@
 layout: post
 title: Team Topologies
 type: blog
+tags: [Management]
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/topologies.png)

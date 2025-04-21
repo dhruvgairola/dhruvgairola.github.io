@@ -2,6 +2,7 @@
 layout: post
 title: Anti-patterns for engineering leaders
 type: blog
+tags: [Management]
 ---
 
 Will Larson, the current CTO of Carta, did an [interview](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) with a VC firm about anti-patterns for engineering leaders. In the article, Will describes that there's no clear formula for shipping value more quickly as engineering leaders. Additionally, applying rules from previous firms too universally is counter-productive since the context is different in a new firm.

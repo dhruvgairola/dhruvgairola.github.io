@@ -2,6 +2,7 @@
 layout: post
 title: Kafka in production
 type: blog
+tags: [Technology]
 ---
 
 I spent the last 5 months implementing the first kafka system at Wealthsimple, rolling it into production and scaling it to many millions of events everyday. Our old system that would update customer balances used a poller and we knew it was slow. However, I was shocked when our new system increased our throughput (of balance updates) by 5x within first month of deployment in-part due to the meme-stock/Gamestop frenzy that lead to a massive growth in our trade volume.

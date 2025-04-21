@@ -2,6 +2,7 @@
 layout: post
 title: Jeff Bezos and the age of Amazon
 type: blog
+tags: [Product]
 ---
 
 I recently read the Amazon book by Brad Stone and got a glimpse into the mind Jeff Bezos. I'm awestruck by how deeply and ferociously Bezos focuses on the needs of the customer. His openness to risk, innovation and relentless drive has made Amazon a successs.

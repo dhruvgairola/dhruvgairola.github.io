@@ -2,6 +2,7 @@
 layout: post
 title: Intelligent Investor
 type: blog
+tags: [Personal]
 ---
 
 I've compiled a list of my learnings from the book "Intelligent Investor" by Benjamin Graham.

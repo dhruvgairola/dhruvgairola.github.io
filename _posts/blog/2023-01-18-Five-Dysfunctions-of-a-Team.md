@@ -2,6 +2,7 @@
 layout: post
 title: The Five Dysfunctions of a Team
 type: blog
+tags: [Management]
 ---
 
 After reading The Five Dysfunctions of a Team by Patrick Lencioni, I took time to reflect on my own team. While we're performing well in the many areas such as interpersonal trust, debate-then-commit and being results-driven, I realized that I need to build a culture of accountability so that our team can uphold high standards in the org.

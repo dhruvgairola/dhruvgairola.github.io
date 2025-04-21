@@ -2,6 +2,7 @@
 layout: post
 title: Team Sizing and Team States
 type: blog
+tags: [Management]
 ---
 
 I've had managers with a large number of reports and found it difficult to receive meaningful feedback to grow my career. When I came across an [article](https://review.firstround.com/how-to-size-and-assess-teams-from-an-eng-lead-at-stripe-uber-and-digg/#keep-innovation-and-maintenance-together) about team sizing, I was curious to learn more. 

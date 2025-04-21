@@ -2,6 +2,7 @@
 layout: post
 title: Can LLM agents analyze unstructured data?
 type: blog
+tags: [Technology]
 ---
 LLMs aren't great at analytics. If we upload structured CSV to Claude and ask it to "count the number of rows in this file", it's frequently incorrect. If the CSV is unstructured, the accuracy is even worse as the LLM struggles with noisy data. LLMs also have limited context windows and a few thousand rows can exceed its capabilities.
 

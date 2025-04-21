@@ -2,6 +2,7 @@
 layout: post
 title: Resilience by Dr. Michael Unger
 type: blog
+tags: [Management]
 ---
 
 My company had a lecture about Resilience by Dr. Michael Unger, and I have compiled a few of my notes below.

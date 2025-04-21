@@ -2,6 +2,7 @@
 layout: post
 title: Elevate Toronto
 type: blog
+tags: [Product]
 ---
 
 The VP of Engineering at Loblaw Digital graciously offered me a corporate ticket to attend Elevate Toronto, a week-long tech conference that celebrates Toronto's tech ecosystem. I have compiled a short summary of my key takeaways from the various presentations.

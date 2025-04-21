@@ -2,6 +2,7 @@
 layout: post
 title: Founders at Work
 type: blog
+tags: [Product]
 ---
 
 I picked up the book "Founders at work" on the airport bookstore while I was traveling from Bangalore to Toronto and I'm glad I did. The book is a compilation of interviews between Jessica Livingston and the founders from many of the 90s-era tech startups. Reading the interviews, you feel as though you're sitting right beside the participants. It's really riveting and I've compiled a few of my learnings.

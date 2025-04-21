@@ -2,6 +2,7 @@
 layout: post
 title: Principles by Ray Dalio
 type: blog
+tags: [Management]
 ---
 
 Lately, I've felt that I'm spending a lot of time on computer science and software development and not enough time on self-development. This is not aligned with my personal goal of becoming a more well-rounded person. Hence, I decided to take a step back and learn more about goal setting and people management by picking up a copy of the book "Priciples" by Ray Dalio (one of my good friends recommended this book to me). 

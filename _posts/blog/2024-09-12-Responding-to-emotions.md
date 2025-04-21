@@ -2,6 +2,7 @@
 layout: post
 title: When Your Employee Feels Angry, Sad, or Dejected
 type: blog
+tags: [Management]
 ---
 In the past, I have found it tricky figuring out how to respond when a report feels dejected or angry. I want to be careful not to overstep but would love to help if possible. I remember asking an older manager for advice and the response was to acknowledge and direct them to existing processes. When I recently read an [article](https://hbr.org/2024/07/when-your-employee-feels-angry-sad-or-dejected), I got a better understanding of how other managers respond when their reports are going through a difficult time in their lives.
 

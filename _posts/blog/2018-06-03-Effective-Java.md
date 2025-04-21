@@ -2,6 +2,7 @@
 layout: post
 title: Effective Java (3rd Edition) by Joshua Bloch
 type: blog
+tags: [Technology]
 ---
 
 With the release of the 3rd Edition of "Effective Java" a few months back, I decided to re-read it and compile a few notes for future reference. These notes only represent points that are specifically useful to my development as a Java programmer.

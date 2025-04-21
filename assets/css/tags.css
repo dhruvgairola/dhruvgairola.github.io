@@ -1,0 +1,60 @@
+.tags {
+  margin: 2em 0;
+}
+
+.tag {
+  margin-bottom: 2em;
+}
+
+.tag h2 {
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.tag ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tag li {
+  margin-bottom: 0.5em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tag .date {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 1em;
+}
+
+.back-to-tags {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #eee;
+}
+
+.back-to-tags a {
+  color: #666;
+  text-decoration: none;
+}
+
+.back-to-tags a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.post-tags {
+  margin: 1em 0;
+  color: #666;
+}
+
+.post-tags a {
+  color: #666;
+  text-decoration: none;
+}
+
+.post-tags a:hover {
+  color: #333;
+  text-decoration: underline;
+} 
