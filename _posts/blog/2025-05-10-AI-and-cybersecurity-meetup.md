@@ -6,7 +6,7 @@ tags: [Technology]
 ---
 I attended the AI and Cybersecurity meetup at Adaptavist in Toronto this Wednesday because I am curious how different components of the AI ecosystem can be scaled in a secure manner. I was able to attend 2 presentations.
 
-![_config.yml]({{ site.baseurl }}/images/meetup_ai_and_cyb.jpg)
+![_config.yml]({{ site.baseurl }}/images/meetup_ai_cyb.jpg)
 
 From the first speaker, I learned about a few companies at the forefront of AI security. Crowdstrike has a product called Charlotte AI that is able to detect suspicious activity via AI (e.g., suspicious attacks on API endpoints). Clarlotte AI also has a UI tool that enables analysts to define workflows (agentic workflows) so that when suspicious activity is flagged, these are then channelled to the workflow for additional checks and alerts, like a security playbook.
 
