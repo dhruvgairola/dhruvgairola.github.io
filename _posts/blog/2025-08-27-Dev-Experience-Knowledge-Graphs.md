@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Future of Developer Experience
+title: Developer Experience and Knowledge Graphs
 type: blog
 tags: [Technology]
 ---
