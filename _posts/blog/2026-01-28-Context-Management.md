@@ -8,10 +8,10 @@ Context management is crucial when it comes to the effectiveness of agents. As y
 
 The agent context can get even more bloated when it needs to share a list of MCP tool definitions with the LLM so the LLM can use those tools to retrieve additional information from other systems. [A recent article](https://www.anthropic.com/engineering/code-execution-with-mcp) describes a few issues. The first issue is that all MCP definitions have to be loaded into the agent, and therefore, the LLM context - this doesn't scale as the number of MCP definitions grow. The second issue is that when an agent makes multiple MCP calls on behalf of the LLM (e.g., load doc from google drive and upload it to salesforce), then the intermediate results have to be sent back to the LLM (e.g., the entire doc is sent to the LLM). When these results are huge (e.g., the doc is large) then the context window can get bloated.
 
+![_config.yml]({{ site.baseurl }}/images/context_mgmt.png)
+
 ### Context reduction
 A solution to these is to provide agents with LLM models that can write code. For example, in vscode, or even in online webapps like Gemini or ChatGPT, the LLM can write code that the agent can execute directly in the IDE or web UI. The agent can expose a /search API endpoint to the LLM so that the LLM can first query and get a smaller list of tool definitions that are relevant to the immediate task instead of loading every single MCP tool definition into context. A key point is that LLM code can also filter out irrelevant intermediate output or write code to summarize data - these can drastically reduce the context window.
-
-![_config.yml]({{ site.baseurl }}/images/context_mgmt.png)
 
 ### Context persistence
 Another useful technique is to ask agents to **persist state in files**. For very long and complex tasks, you first break the task down into many smaller tasks. Then you can ask the agent to save state after each small task is completed and to read state before picking up the next small task. This is desirable because you can control **when and what** to save instead of the agent auto-compressing context by itself, and because you can **reset the agent context** when the next small task is picked up. You can optionally save individual instructions into files called skills (e.g., brainstorming skill) and you can ask the main agent to use those skills in future.
