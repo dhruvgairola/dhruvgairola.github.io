@@ -22,6 +22,8 @@ Another innovation are subagents, which are processes that can do independent wo
 ### Orchestration
 There are also ways to formally store the coordination logic and call it explicitly with a command e.g., /techbrief command can be created that explicitly coordinates specific agents. Now you can explicitly ask Claude "/techbrief design youtube" and the main agent will load the orchestration instructions and follow the defined workflow.
 
+![_config.yml]({{ site.baseurl }}/images/context_summary.png)
+
 ## Summary
 So far we've discussed a few techniques for shrinking the context window - using models that can code, saving state in files and using subagents. Practically if you're starting from scratch as a developer and have a long and complex task at-hand, you would create subagents and commands to coordinate these subagents. In the command instruction file, you would ensure that intermediate state is saved somewhere and read periodically. Thereafter, you would use the command in the main Claude agent to perform your complex task. Better yet, you could skip all of this and install Github libraries into Claude (e.g., "BMAD" or "Get shit done"). These are libraries that contain community-created commands, subagents and skills.
 
