@@ -2,7 +2,7 @@
 layout: post
 title: Developer Experience and Knowledge Graphs
 type: blog
-tags: [Technology]
+tags: [Technology, AI]
 ---
 I attended the Future of Developer Experience conference yesterday at OneEleven, a startup accelerator.
 ![_config.yml]({{ site.baseurl }}/images/deskree.jpg)

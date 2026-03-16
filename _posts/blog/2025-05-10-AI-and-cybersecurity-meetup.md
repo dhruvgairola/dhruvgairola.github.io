@@ -2,7 +2,7 @@
 layout: post
 title: AI and Cybersecurity meetup
 type: blog
-tags: [Technology]
+tags: [Technology, AI]
 ---
 I attended the AI and Cybersecurity meetup at Adaptavist in Toronto this Wednesday because I am curious how different components of the AI ecosystem can be scaled in a secure manner. I was able to attend 2 presentations.
 

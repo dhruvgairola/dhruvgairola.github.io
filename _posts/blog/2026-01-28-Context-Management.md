@@ -2,7 +2,7 @@
 layout: post
 title: Context Management
 type: blog
-tags: [Technology]
+tags: [Technology, AI]
 ---
 Context management is crucial when it comes to the effectiveness of agents. As you interact with an agent, your input and the agent output are added to the agent's context, and this context constantly grows over every interaction. The agent **always** sends this context to an underlying LLM model to produce an output. Over time, as you interact more with your agent, this context hits a "context limit" because all LLM models have hard limits. To avoid breaching the context limit, the agent has to either summarize or discard some context. This is where quality problems get exacerbated as key details are lost and the LLM produces bad output or hallucinates.
 
