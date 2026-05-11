@@ -2,7 +2,7 @@
 layout: post
 title: Impact of AI on Management
 type: blog
-tags: [Management]
+tags: [Management, AI]
 ---
 Recent trends indicate that organizations are flattening their management structures. Coinbase recently laid of [14% of it's staff](https://fortune.com/2026/05/05/coinbase-layoffs-14-of-employees-ai-tech-ai-job-anxiety-crypto/) "due to AI" but what struck closer to home was the idea that managers are expected to be player-coaches. In this role, managers take on IC duties in parallel to their traditional people responsibilities. Even in my company, there has been some amount of flattening in order to reduce beauracracy and enable faster decision making.
 
@@ -10,4 +10,4 @@ A traditional manager typically shifts between multiple roles to help increase t
 
 Another [trend](https://fortune.com/2026/04/07/megamanager-era-how-many-direct-reports-ai-middle-management/) is the rise of the megamanager. In 2026, managers have an average of 12 direct reports compared to 6 reports a decade earlier. The flattening or org structures is causing this but also the expectation that AI can make managers more efficient. In theory, if AI can summarize emails, capture meeting minutes, organize schedules, etc, the manager has more time to focus on other duties.
 
-To summarize, AI is increasing pressure on managers to become extremely efficient. Not only do managers have to be player-coaches and write/review code, but they also have more reports due to flatter org structures and AI tools. It's not enough for a manager to wait in the sidelines. Simply writing a prompt or relying on "email summaries" is just scratching the surface. I think managers have to dig deep and get their hands dirty. They have to write claude skills and use MCP servers to automate all the administrative rote-work so they can live upto the newer industry trends and buy themselves more time towards the important tasks such as developing people and working on strategy.
+To summarize, AI is increasing pressure on managers to become extremely efficient. Not only do managers have to be player-coaches and write/review code, but they also have more reports due to flatter org structures and AI tools. It's not enough for a manager to wait in the sidelines. Simply writing a prompt or relying on "email summaries" is just scratching the surface. I think managers have to dig deep and get their hands dirty. They have to write claude skills and use MCP servers to automate all the administrative rote-work. This will free up time for them to focus on important work such as developing people, working on strategy and now, reviewing PRs.
