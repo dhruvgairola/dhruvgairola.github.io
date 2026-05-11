@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Impact of AI on Management
+title: Impact of AI on Managers
 type: blog
 tags: [Management, AI]
 ---
