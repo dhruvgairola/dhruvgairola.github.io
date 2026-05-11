@@ -1,11 +1,32 @@
-<div class="newsletter-signup">
-  <h3>Subscribe to the newsletter</h3>
-  <p>Get new posts delivered to your inbox. No spam.</p>
-  <iframe src="https://embeds.beehiiv.com/{{ site.beehiiv_publication_id }}"
-          data-test-id="beehiiv-embed"
-          width="100%"
-          height="320"
-          frameborder="0"
-          scrolling="no"
-          style="border-radius: 4px; border: 1px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
-</div>
+<form class="newsletter-form"
+      action="https://embeds.beehiiv.com/{{ site.beehiiv_publication_id }}"
+      method="POST"
+      target="beehiiv-subscribe-target">
+  <label class="newsletter-form__label" for="newsletter-email">Email</label>
+  <div class="newsletter-form__row">
+    <input class="newsletter-form__input"
+           type="email"
+           id="newsletter-email"
+           name="email"
+           placeholder="you@example.com"
+           autocomplete="email"
+           required />
+    <button class="newsletter-form__submit" type="submit">Subscribe</button>
+  </div>
+  <p class="newsletter-form__message hint" data-newsletter-message hidden>Thanks, check your inbox to confirm.</p>
+</form>
+<iframe name="beehiiv-subscribe-target" class="newsletter-form__target" title="Newsletter submission" aria-hidden="true" tabindex="-1"></iframe>
+<script>
+  (function () {
+    var form = document.querySelector('.newsletter-form');
+    if (!form) return;
+    form.addEventListener('submit', function () {
+      setTimeout(function () {
+        var msg = form.querySelector('[data-newsletter-message]');
+        if (msg) msg.hidden = false;
+        var input = form.querySelector('input[type="email"]');
+        if (input) input.value = '';
+      }, 600);
+    });
+  })();
+</script>
