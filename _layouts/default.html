@@ -41,6 +41,7 @@
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/lists">Lists</a>
             <a href="{{ site.baseurl }}/tags">Tags</a>
+            <a href="{{ site.baseurl }}/subscribe">Subscribe</a>
             <a href="{{ site.baseurl }}/about">About</a>
           </nav>
         </header>
@@ -54,6 +55,7 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
+          {% include newsletter-slim.html %}
           {% include svg-icons.html %}
         </footer>
       </div>

@@ -32,6 +32,10 @@ footer-links:
 # Your disqus shortname, entering this will enable commenting on posts
 disqus: dhruvgairola
 
+# beehiiv publication ID — find it in your beehiiv dashboard under Settings → Publication → Embed.
+# Replace YOUR_PUBLICATION_ID with the real ID (looks like a UUID, e.g. "pub_abc123...").
+beehiiv_publication_id: a06e6b98-42e0-482c-872c-2432c7c0b2d5
+
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-56326923-1
 
