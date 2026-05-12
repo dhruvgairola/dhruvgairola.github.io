@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-<p class="page-intro">Engineering manager in Toronto. Writing here is how I think through what I run into at work.</p>
-
 ### Experience
 
 I&rsquo;m currently an Engineering Manager at Okta in the Privileged Access Management domain, rapidly scaling our emerging product. Before that, I was an EM at Wealthsimple through a period of 8x growth to roughly $50B AUM. I led critical teams in the highly profitable stock-trading product and the growth marketing product.
