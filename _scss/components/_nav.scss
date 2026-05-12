@@ -1,5 +1,4 @@
-// NAV — masthead with wordmark + nav links.
-// Static (not sticky). 1px rule underneath.
+// NAV — masthead with wordmark + tagline + nav links.
 
 .masthead {
   border-bottom: 1px solid var(--rule);
@@ -9,26 +8,47 @@
 }
 
 .masthead__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: start;
+
+  @include md {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-6);
+    align-items: center;
+  }
+}
+
+.masthead__brand {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-5);
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.masthead__tagline {
+  font-family: var(--font-sans);
+  font-size: var(--step--1);
+  line-height: 1.4;
+  color: var(--ink-muted);
+  letter-spacing: 0;
+  max-width: 52ch;
+  text-wrap: pretty;
 }
 
 .wordmark {
-  font-family: var(--font-serif);
-  font-size: var(--step-2);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1;
+  font-family: var(--font-sans);
+  font-size: var(--step-1);
+  font-weight: 700;
+  line-height: 1.1;
   color: var(--ink);
   text-decoration: none;
   letter-spacing: -0.02em;
 
   &:hover { color: var(--ink); }
 
-  @include md { font-size: var(--step-3); }
+  @include md { font-size: var(--step-2); }
 }
 
 .wordmark__dot {
@@ -40,7 +60,7 @@
   gap: var(--space-5);
   flex-wrap: wrap;
 
-  @include md { gap: var(--space-6); }
+  @include md { gap: var(--space-5); }
 
   a {
     font-family: var(--font-sans);

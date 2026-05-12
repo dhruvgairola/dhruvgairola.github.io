@@ -8,11 +8,6 @@ layout: default
 
 <div class="post-grid">
 
-  <section class="intro">
-    <p class="intro__lede">Essays on engineering management, AI, and the security edges in between.</p>
-    <p class="intro__dek">I&rsquo;m Dhruv, an engineering manager writing about what I run into at work. <a href="{{ site.baseurl }}/about">More about me</a>.</p>
-  </section>
-
   {% if featured %}
     {% assign fwords = featured.content | strip_html | number_of_words %}
     {% assign fmin = fwords | divided_by: 200 | plus: 1 %}

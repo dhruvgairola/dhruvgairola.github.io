@@ -91,10 +91,4 @@
   .post-header__meta { font-size: 10pt; }
   .post-body { font-size: 11pt; line-height: 1.5; }
   .post-footer, .newsletter-block { display: none; }
-  .prose > p:first-of-type::first-letter {
-    font-size: 1em;
-    float: none;
-    padding: 0;
-    margin: 0;
-  }
 }

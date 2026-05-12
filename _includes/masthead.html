@@ -1,8 +1,9 @@
 <header class="masthead">
   <div class="frame masthead__inner">
-    <a href="{{ site.baseurl }}/" class="wordmark">
-      {{ site.name }}<span class="wordmark__dot">.</span>
-    </a>
+    <div class="masthead__brand">
+      <a href="{{ site.baseurl }}/" class="wordmark">{{ site.name }}<span class="wordmark__dot">.</span></a>
+      <p class="masthead__tagline">{{ site.description }}</p>
+    </div>
     <nav class="site-nav" aria-label="Primary">
       {% assign p = page.url %}
       <a href="{{ site.baseurl }}/"{% if p == '/' %} aria-current="page"{% endif %}>Writing</a>

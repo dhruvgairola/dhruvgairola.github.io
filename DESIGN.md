@@ -25,13 +25,14 @@ Contrast: `--ink` on `--paper` ≥ 7:1. `--accent` on `--paper` ≥ 4.5:1.
 
 ## Typography
 
+Single display/UI family + monospace for code. No serif display faces — unified, modern, understated.
+
 | Role | Family | Notes |
 |---|---|---|
-| UI, body, most headings | **Inter** (variable) | 400 / 500 / 600 / 700 |
-| Display accent | **Instrument Serif** | italic-leaning, used on post H1, drop cap, wordmark |
+| Everything except code | **Inter** (variable) | 400 / 500 / 600 / 700 |
 | Code | **JetBrains Mono** | 400 / 500 |
 
-Loaded via Google Fonts with preconnect + `font-display: swap`.
+Loaded via Google Fonts with preconnect + `font-display: swap`. Hierarchy comes from weight (400 → 700) and size, not family contrast.
 
 ### Scale
 
@@ -84,14 +85,14 @@ Animate only: opacity, transform, color, background, border-color. Never layout 
 
 ## Components
 
-- **Masthead** — static (not sticky). Wordmark (site name in Instrument Serif italic) left; nav (Inter) right. Single 1px `--rule` below.
-- **Post list row** — typographic, no card. Grid: `[date] auto [title] 1fr` (wraps on narrow). Date `--ink-muted`, title `--ink` on `--paper`, hover title `--accent`. Year groups separated by large Instrument Serif year labels.
-- **Featured post (homepage)** — display-scale title in Instrument Serif + dek + meta. Takes full page-frame width.
-- **Post page** — display serif H1, meta row (date · reading time · tag pills), drop cap via `::first-letter` on first `<p>` (Instrument Serif, 4-line, negative right margin), prose column.
+- **Masthead** — static (not sticky). Wordmark (bold Inter, period in accent) + tagline on left; nav (Inter) right. Single 1px `--rule` below.
+- **Post list row** — typographic, no card. Grid: `[date] auto [title] 1fr` (wraps on narrow). Date `--ink-muted`, title `--ink` on `--paper`, hover title `--accent`. Year groups separated by small-cap Inter year labels.
+- **Featured post (homepage)** — display-scale bold Inter title + dek + meta. Takes full page-frame width.
+- **Post page** — bold Inter H1, meta row (date · reading time · tag pills), prose column. No drop cap.
 - **Tag pill** — 12px Inter uppercase-tracked, 2px/10px padding, 999px radius, `--accent-weak` bg, `--accent` text. Used on post meta and post list.
 - **Code block** — `--paper-sunk` bg, `--rule` top + bottom only (no side stripes), 16px/20px padding, JetBrains Mono 14px, bleed to wider grid line.
 - **Inline code** — JetBrains Mono 0.92em, `--accent-weak` bg, 2px/5px padding, 3px radius.
-- **Blockquote** — Instrument Serif italic 1.25em, negative indent so quote mark hangs, no side border.
+- **Blockquote** — Inter 500-weight at 1.25em on `--paper-sunk` background, padded. No side border, no italic.
 - **Newsletter** — single-line: prompt text + email input with underline + submit button. Minimal.
 - **Footer** — thin rule, small meta, social icons.
 
