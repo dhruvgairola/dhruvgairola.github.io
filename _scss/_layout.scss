@@ -15,15 +15,17 @@
 // `.bleed` expands slightly. `.full-bleed` goes edge-to-edge of the page frame.
 .post-grid {
   display: grid;
+  width: 100%;
+  max-width: 100%;
   grid-template-columns:
     [full-start] minmax(var(--space-4), 1fr)
     [bleed-start] minmax(0, 880px)
-    [body-start] min(var(--col-prose), 100%) [body-end]
+    [body-start] min(var(--col-prose), 100% - 2 * var(--space-4)) [body-end]
     minmax(0, 880px) [bleed-end]
     minmax(var(--space-4), 1fr) [full-end];
 
   // Only explicitly-placed items use the grid; everything else defaults to body.
-  > * { grid-column: body-start / body-end; }
+  > * { grid-column: body-start / body-end; min-width: 0; }
   > .bleed { grid-column: bleed-start / bleed-end; }
   > .full-bleed { grid-column: full-start / full-end; }
 }
