@@ -1,18 +1,24 @@
 // POST LIST — typographic rows, year-grouped. No cards.
 
 .intro {
-  max-width: 40ch;
+  max-width: 28ch;
   padding-block: var(--space-6) var(--space-7);
 
-  @include md { padding-block: var(--space-8) var(--space-9); }
+  @include md {
+    max-width: 36ch;
+    padding-block: var(--space-7) var(--space-8);
+  }
 
   &__lede {
-    font-family: var(--font-serif);
-    font-size: var(--step-5);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: var(--step-4);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
     color: var(--ink);
     text-wrap: balance;
+
+    @include md { font-size: var(--step-5); line-height: 1.05; }
   }
 
   &__dek {
@@ -44,13 +50,16 @@
 
   &__title {
     margin-top: var(--space-3);
-    font-family: var(--font-serif);
-    font-size: var(--step-5);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: var(--step-4);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     color: var(--ink);
     text-wrap: balance;
     transition: color var(--dur) var(--ease-out);
+
+    @include md { font-size: var(--step-5); line-height: 1.05; }
   }
 
   &__dek {
@@ -100,11 +109,12 @@
 }
 
 .archive__year-label {
-  font-family: var(--font-serif);
-  font-size: var(--step-4);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  color: var(--ink-muted);
+  font-family: var(--font-sans);
+  font-size: var(--step-2);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
   line-height: 1;
   position: sticky;
   top: var(--space-4);
@@ -171,9 +181,11 @@
   &:first-child { border-top: 1px solid var(--rule); }
 
   &__title {
-    font-family: var(--font-serif);
-    font-size: var(--step-3);
-    line-height: 1.1;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: var(--step-2);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
     color: var(--ink);
     transition: color var(--dur-fast) var(--ease-out);
   }

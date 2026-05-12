@@ -6,12 +6,13 @@
   border-top: 1px solid var(--rule);
 
   &__lede {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
+    font-weight: 600;
     font-size: var(--step-2);
-    line-height: 1.2;
-    letter-spacing: -0.015em;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
     color: var(--ink);
-    max-width: 32ch;
+    max-width: 36ch;
     text-wrap: balance;
   }
 

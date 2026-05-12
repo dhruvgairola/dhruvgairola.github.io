@@ -7,15 +7,18 @@
 }
 
 .post-header__title {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: var(--step-5);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--step-4);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
   color: var(--ink);
   text-wrap: balance;
 
-  @include md { font-size: var(--step-6); }
+  @include md {
+    font-size: var(--step-5);
+    line-height: 1.04;
+  }
 }
 
 .post-header__meta {
@@ -69,13 +72,15 @@
   padding-block: var(--space-7) var(--space-6);
 
   &__title {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: var(--step-5);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--step-4);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
     color: var(--ink);
     text-wrap: balance;
+
+    @include md { font-size: var(--step-5); line-height: 1.04; }
   }
 }
 
