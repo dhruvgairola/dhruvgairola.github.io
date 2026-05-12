@@ -2,15 +2,20 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    {% if post.type == 'lists' %}
-      <article class="post">    
-        
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-        
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Reveal</a>
-      </article>
-    {% endif %}
-  {% endfor %}
-</div>
+<article class="post-grid">
+  <header class="page-header">
+    <h1 class="page-header__title">Lists</h1>
+  </header>
+
+  <p class="page-intro">Curated lists, revealed on click. Albums, films, games, and coffees worth remembering.</p>
+
+  <div class="list-reveals">
+    {% assign list_posts = site.posts | where: "type", "lists" %}
+    {% for post in list_posts %}
+      <a class="list-reveal" href="{{ site.baseurl }}{{ post.url }}">
+        <span class="list-reveal__title">{{ post.title }}</span>
+        <span class="list-reveal__cta">Reveal →</span>
+      </a>
+    {% endfor %}
+  </div>
+</article>

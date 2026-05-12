@@ -1,0 +1,15 @@
+<header class="masthead">
+  <div class="frame masthead__inner">
+    <a href="{{ site.baseurl }}/" class="wordmark">
+      {{ site.name }}<span class="wordmark__dot">.</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      {% assign p = page.url %}
+      <a href="{{ site.baseurl }}/"{% if p == '/' %} aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ site.baseurl }}/lists"{% if p contains '/lists' %} aria-current="page"{% endif %}>Lists</a>
+      <a href="{{ site.baseurl }}/tags"{% if p contains '/tags' %} aria-current="page"{% endif %}>Tags</a>
+      <a href="{{ site.baseurl }}/subscribe"{% if p contains '/subscribe' %} aria-current="page"{% endif %}>Subscribe</a>
+      <a href="{{ site.baseurl }}/about"{% if p contains '/about' %} aria-current="page"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>

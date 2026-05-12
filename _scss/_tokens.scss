@@ -1,0 +1,77 @@
+// TOKENS
+// All design tokens as CSS custom properties.
+// See DESIGN.md for the full contract.
+
+:root {
+  // Color — Restrained strategy, warm neutrals (hue 85) + terracotta accent (hue 32)
+  --paper:        oklch(98.5% 0.006 85);
+  --paper-sunk:   oklch(96%   0.008 85);
+  --ink:          oklch(18%   0.012 85);
+  --ink-muted:    oklch(45%   0.010 85);
+  --ink-faint:    oklch(62%   0.008 85);
+  --rule:         oklch(91%   0.008 85);
+  --accent:       oklch(56%   0.15  32);
+  --accent-hover: oklch(48%   0.16  32);
+  --accent-weak:  oklch(94%   0.04  32);
+  --selection:    oklch(88%   0.10  85);
+
+  // Fallbacks for browsers without OKLCH (Safari < 15.4, pre-2022)
+  @supports not (color: oklch(0% 0 0)) {
+    --paper:        #faf8f5;
+    --paper-sunk:   #f2efea;
+    --ink:          #1e1a14;
+    --ink-muted:    #6b6459;
+    --ink-faint:    #9a9388;
+    --rule:         #e5e0d8;
+    --accent:       #c65a3a;
+    --accent-hover: #a84728;
+    --accent-weak:  #f5e4dc;
+    --selection:    #f0e6d2;
+  }
+
+  // Typography families
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  // Type scale
+  --step--1: 0.875rem;
+  --step-0:  1.0625rem;
+  --step-1:  1.25rem;
+  --step-2:  1.5rem;
+  --step-3:  1.875rem;
+  --step-4:  2.5rem;
+  --step-5:  3.5rem;
+  --step-6:  clamp(3rem, 7vw, 4.5rem);
+
+  // Spacing — 4px base
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-7:  3rem;
+  --space-8:  4rem;
+  --space-9:  6rem;
+  --space-10: 8rem;
+  --space-11: 12rem;
+
+  // Layout
+  --col-prose: 68ch;
+  --frame: min(100% - 2rem, 1080px);
+  --frame-wide: min(100% - 2rem, 880px);
+
+  // Motion
+  --dur-fast: 140ms;
+  --dur:      220ms;
+  --dur-slow: 360ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+// Breakpoint mixins (Sass-side)
+@mixin sm { @media (min-width: 35rem) { @content; } }   // 560
+@mixin md { @media (min-width: 51.25rem) { @content; } } // 820
+@mixin lg { @media (min-width: 67.5rem) { @content; } }  // 1080
+@mixin reduce-motion { @media (prefers-reduced-motion: reduce) { @content; } }
+@mixin print { @media print { @content; } }

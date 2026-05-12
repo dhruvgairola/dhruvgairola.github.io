@@ -1,0 +1,65 @@
+// LAYOUT — page frame + post grid
+
+.frame {
+  width: var(--frame);
+  margin-inline: auto;
+}
+
+.frame-wide {
+  width: var(--frame-wide);
+  margin-inline: auto;
+}
+
+// Named-grid post layout — supports "bleed" for wide figures and code.
+// Default content sits in body-start / body-end (68ch).
+// `.bleed` expands slightly. `.full-bleed` goes edge-to-edge of the page frame.
+.post-grid {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--space-4), 1fr)
+    [bleed-start] minmax(0, 880px)
+    [body-start] min(var(--col-prose), 100%) [body-end]
+    minmax(0, 880px) [bleed-end]
+    minmax(var(--space-4), 1fr) [full-end];
+
+  // Only explicitly-placed items use the grid; everything else defaults to body.
+  > * { grid-column: body-start / body-end; }
+  > .bleed { grid-column: bleed-start / bleed-end; }
+  > .full-bleed { grid-column: full-start / full-end; }
+}
+
+// Page shell — flex column so footer sinks to bottom on short pages.
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.shell > main {
+  flex: 1 0 auto;
+  padding-block: var(--space-7) var(--space-9);
+
+  @include md { padding-block: var(--space-8) var(--space-10); }
+}
+
+// Utility stacks
+.stack-3 > * + * { margin-top: var(--space-3); }
+.stack-4 > * + * { margin-top: var(--space-4); }
+.stack-5 > * + * { margin-top: var(--space-5); }
+.stack-6 > * + * { margin-top: var(--space-6); }
+
+// Global print rules
+@include print {
+  :root {
+    --paper: #fff;
+    --ink: #111;
+    --ink-muted: #555;
+    --accent: #000;
+  }
+  body { font-size: 11pt; line-height: 1.5; }
+  a { color: inherit; text-decoration: underline; }
+  .masthead, .site-footer, .newsletter-block { display: none !important; }
+  .dot { display: none !important; }
+  .post-grid { display: block; }
+  .post-grid > * { grid-column: auto; }
+}

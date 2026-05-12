@@ -1,0 +1,58 @@
+// CODE — inline and block. No side stripes. Solarized-light retuned to warm palette.
+
+:not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--accent-weak);
+  color: var(--accent-hover);
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-variant-ligatures: none;
+}
+
+pre, .highlight {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  background: var(--paper-sunk);
+  border-block: 1px solid var(--rule);
+  padding: var(--space-4) var(--space-5);
+  overflow-x: auto;
+  margin-block: var(--space-5);
+  color: var(--ink);
+
+  code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+}
+
+// Rouge/Jekyll syntax highlighting — warm-tuned Solarized-light.
+// Hues nudged off cold blues; readable on --paper-sunk.
+.highlight {
+  .c, .c1, .cm, .cd, .cp, .cs { color: oklch(62% 0.03 85); font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kt { color: oklch(48% 0.14 280); font-weight: 500; }
+  .kc { color: oklch(56% 0.15 32); }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss { color: oklch(52% 0.12 195); }
+  .m, .mi, .mf, .mh, .mo, .il { color: oklch(52% 0.12 195); }
+  .n, .na, .nl, .nn, .nx, .py, .w, .p { color: var(--ink); }
+  .nb, .nc, .no, .nd, .nf, .nt, .nv, .vc, .vg, .vi, .bp { color: oklch(48% 0.14 250); }
+  .ne, .ni, .gh, .gu { color: oklch(56% 0.15 32); }
+  .o, .ow { color: oklch(50% 0.12 140); }
+  .gd { color: oklch(55% 0.16 25); }
+  .gi { color: oklch(50% 0.12 140); }
+  .gr, .err { color: oklch(55% 0.18 25); }
+  .ge { font-style: italic; }
+  .gs { font-weight: 600; }
+}
+
+@include print {
+  pre, .highlight {
+    border: 1px solid #ccc;
+    background: #f7f5f0;
+    page-break-inside: avoid;
+  }
+}

@@ -3,21 +3,32 @@ layout: page
 title: Tags
 ---
 
-<div class="tags">
-  {% assign sorted_tags = site.tags | sort %}
+{% assign sorted_tags = site.tags | sort %}
+
+<p class="page-intro">Topics I've written about, grouped.</p>
+
+<nav class="tag-cloud" aria-label="Tag cloud">
   {% for tag in sorted_tags %}
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
-    <div class="tag">
-      <h2 id="{{ t | downcase }}">{{ t }}</h2>
-      <ul>
-        {% for post in posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+    <a class="tag-cloud__link" href="#{{ t | downcase }}">
+      {{ t }}<span class="count">{{ posts.size }}</span>
+    </a>
   {% endfor %}
-</div> 
+</nav>
+
+{% for tag in sorted_tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+  <section class="tag-section">
+    <h2 id="{{ t | downcase }}">{{ t }}</h2>
+    <ul class="tag-archive">
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}

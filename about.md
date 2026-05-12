@@ -1,28 +1,31 @@
 ---
 layout: page
+title: About
 permalink: /about/
 ---
 
-**Experience**
+<p class="page-intro">Engineering manager in Toronto. Writing here is how I think through what I run into at work.</p>
 
-I'm currently an Engineering Manager (EM) at Okta in the Privileged Access Management domain, rapidly scaling our emerging product. Prior to this, I was an EM at Wealthsimple where the company grew 8x ($50 billion AUM) over the 5 years I worked there. I managed critical teams in the highly profitable stock-trading product and growth marketing product. 
+### Experience
 
-In the past, I've been in software engineering indvidual contributor (IC) roles at Series-B startups and large enterprises. My fondest memory is starting my own business and spending 2 years as a CTO where I hired devs, raised funds and managed on-prem relationships with customers (we built an excel-like platform for big-data).
+I&rsquo;m currently an Engineering Manager at Okta in the Privileged Access Management domain, rapidly scaling our emerging product. Before that, I was an EM at Wealthsimple through a period of 8x growth to roughly $50B AUM. I led critical teams in the highly profitable stock-trading product and the growth marketing product.
 
-**Education**
+Earlier I spent time as a software engineer at Series-B startups and large enterprises. My fondest memory is starting my own business and spending two years as CTO, where I hired developers, raised funds, and managed on-prem relationships with customers (we built an Excel-like platform for big data).
 
-I completed my MSc degree in Computer Science at McMaster University as a member of the Data Science Research Lab. My thesis was titled [Data Cleaning with Minimal Information Disclosure](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf) and lead to [3 publications](https://scholar.google.ca/citations?user=VnJw6zIAAAAJ&hl=en) (1 ACM JDIQ Journal and 2 ACM CIKM Conferences). 
+### Education
 
-Additionally, I completed my BSc degree (Hons) in Computer Science at the University of Nottingham, graduating with First Class Honours and a departmental rank of 1/55.
+MSc in Computer Science at McMaster University, as a member of the Data Science Research Lab. My thesis was [*Data Cleaning with Minimal Information Disclosure*](http://macsphere.mcmaster.ca/bitstream/11375/18075/2/gairola_dhruv_201507_msc_computer_science.pdf), which led to [three publications](https://scholar.google.ca/citations?user=VnJw6zIAAAAJ&hl=en) (one ACM JDIQ journal and two ACM CIKM conferences).
 
-**Technical Interests**
+BSc (Hons) in Computer Science at the University of Nottingham. First-class honours, departmental rank 1 of 55.
 
-Broadly, my interests include distributed systems, software architecture and algorithms. I like diving deep into problems. I am intimately familiar with Java, and Java-related technologies (Spring, Spark, Android, JRuby, etc). I also enjoy programming in Typescript/React and Python.
+### Technical interests
 
-**Other Interests**
+Distributed systems, software architecture, algorithms. I like diving deep into problems. Closely familiar with Java and related technologies (Spring, Spark, Android, JRuby). I also enjoy TypeScript, React, and Python.
+
+### Other interests
 
 * Guitar
 * Swimming
 * Scrabble
 * Entrepreneurship
-* Reading sci-fi or lit classics
+* Reading sci-fi and lit classics

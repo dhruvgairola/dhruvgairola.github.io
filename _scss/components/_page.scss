@@ -1,0 +1,103 @@
+// PAGE — generic long-form page styling (about, subscribe, 404, tag lists).
+
+.page-intro {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  line-height: 1.35;
+  color: var(--ink);
+  max-width: 48ch;
+  text-wrap: pretty;
+
+  @include md {
+    font-size: var(--step-3);
+    line-height: 1.3;
+  }
+}
+
+// Not-found page: one giant display phrase.
+.not-found {
+  padding-block: var(--space-10);
+  text-align: left;
+
+  @include md { padding-block: var(--space-11); }
+
+  &__mark {
+    font-family: var(--font-serif);
+    font-size: clamp(4rem, 16vw, 12rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  &__message {
+    margin-top: var(--space-5);
+    font-family: var(--font-serif);
+    font-size: var(--step-3);
+    line-height: 1.2;
+    color: var(--ink);
+    max-width: 36ch;
+    text-wrap: balance;
+  }
+
+  &__back {
+    display: inline-block;
+    margin-top: var(--space-6);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+
+    &:hover { color: var(--accent-hover); }
+  }
+}
+
+// Tag-page single-tag archive list (reuses archive rows implicitly on .html pages)
+.tag-archive {
+  margin-top: var(--space-6);
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+    padding-block: var(--space-3);
+    border-bottom: 1px solid var(--rule);
+
+    @include sm {
+      grid-template-columns: 1fr 8rem;
+      gap: var(--space-4);
+      align-items: baseline;
+    }
+
+    &:first-child { border-top: 1px solid var(--rule); }
+
+    a {
+      font-family: var(--font-sans);
+      font-size: var(--step-0);
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      text-wrap: balance;
+
+      &:hover { color: var(--accent); }
+    }
+
+    .date {
+      font-family: var(--font-sans);
+      font-size: var(--step--1);
+      font-variant-numeric: tabular-nums;
+      color: var(--ink-muted);
+
+      @include sm { text-align: right; }
+    }
+  }
+}

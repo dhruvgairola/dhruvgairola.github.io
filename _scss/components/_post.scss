@@ -1,0 +1,95 @@
+// POST PAGE — single post layout.
+
+.post-header {
+  padding-block: var(--space-7) var(--space-6);
+
+  @include md { padding-block: var(--space-8) var(--space-7); }
+}
+
+.post-header__title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--step-5);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  text-wrap: balance;
+
+  @include md { font-size: var(--step-6); }
+}
+
+.post-header__meta {
+  margin-top: var(--space-5);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+
+  .dot {
+    width: 3px;
+    height: 3px;
+    background: var(--ink-faint);
+    border-radius: 50%;
+  }
+
+  time { font-variant-numeric: tabular-nums; }
+
+  .meta-tags {
+    display: inline-flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+}
+
+.post-body {
+  padding-bottom: var(--space-8);
+}
+
+.post-footer {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--rule);
+
+  &__back {
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
+    text-decoration: none;
+
+    &:hover { color: var(--accent); }
+  }
+}
+
+// Page (non-post) header — simpler, no drop cap
+.page-header {
+  padding-block: var(--space-7) var(--space-6);
+
+  &__title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: var(--step-5);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+}
+
+// Printable-friendly
+@include print {
+  .post-header { padding-block: 1rem 0.5rem; }
+  .post-header__title { font-size: 24pt; }
+  .post-header__meta { font-size: 10pt; }
+  .post-body { font-size: 11pt; line-height: 1.5; }
+  .post-footer, .newsletter-block { display: none; }
+  .prose > p:first-of-type::first-letter {
+    font-size: 1em;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+}
