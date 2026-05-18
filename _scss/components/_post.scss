@@ -46,6 +46,32 @@
   }
 }
 
+.post-header__subscribe {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+
+  &:hover {
+    color: var(--ink);
+
+    .post-header__subscribe-arrow {
+      transform: translateX(2px);
+    }
+  }
+}
+
+.post-header__subscribe-arrow {
+  display: inline-block;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
 .post-body {
   padding-bottom: var(--space-8);
 }
@@ -90,5 +116,5 @@
   .post-header__title { font-size: 24pt; }
   .post-header__meta { font-size: 10pt; }
   .post-body { font-size: 11pt; line-height: 1.5; }
-  .post-footer, .newsletter-block { display: none; }
+  .post-footer, .newsletter-block, .post-header__subscribe { display: none; }
 }

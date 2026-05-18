@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__slack__slack-search_my_channels",
+      "mcp__slack__slack-slack_read_channel"
+    ]
+  }
+}
