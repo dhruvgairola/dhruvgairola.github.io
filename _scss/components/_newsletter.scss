@@ -119,7 +119,7 @@
     position: absolute;
     inset: 0;
     background: color-mix(in oklch, var(--ink) 45%, transparent);
-    animation: subscribe-modal-fade var(--dur) var(--ease-out);
+    animation: subscribe-modal-fade 2s var(--ease-out) both;
   }
 
   &__panel {
@@ -131,7 +131,7 @@
     max-width: 30rem;
     width: 100%;
     box-shadow: 0 24px 60px color-mix(in oklch, var(--ink) 18%, transparent);
-    animation: subscribe-modal-rise var(--dur) var(--ease-out);
+    animation: subscribe-modal-drop 2s var(--ease-out) both;
   }
 
   &__close {
@@ -191,7 +191,7 @@ body.subscribe-modal-open { overflow: hidden; }
   to   { opacity: 1; }
 }
 
-@keyframes subscribe-modal-rise {
-  from { opacity: 0; transform: translateY(8px); }
+@keyframes subscribe-modal-drop {
+  from { opacity: 0; transform: translateY(-100vh); }
   to   { opacity: 1; transform: translateY(0); }
 }

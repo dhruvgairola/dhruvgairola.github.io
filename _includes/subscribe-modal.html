@@ -30,8 +30,7 @@
     var STORAGE_KEY = 'nl_modal_state_v1';
     var THRESHOLD = 0.9;
     var modal = document.querySelector('[data-subscribe-modal]');
-    var article = document.querySelector('.post-body');
-    if (!modal || !article) return;
+    if (!modal) return;
 
     function getState() {
       try { return window.localStorage && localStorage.getItem(STORAGE_KEY); }
@@ -69,15 +68,14 @@
 
     function check() {
       if (resolved) return;
-      var rect = article.getBoundingClientRect();
-      var viewport = window.innerHeight || document.documentElement.clientHeight;
-      var scrollable = article.offsetHeight - viewport;
-      if (scrollable <= 0) {
-        if (rect.bottom <= viewport + 40) show();
-        return;
-      }
-      var scrolled = Math.max(0, -rect.top);
-      if (scrolled / scrollable >= THRESHOLD) show();
+      var doc = document.documentElement;
+      var body = document.body;
+      var scrollY = window.scrollY || doc.scrollTop || body.scrollTop || 0;
+      var docHeight = Math.max(doc.scrollHeight, body.scrollHeight);
+      var viewport = window.innerHeight || doc.clientHeight;
+      var maxScroll = docHeight - viewport;
+      if (maxScroll <= 0) return;
+      if (scrollY / maxScroll >= THRESHOLD) show();
     }
 
     var ticking = false;
@@ -129,7 +127,7 @@
     var form = modal.querySelector('[data-subscribe-modal-form]');
     if (form) form.addEventListener('submit', onSubmit);
 
-    // Cover the case where the article is already 90% scrolled on load (refresh, deep link).
+    // Cover the case where the page is already 90% scrolled on load (refresh, deep link).
     check();
   })();
 </script>
