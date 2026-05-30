@@ -2,7 +2,7 @@
 layout: post
 title: The Phoenix Project
 type: blog
-tags: [Management]
+tags: [Management, Leadership]
 ---
 > Any improvement not made at the constraint is an illusion.
 

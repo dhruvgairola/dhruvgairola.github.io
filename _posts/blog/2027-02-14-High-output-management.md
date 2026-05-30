@@ -2,7 +2,7 @@
 layout: post
 title: High Output Management
 type: blog
-tags: [Management]
+tags: [Management, Leadership]
 ---
 * In principle, every hour of your day should be spent increasing the output or the value of the output of the people whom you’re responsible for.
 * **Are you a node connected to a network of plugged-in people or are you floating by yourself?**

@@ -2,7 +2,7 @@
 layout: post
 title: Impact of AI on Managers
 type: blog
-tags: [Management, AI]
+tags: [Management, AI, Leadership]
 ---
 Recent trends indicate that organizations want managers to code. For example, the CEO of Coinbase spoke of an internal shift in their company, where [player-coach managers](https://fortune.com/2026/05/05/coinbase-layoffs-14-of-employees-ai-tech-ai-job-anxiety-crypto/) are preferred. A player-coach manager balances IC duties with traditional people-management while a traditional manager shifts across multiple roles to help their team ([visionaries/team-builders/coaches/etc](https://dhruvgairola.com/Leadership-Styles/)). A sole emphasis on player-coach constrains a manager because it's harder for them to shift focus. For example, they will have less time to be strategic if they're also coding actively. I view the recent changes as a temporary change until the software industry stabilizes. It seems logical that managers should invest into building up AI skills as ICs in order to guide and support their teams through these transitions.
 
