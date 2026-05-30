@@ -1,0 +1,135 @@
+<div class="subscribe-modal" data-subscribe-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="subscribe-modal-title">
+  <div class="subscribe-modal__backdrop" data-subscribe-modal-dismiss></div>
+  <div class="subscribe-modal__panel" role="document">
+    <button class="subscribe-modal__close" type="button" data-subscribe-modal-dismiss aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p class="subscribe-modal__lede" id="subscribe-modal-title">Enjoying this?</p>
+    <p class="subscribe-modal__dek">Occasional essays on engineering management, AI, and security. No spam.</p>
+    <form class="newsletter-form subscribe-modal__form"
+          action="https://embeds.beehiiv.com/{{ site.beehiiv_publication_id }}"
+          method="POST"
+          target="beehiiv-modal-subscribe-target"
+          data-subscribe-modal-form>
+      <label class="newsletter-form__label" for="subscribe-modal-email">Email</label>
+      <div class="newsletter-form__row">
+        <input class="newsletter-form__input"
+               type="email"
+               id="subscribe-modal-email"
+               name="email"
+               placeholder="you@example.com"
+               autocomplete="email"
+               required />
+        <button class="newsletter-form__submit" type="submit">Subscribe</button>
+      </div>
+      <p class="newsletter-form__message" data-subscribe-modal-message hidden>Thanks, check your inbox to confirm.</p>
+    </form>
+    <iframe name="beehiiv-modal-subscribe-target" class="newsletter-form__target" title="Newsletter submission" aria-hidden="true" tabindex="-1"></iframe>
+  </div>
+</div>
+<script>
+  (function () {
+    var STORAGE_KEY = 'nl_modal_state_v1';
+    var THRESHOLD = 0.9;
+    var modal = document.querySelector('[data-subscribe-modal]');
+    var article = document.querySelector('.post-body');
+    if (!modal || !article) return;
+
+    function getState() {
+      try { return window.localStorage && localStorage.getItem(STORAGE_KEY); }
+      catch (e) { return null; }
+    }
+    function setState(value) {
+      try { if (window.localStorage) localStorage.setItem(STORAGE_KEY, value); }
+      catch (e) { /* private mode / quota — fall through */ }
+    }
+
+    if (getState()) return;
+
+    var shown = false;
+    var resolved = false;
+
+    function show() {
+      if (shown || resolved) return;
+      shown = true;
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('subscribe-modal-open');
+      var input = modal.querySelector('input[type="email"]');
+      if (input) setTimeout(function () { try { input.focus(); } catch (e) {} }, 60);
+    }
+
+    function resolve(reason) {
+      if (resolved) return;
+      resolved = true;
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('subscribe-modal-open');
+      setState(reason);
+      teardown();
+    }
+
+    function check() {
+      if (resolved) return;
+      var rect = article.getBoundingClientRect();
+      var viewport = window.innerHeight || document.documentElement.clientHeight;
+      var scrollable = article.offsetHeight - viewport;
+      if (scrollable <= 0) {
+        if (rect.bottom <= viewport + 40) show();
+        return;
+      }
+      var scrolled = Math.max(0, -rect.top);
+      if (scrolled / scrollable >= THRESHOLD) show();
+    }
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking || resolved) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        ticking = false;
+        check();
+      });
+    }
+
+    function onKey(e) {
+      if (shown && (e.key === 'Escape' || e.keyCode === 27)) resolve('dismissed');
+    }
+
+    function onClick(e) {
+      var node = e.target;
+      while (node && node !== modal) {
+        if (node.hasAttribute && node.hasAttribute('data-subscribe-modal-dismiss')) {
+          resolve('dismissed');
+          return;
+        }
+        node = node.parentNode;
+      }
+    }
+
+    function onSubmit() {
+      // Persist immediately so a refresh between submit and confirmation still suppresses.
+      setState('subscribed');
+      var msg = modal.querySelector('[data-subscribe-modal-message]');
+      if (msg) msg.hidden = false;
+      var input = modal.querySelector('input[type="email"]');
+      setTimeout(function () { if (input) input.value = ''; }, 600);
+      setTimeout(function () { resolve('subscribed'); }, 1800);
+    }
+
+    function teardown() {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      document.removeEventListener('keydown', onKey);
+      modal.removeEventListener('click', onClick);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    document.addEventListener('keydown', onKey);
+    modal.addEventListener('click', onClick);
+    var form = modal.querySelector('[data-subscribe-modal-form]');
+    if (form) form.addEventListener('submit', onSubmit);
+
+    // Cover the case where the article is already 90% scrolled on load (refresh, deep link).
+    check();
+  })();
+</script>
