@@ -4,7 +4,7 @@ layout: default
 
 {% assign blog_posts = site.posts | where: "type", "blog" %}
 {% assign featured = blog_posts | first %}
-{% assign rest = blog_posts | slice: 1, blog_posts.size %}
+{% assign rest = blog_posts %}
 
 <div class="post-grid">
 
