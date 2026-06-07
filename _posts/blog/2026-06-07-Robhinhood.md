@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TechToronto - Robinhood event
+title: Agentic incident response and E2E Testing - Robinhood event
 type: blog
 tags: [Technology, Tech Event]
 ---
