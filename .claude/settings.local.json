@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "mcp__slack__slack-search_my_channels",
-      "mcp__slack__slack-slack_read_channel"
+      "mcp__slack__slack-slack_read_channel",
+      "Bash(rsync -a --exclude='.git' --exclude='_site' --exclude='.DS_Store' --exclude='.jekyll' --exclude='.sass-cache' --exclude='.bundle' --exclude='__pycache__' --exclude='node_modules' ./ /Users/dhruv.gairola/pvarnika/varnikan.github.io/)"
     ]
   }
 }
