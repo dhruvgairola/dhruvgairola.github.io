@@ -1,6 +1,6 @@
 ---
 layout: post
-title: E2E Testing
+title: Test infra
 type: blog
 tags: [Technology, Tech Event]
 ---
@@ -9,12 +9,14 @@ tags: [Technology, Tech Event]
 I attended a tech event at the Robinhood office in Toronto titled "Engineering The Future of Finance". Two of their presentations caught my eye. The first was about testing and the second was related to AI devex. Robinhood shared a test framework called Apollo.
 
 ## Signadot
-My previous company used a similar system built using [Signadot](https://www.signadot.com/). Essentially we had a staging k8s cluster with all the hundreds of microservices deployed on their main builds. A developer could deploy a sandbox version of their service, and requests associated with that sandbox would be routed to it while the rest of the system continued using the baseline deployment. Hence, a developer could test their local changes inside the staging cluster, against real services instead of mocks. If any of their changes were breaking, it would only impact their sandbox deployment and related traffic. All the other baseline services and traffic would remain unaffected.
+My previous company used a similar system built using [Signadot](https://www.signadot.com/). Essentially we had a staging k8s cluster with hundreds of microservices deployed on their main builds. A developer could deploy a sandbox version of their service, and requests associated with that sandbox would be routed to it while the rest of the system continued using the baseline deployment. Hence, a developer could test their local changes inside the staging cluster, against real services instead of mocks. If any of their changes were breaking, it would only impact their sandbox deployment and related traffic. All the other baseline services and traffic would remain unaffected. 
+
+For context, for a fullstack repo, our CI pipeline would run - BE unit tests, FE component tests, FE visual regression tests, BE integration tests, and API tests (Cypress). True e2e/Post-deploy tests were expensive and reserved for critical flows and automated by a tool called Gptdriver (run on every deploy). In my current firm, we have a similar pipeline except we use Playwright for both the API tests and e2e tests.
 
 ![_config.yml]({{ site.baseurl }}/images/signadot.png)
 
 ## Stateful testing
-An attendee asked a sharp question about e2e testing on stateful systems and the response was that they're still figuring it out. I've seen that Signadot offers [resource plugins](https://www.signadot.com/docs/overview) that enable devs to provision stateful sandboxes. For example, a DB can be deployed on a stateful sandbox for isolation. This can also work for messaging systems with a little more plumbing using Signadot's routing libraries.
+An attendee asked a sharp question about testing on stateful systems and the response was that they're still figuring it out. I've seen that Signadot offers [resource plugins](https://www.signadot.com/docs/overview) that enable devs to provision stateful sandboxes. For example, a DB can be deployed on a stateful sandbox for isolation. This can also work for messaging systems with a little more plumbing using Signadot's routing libraries.
 
 ## Complex shared services like Kafka
 For complex shared services like Kafka, having a stateful sandbox per developer is overkill and costly for a large org. Hence, a solution here is [message level routing](https://www.signadot.com/docs/guides/set-up-message-queue-isolation). In this pattern, devs have to update the business logic of the producers and consumers. Producers have to append routing keys to the messages. Meanwhile, all consumers have to parse the routing key and decide whether to process or ignore these messages. This is a lightweight solution compared to dedicated stateful sandboxes.
