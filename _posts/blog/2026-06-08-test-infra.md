@@ -11,7 +11,7 @@ I attended a tech event at the Robinhood office in Toronto titled "Engineering T
 ## Signadot
 My previous company used a similar system built using [Signadot](https://www.signadot.com/). Essentially we had a staging k8s cluster with hundreds of microservices deployed on their main builds. A developer could deploy a sandbox version of their service, and requests associated with that sandbox would be routed to it while the rest of the system continued using the baseline deployment. Hence, a developer could test their local changes inside the staging cluster, against real services instead of mocks. If any of their changes were breaking, it would only impact their sandbox deployment and related traffic. All the other baseline services and traffic would remain unaffected. 
 
-For context, for a fullstack repo, our CI pipeline would run - BE unit tests, FE component tests, FE visual regression tests, BE integration tests, and API tests (Cypress). True e2e/Post-deploy tests were expensive and reserved for critical flows and automated by a tool called Gptdriver (run on every deploy). In my current firm, we have a similar pipeline except we use Playwright for both the API tests and e2e tests.
+For context, for a fullstack repo, our CI pipeline would run - BE unit tests, FE component tests, FE visual regression tests, BE integration tests, and API tests (Cypress). True e2e (Post-deploy) tests were expensive and reserved for critical flows and automated by a tool called Gptdriver (run on every deploy). In my current firm, we have a similar pipeline except we use Playwright for both the API tests and e2e tests. Feature flags are turned to true by default before each test.
 
 ![_config.yml]({{ site.baseurl }}/images/signadot.png)
 
