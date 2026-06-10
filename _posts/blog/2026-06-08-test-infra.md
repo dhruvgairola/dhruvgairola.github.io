@@ -8,12 +8,31 @@ tags: [Technology, Tech Event]
 
 I attended a tech event at the Robinhood office in Toronto titled "Engineering The Future of Finance". Two of their presentations caught my eye. The first was about testing and the second was related to AI devex. Robinhood shared a test framework called Apollo.
 
-## Signadot
-My previous company used a similar system built using [Signadot](https://www.signadot.com/). Essentially we had a staging k8s cluster with hundreds of microservices deployed on their main builds. A developer could deploy a sandbox version of their service, and requests associated with that sandbox would be routed to it while the rest of the system continued using the baseline deployment. Hence, a developer could test their local changes inside the staging cluster, against real services instead of mocks. If any of their changes were breaking, it would only impact their sandbox deployment and related traffic. All the other baseline services and traffic would remain unaffected. 
+## Types of tests
+Before I dive in, a quick note on the tests we'd run in a few of my previous firms.
 
-For context, for a fullstack repo, our CI pipeline would run - BE unit tests, FE component tests, FE visual regression tests, BE integration tests, and API tests (Cypress). True e2e (Post-deploy) tests were expensive and reserved for critical flows and automated by a tool called Gptdriver (run on every deploy). In my current firm, we have a similar pipeline except we use Playwright for both the API tests and e2e tests. Feature flags are turned to true by default before each test.
+Within a service in CI -
+* BE unit tests per layer of code, mocking the other layers.
+* FE component tests, trying hard to avoid mocking state.
+* FE visual regression tests (usually for the design system).
+* BE integration tests within the service, avoiding mocks as much as possible. Most of the value came from these tests.
+* API tests (Cypress or Playwright) that connected FE and BE within the service. External API calls were mocked. Many useful tests lived here too but were more flaky due to FE updates.
+* NOTE - We'd set feature flags to mirror the production state in all layers.
+
+Cross-service tests within the same team in CI -
+* We used a product called Pact to make mocks more trustworthy between services. This was met with moderate success since devs who managed a sister-service would forget to update contracts.
+
+Cross-service tests across teams -
+* Usually, these tests were run manually by QA (or devs) before deployment. These tests were slower and reserved for the most critical flows.
+* These tests can also be run after service deployment or in a CRON schedule. Playwright has largely replaced the old-school Selenium tests.
+* We have used experimental AI crawlers like Gptdriver to supplement the automated tests.
+
+My blog post describes 2 products - Signadot and vcluster. Signadot is similar to Robinhood Apollo which is what prompted me to write this post. These two products lay out the infrastructure that makes it easier to execute cross-service tests in CI, or pre/post deployment. The resulting infra also enables devs to test local changes against real services.
 
 ![_config.yml]({{ site.baseurl }}/images/signadot.png)
+
+## Signadot
+My previous company used a similar system built using [Signadot](https://www.signadot.com/). Essentially we had a staging k8s cluster with hundreds of microservices deployed on their main builds. A developer could deploy a sandbox version of their service, and requests associated with that sandbox would be routed to it while the rest of the system continued using the baseline deployment. Hence, a developer could test their local changes inside the staging cluster, against real services instead of mocks. If any of their changes were breaking, it would only impact their sandbox deployment and related traffic. All the other baseline services and traffic would remain unaffected. 
 
 ## Stateful testing
 An attendee asked a sharp question about testing on stateful systems and the response was that they're still figuring it out. I've seen that Signadot offers [resource plugins](https://www.signadot.com/docs/overview) that enable devs to provision stateful sandboxes. For example, a DB can be deployed on a stateful sandbox for isolation. This can also work for messaging systems with a little more plumbing using Signadot's routing libraries.
