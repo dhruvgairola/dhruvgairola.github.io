@@ -11,7 +11,7 @@ I attended a tech event at the Robinhood office in Toronto titled "Engineering T
 ## Types of tests
 Before I dive in, a quick note on the tests we'd run in a few of my previous firms.
 
-### Within a service in CI -
+### Within a service in CI
 * BE unit tests per layer of code, mocking the other layers.
 * FE component tests, trying hard to avoid mocking state.
 * FE visual regression tests (usually for the design system).
@@ -19,10 +19,10 @@ Before I dive in, a quick note on the tests we'd run in a few of my previous fir
 * API tests (Cypress or Playwright) that connected FE and BE within the service. External API calls were mocked. Many useful tests lived here too but were more flaky due to FE updates.
 * NOTE - We'd set feature flags to mirror the production state in all layers.
 
-### Cross-service tests within the same team in CI -
+### Cross-service tests within the same team in CI
 * We used a product called Pact to make mocks more trustworthy between services. This was met with moderate success since devs who managed a sister-service would forget to update contracts.
 
-### Cross-service tests across teams -
+### Cross-service tests across teams
 * Usually, these tests were run manually by QA (or devs) before deployment. These tests were slower and reserved for the most critical flows.
 * These tests can also be run after service deployment or in a CRON schedule. Playwright has largely replaced the old-school Selenium tests.
 * We have used experimental AI crawlers like Gptdriver (for mobile) to supplement the automated tests. Today, claude/codex can easily crawl webapps.
