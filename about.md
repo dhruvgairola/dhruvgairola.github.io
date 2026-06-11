@@ -6,7 +6,7 @@ permalink: /about/
 
 ### Experience
 
-I&rsquo;m currently an Engineering Manager at Okta in the Privileged Access Management domain, rapidly scaling our emerging product. Before that, I was an EM at Wealthsimple through a period of 8x growth to roughly $50B AUM. I led critical teams in the highly profitable stock-trading product and the growth marketing product.
+I&rsquo;m currently an Engineering Manager at Okta in the Privileged Access Management domain, rapidly scaling our emerging product. I manage 2 teams in Okta, one is a feature team that brokers access to infrastructure and the other is a product-platform team that builds middleware that is used by my domain. Before that, I was an EM at Wealthsimple through a period of 8x growth to $50B assets under management. I led critical teams in the highly profitable stock-trading product and the growth marketing product.
 
 Earlier I spent time as a software engineer at Series-B startups and large enterprises. My fondest memory is starting my own business and spending two years as CTO, where I hired developers, raised funds, and managed on-prem relationships with customers (we built an Excel-like platform for big data).
 
