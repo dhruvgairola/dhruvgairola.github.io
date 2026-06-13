@@ -26,7 +26,7 @@ Before I dive in, a quick note on the tests we'd run in a few of my previous fir
 * Usually, these tests were run manually by QA (or devs) before deployment. These tests were slower and reserved for the most critical flows.
 * These tests can also be run after service deployment or in a CRON schedule. Playwright has largely replaced the old-school Selenium tests.
 * We have used experimental AI crawlers like Gptdriver (for mobile) to supplement the automated tests. Today, claude/codex can easily crawl webapps.
-* I'm intentionally excluding load tests from this post because it's large enough to be it's own topic. Chaos testing is another type of test that I'm excluding because it seems to be relatively uncommon in the industry.
+* I'm intentionally excluding the following topics from this post - load tests, chaos tests, canary, blue-green, dark-launch, etc.
 
 My blog post describes 2 products - Signadot and vcluster. Signadot is similar to Robinhood Apollo which is what prompted me to write this post. These two products **lay out the infrastructure** that makes it easier to execute cross-service tests in CI, or pre/post deployment. The resulting infra also enables devs to test local changes against real services.
 
