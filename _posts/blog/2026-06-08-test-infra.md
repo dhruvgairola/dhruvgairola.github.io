@@ -15,6 +15,7 @@ Before I dive in, a quick note on the tests we'd run in a few of my previous fir
 * BE unit tests per layer of code, mocking the other layers.
 * FE component tests, trying hard to avoid mocking state.
 * FE visual regression tests (usually for the design system).
+* FE accessibility tests.
 * BE integration tests within the service, avoiding mocks as much as possible. Most of the value came from these tests.
 * API tests (Cypress or Playwright) that connected FE and BE within the service. External API calls were mocked. Many useful tests lived here too but were more flaky due to FE updates.
 * NOTE - We'd set feature flags to mirror the production state in all layers.
