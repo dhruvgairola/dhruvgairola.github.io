@@ -24,12 +24,11 @@ Before I dive in, a quick note on the tests we'd run in a few of my previous fir
 * We used a product called Pact to make mocks more trustworthy between services. This was met with moderate success since devs who managed a sister-service would forget to update contracts.
 
 ### Cross-service tests across teams
-* Usually, these tests were run manually by QA (or devs) before deployment. These tests were slower and reserved for the most critical flows.
-* These tests can also be run after service deployment or in a CRON schedule. Playwright has largely replaced the old-school Selenium tests.
-* We have used experimental AI crawlers like Gptdriver (for mobile) to supplement the automated tests. Today, claude/codex can easily crawl webapps.
+* Usually, these tests were run manually by QA (or devs) before deployment on a staging/preview environment. These tests were reserved for the most critical flows. 
+* Sometimes, a few of the tests would be automated using tools like Selenium / Playwright / AI crawlers. Additionally, these tests were also run post-deployment (post-deploy verification).
 * I'm intentionally excluding the following topics from this post - load tests, chaos tests, security tests, canary, blue-green, dark-launch, etc.
 
-My blog post describes 2 products - Signadot and vcluster. Signadot is similar to Robinhood Apollo which is what prompted me to write this post. These two products **lay out the infrastructure** that makes it easier to execute cross-service tests in CI, or pre/post deployment. The resulting infra also enables devs to test local changes against real services.
+My blog post describes 2 products - Signadot and vcluster. Signadot is similar to Robinhood Apollo which is what prompted me to write this post. These two products **lay out the infrastructure** that makes it easier to execute cross-service tests in CI, locally, or staging/preview environments either pre-deploy or post-deploy.
 
 ![_config.yml]({{ site.baseurl }}/images/signadot.png)
 
