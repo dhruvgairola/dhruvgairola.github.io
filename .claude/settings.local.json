@@ -3,7 +3,12 @@
     "allow": [
       "mcp__slack__slack-search_my_channels",
       "mcp__slack__slack-slack_read_channel",
-      "Bash(rsync -a --exclude='.git' --exclude='_site' --exclude='.DS_Store' --exclude='.jekyll' --exclude='.sass-cache' --exclude='.bundle' --exclude='__pycache__' --exclude='node_modules' ./ /Users/dhruv.gairola/pvarnika/varnikan.github.io/)"
+      "Bash(rsync -a --exclude='.git' --exclude='_site' --exclude='.DS_Store' --exclude='.jekyll' --exclude='.sass-cache' --exclude='.bundle' --exclude='__pycache__' --exclude='node_modules' ./ /Users/dhruv.gairola/pvarnika/varnikan.github.io/)",
+      "WebFetch(domain:github.com)",
+      "Bash(rtk curl *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('truncated=',d.get\\('truncated'\\)\\); [print\\(t['path']\\) for t in d.get\\('tree',[]\\) if t['path'].lower\\(\\).endswith\\('.md'\\) and \\('command' in t['path'].lower\\(\\) or 'template' in t['path'].lower\\(\\)\\)]\")",
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('default_branch=',d.get\\('default_branch'\\),'msg=',d.get\\('message'\\)\\)\")",
+      "WebFetch(domain:docs.bmad-method.org)"
     ]
   }
 }
