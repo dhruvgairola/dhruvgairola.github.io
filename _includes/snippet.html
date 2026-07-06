@@ -3,7 +3,7 @@
 
   Paste the raw file into _includes/snippets/ then reference it:
 
-    {% include snippet.html file="hotel-trip-planner.md" lang="bash" %}
+    {% include snippet.html file="hotel-trip-planner-spec.md" lang="markdown" %}
 
   Params:
     file  (required) — filename inside _includes/snippets/
@@ -11,8 +11,12 @@
     lines (optional) — lines shown while collapsed (default: 5)
     title (optional) — label in the header bar (defaults to the filename)
 
+  Styles + behaviour are self-contained here (no dependency on style.css), so the
+  collapse works even if the SCSS hasn't been recompiled/deployed. The critical
+  clamp uses literal units, so it holds even if the design tokens are absent.
+
   Note: the snippet file is run through Liquid. If your code contains {% raw %}{{{% endraw %} or
-  {% raw %}{%{% endraw %}, wrap the file body in {% raw %}{{ "{% raw %}" }}{% endraw %} … {% raw %}{{ "{% endraw %}" }}{% endraw %}.
+  {% raw %}{%{% endraw %}, wrap the file body in {% raw %}{% raw %}{% endraw %} … {% raw %}{% endraw %}{% endraw %}.
 {%- endcomment -%}
 {%- assign _lines = include.lines | default: 5 -%}
 {%- assign _lang  = include.lang  | default: "text" -%}
@@ -24,6 +28,86 @@
 {{ _snip_raw }}
 ```
 {%- endcapture -%}
+<style>
+  .snippet {
+    --snippet-lines: 5;
+    margin-block: var(--space-5, 1.5rem);
+    border: 1px solid var(--rule, #e5e0d8);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--paper-sunk, #f2efea);
+  }
+  .snippet__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3, 0.75rem);
+    padding: var(--space-2, 0.5rem) var(--space-4, 1rem);
+    border-bottom: 1px solid var(--rule, #e5e0d8);
+    background: var(--paper, #faf8f5);
+    font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    font-size: var(--step--1, 0.875rem);
+    color: var(--ink-muted, #6b6459);
+  }
+  .snippet__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .snippet__toggle {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.15rem 0.4rem;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+    font-size: var(--step--1, 0.875rem);
+    font-weight: 500;
+    color: var(--accent, #c65a3a);
+    cursor: pointer;
+    transition: color 140ms, background 140ms;
+  }
+  .snippet__toggle:hover { background: var(--accent-weak, #f5e4dc); color: var(--accent-hover, #a84728); }
+  .snippet__toggle:focus-visible { outline: 2px solid var(--accent, #c65a3a); outline-offset: 1px; }
+  .snippet__toggle[hidden] { display: none; }
+  .snippet__toggle-chevron { display: inline-block; line-height: 1; transition: transform 140ms; }
+  /* Body sets font-size so the `em` clamp below matches the code line height. */
+  .snippet__body { position: relative; font-size: var(--step--1, 0.875rem); }
+  .snippet__body :is(.highlighter-rouge, div.highlight, div[class*="language-"]) {
+    margin: 0; padding: 0; border: 0; background: transparent; border-radius: 0;
+  }
+  .snippet__body pre {
+    margin: 0; border: 0; background: transparent; border-radius: 0; padding: 1rem;
+  }
+  .snippet__fade {
+    display: none;
+    position: absolute;
+    inset-inline: 0;
+    left: 0; right: 0;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: linear-gradient(to bottom, transparent, var(--paper-sunk, #f2efea));
+    cursor: pointer;
+  }
+  /* Collapsed state — added by JS only when the content actually overflows.
+     Clamp uses literal units so it holds even with no design tokens loaded. */
+  .snippet.is-collapsible.is-collapsed .snippet__body {
+    max-height: calc(1rem + var(--snippet-lines, 5) * 1.6em);
+    overflow: hidden;
+  }
+  .snippet.is-collapsible.is-collapsed .snippet__fade { display: block; }
+  .snippet.is-collapsible:not(.is-collapsed) .snippet__toggle-chevron { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) {
+    .snippet__toggle, .snippet__toggle-chevron { transition: none; }
+  }
+  @media print {
+    .snippet { border: 1px solid #ccc; background: #f7f5f0; break-inside: avoid; }
+    .snippet.is-collapsed .snippet__body { max-height: none; overflow: visible; }
+    .snippet__toggle, .snippet__fade { display: none; }
+  }
+</style>
 <figure class="snippet" style="--snippet-lines: {{ _lines }};">
   <figcaption class="snippet__bar">
     <span class="snippet__name" title="{{ _title }}">{{ _title }}</span>
