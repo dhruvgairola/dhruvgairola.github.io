@@ -4,7 +4,7 @@ title: Ralph loops vs Goals in the Software development lifecycle
 type: blog
 tags: [AI]
 ---
-AI writes most of the implementation now, but the same model that wrote the code is hard-pressed to critique it's own work. This post looks at two mechanisms for enforcing quality during implementation - the Ralph loop and the `goal` command - and why they solve different problems.
+AI writes most of the implementation now, but the same model that wrote the code is hard-pressed to critique it's own work. This post looks at two mechanisms for enforcing quality during implementation - the Ralph loop and the `goal` command - and why they solve different problems. But first, here's some context:
 
 ### AI assisted SDLC
 The newest models have made it possible to accelerate various phases of the traditional SDLC (software development lifecycle). At a high-level, SDLC involves ideating, creating a PRD (product requirement doc), UX mockups, a technical brief and implementing and testing the code. AI-based SDLC frameworks such as [BMAD](https://github.com/bmad-code-org/bmad-method) and [Speckit](https://github.com/github/spec-kit) have re-imagined each stage as AI skills that can be triggered by users. The output of each stage are passed along the SDLC pipeline. Recently, Google also published a [short document](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) describing this new paradigm.
