@@ -1,0 +1,92 @@
+{%- comment -%}
+  Collapsible, Slack-style code snippet.
+
+  Paste the raw file into _includes/snippets/ then reference it:
+
+    {% include snippet.html file="hotel-trip-planner.md" lang="bash" %}
+
+  Params:
+    file  (required) — filename inside _includes/snippets/
+    lang  (optional) — highlighter language (bash, python, ruby, js, java, yaml, …)
+    lines (optional) — lines shown while collapsed (default: 5)
+    title (optional) — label in the header bar (defaults to the filename)
+
+  Note: the snippet file is run through Liquid. If your code contains {% raw %}{{{% endraw %} or
+  {% raw %}{%{% endraw %}, wrap the file body in {% raw %}{{ "{% raw %}" }}{% endraw %} … {% raw %}{{ "{% endraw %}" }}{% endraw %}.
+{%- endcomment -%}
+{%- assign _lines = include.lines | default: 5 -%}
+{%- assign _lang  = include.lang  | default: "text" -%}
+{%- assign _title = include.title | default: include.file -%}
+{%- capture _snip_path -%}snippets/{{ include.file }}{%- endcapture -%}
+{%- capture _snip_raw -%}{% include {{ _snip_path }} %}{%- endcapture -%}
+{%- capture _snip_md -%}
+```{{ _lang }}
+{{ _snip_raw }}
+```
+{%- endcapture -%}
+<figure class="snippet" style="--snippet-lines: {{ _lines }};">
+  <figcaption class="snippet__bar">
+    <span class="snippet__name" title="{{ _title }}">{{ _title }}</span>
+    <button type="button" class="snippet__toggle" aria-expanded="false" hidden>
+      <span class="snippet__toggle-label">Show more</span>
+      <span class="snippet__toggle-chevron" aria-hidden="true">⌄</span>
+    </button>
+  </figcaption>
+  <div class="snippet__body">
+    {{ _snip_md | markdownify }}
+    <button type="button" class="snippet__fade" aria-hidden="true" tabindex="-1"></button>
+  </div>
+</figure>
+<script>
+  (function () {
+    if (window.__snippetInit) return;
+    window.__snippetInit = true;
+
+    function label(fig) {
+      var btn = fig.querySelector('.snippet__toggle');
+      if (!btn) return;
+      var collapsed = fig.classList.contains('is-collapsed');
+      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      var text = btn.querySelector('.snippet__toggle-label');
+      if (text) text.textContent = collapsed ? 'Show more' : 'Show less';
+    }
+
+    function setup(fig) {
+      var body = fig.querySelector('.snippet__body');
+      var toggle = fig.querySelector('.snippet__toggle');
+      var fade = fig.querySelector('.snippet__fade');
+      if (!body || !toggle) return;
+
+      // Collapse first, then keep it only if the content actually overflows.
+      fig.classList.add('is-collapsible', 'is-collapsed');
+      if (body.scrollHeight <= body.clientHeight + 4) {
+        fig.classList.remove('is-collapsible', 'is-collapsed');
+        return;
+      }
+
+      toggle.hidden = false;
+      label(fig);
+
+      function toggleState() {
+        fig.classList.toggle('is-collapsed');
+        label(fig);
+      }
+      toggle.addEventListener('click', toggleState);
+      // Clicking the faded preview expands (like Slack); it never re-collapses.
+      if (fade) fade.addEventListener('click', function () {
+        if (fig.classList.contains('is-collapsed')) toggleState();
+      });
+    }
+
+    function init() {
+      var figs = document.querySelectorAll('.snippet');
+      for (var i = 0; i < figs.length; i++) setup(figs[i]);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

@@ -92,6 +92,7 @@ Animate only: opacity, transform, color, background, border-color. Never layout 
 - **Tag pill** — 12px Inter uppercase-tracked, 2px/10px padding, 999px radius, `--accent-weak` bg, `--accent` text. Used on post meta and post list.
 - **Code block** — `--paper-sunk` bg, `--rule` top + bottom only (no side stripes), 16px/20px padding, JetBrains Mono 14px, bleed to wider grid line.
 - **Inline code** — JetBrains Mono 0.92em, `--accent-weak` bg, 2px/5px padding, 3px radius.
+- **Snippet (collapsible)** — Slack-style. Header bar (`--paper` bg, filename in mono + Show more/less toggle) over a syntax-highlighted body clipped to N lines (default 5) with a fade to `--paper-sunk`. Expands via the toggle or by clicking the faded preview; no-JS falls back to fully expanded. Paste raw files into `_includes/snippets/`, reference with `{% raw %}{% include snippet.html file="x.sh" lang="bash" %}{% endraw %}` (optional `lines`, `title`). See the header comment in `_includes/snippet.html`.
 - **Blockquote** — Inter 500-weight at 1.25em on `--paper-sunk` background, padded. No side border, no italic.
 - **Newsletter** — single-line: prompt text + email input with underline + submit button. Minimal.
 - **Footer** — thin rule, small meta, social icons.
