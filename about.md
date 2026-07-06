@@ -8,18 +8,9 @@ I&rsquo;m currently an Engineering Manager at Okta in the Privileged Access Mana
 
 Earlier I spent time as a software engineer at Series-B startups and large enterprises. My fondest memory is starting my own business and spending two years as CTO, where I hired developers, raised funds, and managed on-prem relationships with customers (we built an Excel-like platform for big data).
 
-### Technical interests
+### Interests
 
-Distributed systems, software architecture, algorithms. I like diving deep into problems.
-
-### Other interests
-
-* Guitar
-* Drumming
-* Swimming
-* Scrabble
-* Entrepreneurship
-* Reading sci-fi and lit classics
+Distributed systems, software architecture, algorithms. Guitar, drumming, swimming, scrabble, entrepreneurship, reading sci-fi and lit classics.
 
 ### Work with me
 
