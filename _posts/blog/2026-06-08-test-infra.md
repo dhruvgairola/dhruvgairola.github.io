@@ -21,12 +21,12 @@ Before I dive in, a quick note on the tests we'd run in a few of my previous fir
 * NOTE - We'd set feature flags to mirror the production state in all layers.
 
 ### Cross-service tests across teams
-* We used a product called Pact for contract tests between services. A consumer service would define a contract and send that to the provider service. The provider service would call it's own API and check the response against the contract. This would protect the consumers because the provider CI would break if the semantic response of it's API changed from what a consumer expects.
-* Most firms had manual QA steps before deployment on a staging/preview environment. These tests were reserved for the most critical flows. 
-* A portion of the critical tests would be automated using tools like Selenium / Playwright / AI crawlers. Additionally, these tests were also run post-deployment (post-deploy verification).
+* We used a product called Pact for contract tests between services. A consumer service would define a contract and send that to the provider service. The provider service would call it's own API and check the response against the contract. This would protect the consumers because the provider CI would break if the semantic response of it's API changed from what a consumer expects. These pact tests were more likely to exist in mature orgs but not commonly found.
+* PDVs (post-deploy verification): Critical tests would be automated using tools like Selenium / Playwright / AI crawlers and gate deployments to higher environments. For example, a deployment to staging environment would occur first, and the PDV tests would run. If successful, the deployment would then occur on a preview env and the PDV would run again. This would occur again for prod.
+* Pre-deployment: Most firms had manual regression QA steps on a staging/preview environment. These weren't automated in CI because they took a long time to setup/seed and then regression test a ton of use cases. These regression tests could also be automated as daily jobs.
 * I'm intentionally excluding the following topics from this post - load tests, chaos tests, security tests, canary, blue-green, dark-launch, etc.
 
-My blog post describes 2 products - Signadot and vcluster. Signadot is similar to Robinhood Apollo which is what prompted me to write this post. These two products **lay out the infrastructure** that makes it easier to execute cross-service tests in CI, locally, or staging/preview environments either pre-deploy or post-deploy.
+My blog post describes 2 products - Signadot and vcluster. Signadot is similar to Robinhood Apollo which is what prompted me to write this post. These two products **lay out the infrastructure** that makes it easier to execute cross-service tests in CI, or locally or in staging/preview environments.
 
 ![_config.yml]({{ site.baseurl }}/images/signadot.png)
 
