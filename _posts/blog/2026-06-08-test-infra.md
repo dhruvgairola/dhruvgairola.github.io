@@ -13,7 +13,7 @@ Before I dive in, a quick note on the tests we'd run in a few of my previous fir
 
 ### Within a service in CI
 * BE unit tests per layer of code, mocking the other layers.
-* FE component tests, trying hard to avoid mocking state.
+* FE component tests, trying hard to avoid mocking FE state.
 * FE visual regression tests (usually for the design system).
 * FE accessibility tests.
 * BE integration tests within the service, avoiding mocks as much as possible. Most of the value came from these tests.
